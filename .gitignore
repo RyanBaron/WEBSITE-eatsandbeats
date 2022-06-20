@@ -1,3 +1,4 @@
 web/wp-content/uploads/cache/
 web/.htaccess
 web/wp-content/uploads/wp-migrate-db/
+web/wp-content/themes/rjbstarter/.cache-loader/

@@ -26,7 +26,7 @@ $style = 'style="'.$style.'"';
 
       <div data-section-row-main="mmpwzq" class="row flex-row justify-content-center align-items-start py-4 bg-white">
         <div class="col col-12 col-md-10 col-lg-8 col-xxl-7">
-          @php gravity_form( 3, true, true, false, '', true, 200 ); @endphp
+          @php /* gravity_form( 3, true, true, false, '', true, 200 ); */ @endphp
         </div>
       </div>
 

@@ -2377,10 +2377,9 @@ function get_gravity_form_options() {
   $ret = array(0 => 'None');
 
   // if( class_exists( GFAPI ) ) {
-  if ( is_plugin_active( 'gravityforms/gravityforms.php' ) ) {
-    $forms = GFAPI::get_forms();
-
-  }
+  //if ( is_plugin_active( 'gravityforms/gravityforms.php' ) ) {
+    //$forms = GFAPI::get_forms();
+  //}
 
   if( is_array( $forms ) ) {
     foreach( $forms as $key => $form ) {

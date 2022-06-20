@@ -1,0 +1,97 @@
+@include media-breakpoint-up(md) {
+  .marquee-logo-cards {
+    opacity: 0.8;
+    min-height: 100px;
+
+    .col-cards {
+      min-height: 90px;
+      margin: 0 auto;
+      overflow: hidden;
+
+      .col-inside-cards {
+        display: block;
+        width: 400%;
+        position: absolute;
+        height: 90px;
+        min-height: 90px;
+        animation: marquee 30s linear infinite;
+
+        .row-cards {
+          flex-wrap: nowrap;
+        }
+      }
+
+      .col-card {
+        img {
+          max-height: 60px;
+          width: auto;
+        }
+      }
+    }
+  }
+
+  .marquee-logo-cards_3x {
+    .col-cards {
+      .col-inside-cards {
+        width: 600%;
+        animation: marquee_3x 40s linear infinite;
+      }
+    }
+  }
+}
+
+.marquee-logo-cards_2rows {
+  .col-cards {
+    .col-inside-cards {
+      @include media-breakpoint-up(md) {
+        width: 300%;
+      }
+
+      @include media-breakpoint-up(lg) {
+        width: 200%;
+      }
+
+      @include media-breakpoint-up(xl) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.marquee-logo-cards_3x {
+  .col-cards {
+    .col-inside-cards {
+      @include media-breakpoint-up(md) {
+        width: 400%;
+      }
+
+      @include media-breakpoint-up(lg) {
+        width: 250%;
+      }
+
+      @include media-breakpoint-up(xl) {
+        width: 150%;
+      }
+    }
+  }
+}
+
+@keyframes marquee {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: -212.5%;
+  }
+}
+
+@keyframes marquee_3x {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: -312.5%;
+  }
+}

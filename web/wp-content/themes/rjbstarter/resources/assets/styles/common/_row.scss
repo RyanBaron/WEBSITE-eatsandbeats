@@ -1,0 +1,553 @@
+section {
+  &.narrow-row-90 {
+    > .container {
+      > .row {
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .tns-controls {
+      width: 90%;
+      left: 5%;
+    }
+  }
+
+  &.narrow-row-80 {
+    > .container {
+      > .row {
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .tns-controls {
+      width: 80%;
+      left: 10%;
+    }
+  }
+
+  &.narrow-row-75 {
+    > .container {
+      > .row {
+        max-width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .tns-controls {
+      width: 75%;
+      left: 12.5%;
+    }
+  }
+
+  &.narrow-row-70 {
+    > .container {
+      > .row {
+        max-width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .tns-controls {
+      width: 70%;
+      left: 15%;
+    }
+  }
+
+  &.narrow-row-60 {
+    > .container {
+      > .row {
+        max-width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .tns-controls {
+      width: 60%;
+      left: 20%;
+    }
+  }
+
+  &.narrow-row-50 {
+    > .container {
+      > .row {
+        max-width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .tns-controls {
+      width: 50%;
+      left: 25%;
+    }
+  }
+
+  &.narrow-row-40 {
+    > .container {
+      > .row {
+        max-width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .tns-controls {
+      width: 40%;
+      left: 30%;
+    }
+  }
+
+  &.narrow-row-30 {
+    > .container {
+      > .row {
+        max-width: 30%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .tns-controls {
+      width: 30%;
+      left: 35%;
+    }
+  }
+
+  &.narrow-row-25 {
+    > .container {
+      > .row {
+        max-width: 25%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .tns-controls {
+      width: 25%;
+      left: 37.5%;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  section {
+    &.narrow-row-md-90 {
+      > .container {
+        > .row {
+          max-width: 90%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      .tns-controls {
+        width: 90%;
+        left: 5%;
+      }
+    }
+
+    &.narrow-row-md-80 {
+      > .container {
+        > .row {
+          max-width: 80%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      .tns-controls {
+        width: 80%;
+        left: 10%;
+      }
+    }
+
+    &.narrow-row-md-75 {
+      > .container {
+        > .row {
+          max-width: 75%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      .tns-controls {
+        width: 75%;
+        left: 12.5%;
+      }
+    }
+
+    &.narrow-row-md-70 {
+      > .container {
+        > .row {
+          max-width: 70%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      .tns-controls {
+        width: 70%;
+        left: 15%;
+      }
+    }
+
+    &.narrow-row-md-60 {
+      > .container {
+        > .row {
+          max-width: 60%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      .tns-controls {
+        width: 60%;
+        left: 20%;
+      }
+    }
+
+    &.narrow-row-md-50 {
+      > .container {
+        > .row {
+          max-width: 50%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      .tns-controls {
+        width: 50%;
+        left: 25%;
+      }
+    }
+
+    &.narrow-row-md-40 {
+      > .container {
+        > .row {
+          max-width: 40%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      .tns-controls {
+        width: 40%;
+        left: 3%;
+      }
+    }
+
+    &.narrow-row-md-30 {
+      > .container {
+        > .row {
+          max-width: 30%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      .tns-controls {
+        width: 30%;
+        left: 35%;
+      }
+    }
+
+    &.narrow-row-md-25 {
+      > .container {
+        > .row {
+          max-width: 25%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      .tns-controls {
+        width: 25%;
+        left: 37.5%;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  section {
+    &.narrow-row-lg-90 {
+      > .container {
+        > .row {
+          max-width: 90%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      .tns-controls {
+        width: 90%;
+        left: 5%;
+      }
+    }
+
+    &.narrow-row-lg-80 {
+      > .container {
+        > .row {
+          max-width: 80%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      .tns-controls {
+        width: 80%;
+        left: 10%;
+      }
+    }
+
+    &.narrow-row-lg-75 {
+      > .container {
+        > .row {
+          max-width: 75%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      .tns-controls {
+        width: 75%;
+        left: 12.5%;
+      }
+    }
+
+    &.narrow-row-lg-70 {
+      > .container {
+        > .row {
+          max-width: 70%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      .tns-controls {
+        width: 70%;
+        left: 15%;
+      }
+    }
+
+    &.narrow-row-lg-60 {
+      > .container {
+        > .row {
+          max-width: 60%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      .tns-controls {
+        width: 60%;
+        left: 20%;
+      }
+    }
+
+    &.narrow-row-lg-50 {
+      > .container {
+        > .row {
+          max-width: 50%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      .tns-controls {
+        width: 25%;
+        left: 25%;
+      }
+    }
+
+    &.narrow-row-lg-40 {
+      > .container {
+        > .row {
+          max-width: 40%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      .tns-controls {
+        width: 40%;
+        left: 30%;
+      }
+    }
+
+    &.narrow-row-lg-30 {
+      > .container {
+        > .row {
+          max-width: 30%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      .tns-controls {
+        width: 30%;
+        left: 35%;
+      }
+    }
+
+    &.narrow-row-lg-25 {
+      > .container {
+        > .row {
+          max-width: 25%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      .tns-controls {
+        width: 25%;
+        left: 37.5%;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  section {
+    &.narrow-row-xl-90 {
+      > .container {
+        > .row {
+          max-width: 90%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      .tns-controls {
+        width: 90%;
+        left: 5%;
+      }
+    }
+
+    &.narrow-row-xl-80 {
+      > .container {
+        > .row {
+          max-width: 80%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      .tns-controls {
+        width: 80%;
+        left: 10%;
+      }
+    }
+
+    &.narrow-row-xl-75 {
+      > .container {
+        > .row {
+          max-width: 75%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      .tns-controls {
+        width: 75%;
+        left: 12.5%;
+      }
+    }
+
+    &.narrow-row-xl-70 {
+      > .container {
+        > .row {
+          max-width: 70%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      .tns-controls {
+        width: 70%;
+        left: 15%;
+      }
+    }
+
+    &.narrow-row-xl-60 {
+      > .container {
+        > .row {
+          max-width: 60%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      .tns-controls {
+        width: 60%;
+        left: 20%;
+      }
+    }
+
+    &.narrow-row-xl-50 {
+      > .container {
+        > .row {
+          max-width: 50%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      .tns-controls {
+        width: 50%;
+        left: 25%;
+      }
+    }
+
+    &.narrow-row-xl-40 {
+      > .container {
+        > .row {
+          max-width: 40%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      .tns-controls {
+        width: 40%;
+        left: 30%;
+      }
+    }
+
+    &.narrow-row-xl-30 {
+      > .container {
+        > .row {
+          max-width: 30%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      .tns-controls {
+        width: 30%;
+        left: 35%;
+      }
+    }
+
+    &.narrow-row-xl-25 {
+      > .container {
+        > .row {
+          max-width: 25%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      .tns-controls {
+        width: 25%;
+        left: 37.5%;
+      }
+    }
+  }
+}

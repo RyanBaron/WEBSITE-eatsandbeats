@@ -1,0 +1,35 @@
+@function font-main($key: "sans-serif") {
+  @return map-get($font-main, $key);
+}
+
+@function font-fallback($key: "sans-serif") {
+  @return map-get($font-fallback, $key);
+}
+
+@function font-midstack($key: "sans-serif") {
+  @return map-get($font-midstack, $key);
+}
+
+@function link-color($key: "link-blue") {
+  @return map-get($link-colors, $key);
+}
+
+@function text-color($key: "dark") {
+  @return map-get($text-colors, $key);
+}
+
+@function btn-color($key: "secondary") {
+  @return map-get($btn-colors, $key);
+}
+
+@function bg-color($key: "white") {
+  @return map-get($bg-colors, $key);
+}
+
+@function border-color($key: "border-lighter") {
+  @return map-get($border-colors, $key);
+}
+
+@function social-color($key: "linkedin") {
+  @return map-get($social-colors, $key);
+}

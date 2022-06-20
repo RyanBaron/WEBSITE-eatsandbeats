@@ -1,0 +1,45 @@
+// Category id 25 (news and updates)
+body {
+  .banner {
+    &.banner-blog {
+      .category-nav {
+        li {
+          &.nav-item {
+            &.category-id-25 {
+              &.current-post-ancestor {
+                a {
+                  border-color: theme-color("blog-green");
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.category {
+    &-news-and-updates,
+    &-25 {
+      .banner {
+        .wrap-container {
+          .wrap-container-inside {
+            //background-image: url("../images/blog-banner-bg-green.png");
+          }
+        }
+
+        .category-nav {
+          li {
+            &.nav-item {
+              &.category-id-25 {
+                .nav-link {
+                  border-color: theme-color("blog-green");
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

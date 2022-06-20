@@ -1,0 +1,136 @@
+section {
+  .col-card {
+    .col-inside-icon-pos-top-straddle {
+      * {
+        &.card {
+          position: relative;
+
+          .icon-wrap-icon-pos-top-straddle {
+            position: absolute;
+            left: 0;
+            right: 0;
+            justify-content: center;
+            display: flex;
+            top: -16px;
+
+            .icon-wrapper-inside {
+              border-radius: 100%;
+              padding: 0.25rem;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 32px;
+              height: 32px;
+            }
+
+            &.icon-wrap-icon-18px,
+            &.icon-wrap-fa-18px {
+              top: -19px;
+
+              .icon-wrapper-inside {
+                width: 38px;
+                height: 38px;
+              }
+            }
+
+            &.icon-wrap-icon-20px,
+            &.icon-wrap-fa-20px {
+              top: -20px;
+
+              .icon-wrapper-inside {
+                width: 40px;
+                height: 40px;
+              }
+            }
+
+            &.icon-wrap-icon-24px,
+            &.icon-wrap-fa-24px {
+              top: -22px;
+
+              .icon-wrapper-inside {
+                width: 44px;
+                height: 44px;
+              }
+            }
+
+            &.icon-wrap-icon-28px,
+            &.icon-wrap-fa-28px {
+              top: -24px;
+
+              .icon-wrapper-inside {
+                width: 48px;
+                height: 48px;
+              }
+            }
+
+            &.icon-wrap-icon-32px,
+            &.icon-wrap-fa-32px {
+              top: -28px;
+
+              .icon-wrapper-inside {
+                width: 56px;
+                height: 56px;
+              }
+            }
+
+            &.icon-wrap-icon-36px,
+            &.icon-wrap-fa-36px {
+              top: -32px;
+
+              .icon-wrapper-inside {
+                width: 60px;
+                height: 60px;
+              }
+            }
+
+            &.icon-wrap-icon-40px,
+            &.icon-wrap-fa-40px {
+              top: -32px;
+
+              .icon-wrapper-inside {
+                width: 68px;
+                height: 68px;
+              }
+            }
+
+            &.icon-wrap-fa-2x {
+              top: -2rem;
+
+              .icon-wrapper-inside {
+                width: 4rem;
+                height: 4rem;
+              }
+            }
+
+            &.icon-wrap-fa-3x {
+              top: -3rem;
+
+              .icon-wrapper-inside {
+                width: 6rem;
+                height: 6rem;
+              }
+            }
+
+            &.icon-wrap-fa-4x {
+              top: -3.5rem;
+
+              .icon-wrapper-inside {
+                width: 7rem;
+                height: 7rem;
+              }
+            }
+
+            &.icon-wrap-fa-5x {
+              top: -4rem;
+
+              .icon-wrapper-inside {
+                width: 8rem;
+                height: 8rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

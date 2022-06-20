@@ -1,0 +1,81 @@
+.social-links-sidebar {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+
+  .social-link {
+    display: flex;
+    width: 100%;
+    max-width: 48px;
+    flex-grow: 0 0 48px;
+  }
+}
+
+.wp-block-columns {
+  ul#sidebar {
+    padding: 0;
+    margin: 0;
+
+    .widget-sidebar {
+      &.gform_widget {
+        @extend .p-3;
+        @extend .p-md-4;
+        @extend .mb-3;
+        @extend .bg-secondary;
+        @extend .text-white;
+
+        overflow: hidden;
+
+        h5 {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .gform_body {
+    ul {
+      li {
+        &.gfield {
+          padding: 0 !important;
+          margin: 0;
+          width: 100%;
+          position: relative;
+
+          .ginput_container {
+            margin-top: 12px;
+
+            &.ginput_complex {
+              width: 100% !important;
+            }
+          }
+
+          textarea,
+          input {
+            width: 100%;
+          }
+
+          label {
+            position: absolute;
+            left: -9999px;
+          }
+
+          .ginput_complex {
+            &.ginput_container_name {
+              > span {
+                display: block;
+                width: 100%;
+                padding: 0 0 10px 0;
+                margin: 0;
+
+                &:last-child {
+                  padding-bottom: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

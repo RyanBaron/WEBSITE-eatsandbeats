@@ -1,0 +1,156 @@
+section.container-ignore {
+  > .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+.mw-30px {
+  max-width: 30px !important;
+}
+
+.mw-45px {
+  max-width: 45px !important;
+}
+
+.mw-60px {
+  max-width: 60px !important;
+}
+
+.mw-75px {
+  max-width: 75px !important;
+}
+
+.mw-100px {
+  max-width: 100px !important;
+}
+
+.mw-150px {
+  max-width: 150px !important;
+}
+
+.mw-200px {
+  max-width: 200px !important;
+}
+
+.mw-250px {
+  max-width: 250px !important;
+}
+
+.mw-300px {
+  max-width: 300px !important;
+}
+
+.mw-350px {
+  max-width: 350px !important;
+}
+
+.mw-400px {
+  max-width: 400px !important;
+}
+
+.mw-450px {
+  max-width: 450px !important;
+}
+
+.mw-500px {
+  max-width: 500px !important;
+}
+
+.mw-550px {
+  max-width: 550px !important;
+}
+
+.mw-600px {
+  max-width: 600px !important;
+}
+
+.wrap-container {
+  & > .wrap-container-inside {
+    width: 100%;
+    max-width: 3860px;
+    margin: 0 auto;
+  }
+}
+
+.wrap-site-footer {
+  & > .wrap-site-footer-inside {
+    width: 100%;
+    max-width: 2000px;
+    margin: 0 auto;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .wrap-container {
+    & > .wrap-container-inside {
+      // nothing;
+    }
+  }
+
+  .wrap-site-footer {
+    & > .wrap-site-footer-inside {
+      // nothing;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .wrap-container {
+    & > .wrap-container-inside {
+      // width: calc(100vw - 10vw);
+    }
+  }
+
+  .wrap-site-footer {
+    & > .wrap-site-footer-inside {
+      // width: calc(100vw - 10vw);
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .wrap-container {
+    & > .wrap-container-inside {
+      // nothing;
+    }
+  }
+
+  .wrap-site-footer {
+    & > .wrap-site-footer-inside {
+      // nothing;
+    }
+  }
+}
+
+@include media-breakpoint-up(xxl) {
+  .wrap-container {
+    & > .wrap-container-inside {
+      //padding-left: 3.5vw;
+      //padding-right: 3.5vw;
+      //width: calc(100vw - 16vw);
+    }
+  }
+
+  .wrap-site-footer {
+    & > .wrap-site-footer-inside {
+      //padding-left: 3.5vw;
+      //padding-right: 3.5vw;
+      //width: calc(100vw - 16vw);
+    }
+  }
+}
+
+@include media-breakpoint-up(xxxl) {
+  .wrap-container {
+    & > .wrap-container-inside {
+      // nothing;
+    }
+  }
+
+  .wrap-site-footer {
+    & > .wrap-site-footer-inside {
+      // nothing;
+    }
+  }
+}

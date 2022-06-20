@@ -1,0 +1,110 @@
+.container,
+.container-fluid {
+  &.lg-gutters {
+    padding-left: 15px;
+    padding-right: 15px;
+    overflow-x: hidden;
+
+    > .row {
+      margin-right: -20px;
+      margin-left: -20px;
+
+      > .col,
+      > [class*="col-"] {
+        padding-right: 20px;
+        padding-left: 20px;
+      }
+    }
+  }
+
+  &.xl-gutters {
+    padding-left: 15px;
+    padding-right: 15px;
+    overflow-x: hidden;
+
+    > .row {
+      margin-right: -25px;
+      margin-left: -25px;
+
+      > .col,
+      > [class*="col-"] {
+        padding-right: 25px;
+        padding-left: 25px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .container,
+  .container-fluid {
+    &.lg-gutters {
+      padding-left: 15px;
+      padding-right: 15px;
+
+      > .row {
+        margin-right: -25px;
+        margin-left: -25px;
+
+        > .col,
+        > [class*="col-"] {
+          padding-right: 25px;
+          padding-left: 25px;
+        }
+      }
+    }
+
+    &.xl-gutters {
+      padding-left: 15px;
+      padding-right: 15px;
+
+      > .row {
+        margin-right: -30px;
+        margin-left: -30px;
+
+        > .col,
+        > [class*="col-"] {
+          padding-right: 30px;
+          padding-left: 30px;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(xxl) {
+  .container,
+  .container-fluid {
+    &.lg-gutters {
+      padding-left: 15px;
+      padding-right: 15px;
+
+      > .row {
+        margin-right: -30px;
+        margin-left: -30px;
+
+        > .col,
+        > [class*="col-"] {
+          padding-right: 30px;
+          padding-left: 30px;
+        }
+      }
+    }
+
+    &.xl-gutters {
+      padding-left: 15px;
+      padding-right: 15px;
+
+      > .row {
+        margin-right: -40px;
+        margin-left: -40px;
+
+        > .col,
+        > [class*="col-"] {
+          padding-right: 40px;
+          padding-left: 40px;
+        }
+      }
+    }
+  }
+}

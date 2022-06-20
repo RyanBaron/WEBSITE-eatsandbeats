@@ -1,0 +1,39 @@
+.col {
+  &.col-copy {
+    .col-inside {
+      > * {
+        &:first-child {
+          margin-top: 0;
+          padding-top: 0;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+          padding-bottom: 0;
+        }
+      }
+    }
+
+    .text,
+    .text-col {
+      > p {
+        &:last-child {
+          margin-bottom: 0;
+          padding-bottom: 0;
+        }
+      }
+    }
+
+    &.text-center {
+      .quotes-wrapper {
+        .quote-details-wrapper {
+          justify-content: center !important;
+
+          .quote-cite {
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}

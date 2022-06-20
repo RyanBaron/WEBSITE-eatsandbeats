@@ -1,0 +1,86 @@
+.gated-form-row {
+  margin-top: -80px;
+
+  @include media-breakpoint-up(md) {
+    margin-top: -120px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-top: -180px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    margin-top: -200px;
+  }
+
+  .col-inside-gated-form {
+    @include dropshadow();
+  }
+}
+
+section.reveal-gated-form {
+  .gated-form-row {
+    animation-name: slideInForm;
+  }
+}
+
+.form-header-gated {
+  .superheadline {
+    text-transform: uppercase;
+  }
+}
+
+.gated-form-disabled {
+  display: none !important;
+}
+
+section.display-asset {
+  &.hide-if-asset {
+    display: none !important;
+  }
+
+  &.minimize-if-asset {
+    > .container {
+      > .row {
+        min-height: auto !important;
+      }
+    }
+  }
+
+  &.gated-section {
+    position: relative;
+
+    .gated-form-disabled {
+      display: block !important;
+      height: 0;
+      position: absolute;
+      top: 0;
+      overflow: hidden;
+
+      .gated-form-row {
+        margin-top: 0;
+      }
+    }
+
+    .superheadline {
+      text-transform: uppercase;
+    }
+  }
+}
+
+@keyframes slideInForm {
+  0% {
+    transform: translate(0, -1rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+
+  0% {
+    transform: translate(0, -1rem);
+    opacity: 0;
+  }
+}

@@ -1,0 +1,97 @@
+//@mixin btnBase($bg-color, $border-color, $text-color: #fff) {
+@mixin btnBase() {
+  display: inline-block;
+  position: relative;
+  height: 34px;
+  width: auto;
+  margin: 0;
+  padding: 0 13px;
+  line-height: 34px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  font-size: 13px;
+  font-family: "proxima-nova", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 3px;
+  //box-shadow: shadow();
+  transition: all 0.15s linear;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 100%;
+  vertical-align: middle;
+  background-color: color-bg("qc-white");
+  //border: solid 1px color-brand("light");
+  border: solid 1px transparent;
+  color: color-text("qc-dark");
+
+  &.btn-primary {
+    background-color: color-brand("primary");
+    border: solid 1px color-brand("primary");
+    color: color-text("qc-white");
+  }
+
+  &.btn-secondary {
+    background-color: color-bg("qc-white");
+    border: solid 1px color-brand("primary");
+    color: color-brand("primary");
+  }
+
+  &.btn-primary-advertise,
+  &.btn-primary-marketer {
+    background-color: color-brand("marketer");
+    border: solid 1px color-brand("marketer");
+    color: color-text("qc-white");
+  }
+
+  &.btn-secondary-advertise,
+  &.btn-secondary-marketer {
+    background-color: color-bg("qc-white");
+    border: solid 1px color-brand("marketer");
+    color: color-brand("marketer");
+  }
+
+  &.btn-primary-publisher {
+    background-color: color-brand("publisher");
+    border: solid 1px color-brand("publisher");
+    color: color-text("qc-white");
+  }
+
+  &.btn-secondary-publisher {
+    background-color: color-bg("qc-white");
+    border: solid 1px color-brand("publisher");
+    color: color-brand("publisher");
+  }
+
+  &.btn-primary-privacy {
+    background-color: color-brand("privacy");
+    border: solid 1px color-brand("privacy");
+    color: color-text("qc-white");
+  }
+
+  &.btn-secondary-privacy {
+    background-color: color-bg("qc-white");
+    border: solid 1px color-brand("privacy");
+    color: color-brand("privacy");
+  }
+
+  &:hover {
+    box-shadow: shadow("hover");
+  }
+
+  &:active,
+  &:focus {
+    outline: none !important;
+  }
+
+  &.mktoButton {
+    &[type=submit] {
+      background-color: color-brand("primary");
+      border: solid 1px color-brand("primary");
+      color: color-text("qc-white");
+    }
+  }
+}

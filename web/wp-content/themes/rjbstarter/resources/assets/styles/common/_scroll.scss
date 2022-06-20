@@ -1,0 +1,75 @@
+body {
+  transition: all 0.1s linear;
+
+  &.scroll {
+    .banner {
+      a {
+        &.brand {
+          img {
+            //max-width: 120px;
+            //max-height: 36px;
+          }
+        }
+      }
+
+      .wrap-container {
+        .wrap-container-inside {
+          box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+          background-color: rgba(255, 255, 255, 0.975);
+          border-top: 5px solid theme-color("primary");
+
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 2px;
+            background-color: theme-color("medium");
+          }
+
+          &::after {
+            display: none !important;
+          }
+        }
+      }
+
+      li {
+        &.menu-btn-item {
+          a {
+            color: theme-color("lighter");
+          }
+        }
+
+        &.nav-btn-outline {
+          a {
+            background-color: theme-color("primary");
+            color: theme-color("lighter") !important;
+            border-color: theme-color("primary");
+
+            &:hover,
+            &:active,
+            &:focus {
+              color: theme-color("light") !important;
+              background-color: theme-color("primary");
+              border-color: theme-color("primary");
+
+              @include dropshadowLight();
+            }
+          }
+        }
+      }
+
+      .navbar {
+        .nav-banner {
+          .dropdown-toggle {
+            &::after {
+              content: url("../images/chevron-down-light.svg");
+            }
+          }
+        }
+      }
+    }
+  }
+}

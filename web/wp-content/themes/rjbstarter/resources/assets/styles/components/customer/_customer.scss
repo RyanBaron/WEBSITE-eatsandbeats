@@ -1,0 +1,25 @@
+body {
+  &.customer {
+    //padding-top: 100px;
+
+    @include media-breakpoint-up(lg) {
+      //padding-top: 170px;
+    }
+
+    .entry-summary {
+      line-height: 1.5;
+    }
+
+    .blog-feature-content {
+      // blog index/category top featured sections
+    }
+
+    .blog-feed-content {
+      // blog index/category bottom feed section
+
+      //.col-articles {
+      // col articles
+      //}
+    }
+  }
+}

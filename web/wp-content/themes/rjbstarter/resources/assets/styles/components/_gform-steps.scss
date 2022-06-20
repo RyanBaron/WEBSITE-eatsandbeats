@@ -1,0 +1,28 @@
+form {
+  .gf_page_steps {
+    display: flex;
+
+    .gf_step {
+      flex: 1;
+      padding: 0.5rem;
+      margin: 0;
+      height: auto;
+
+      span {
+        display: block;
+
+        &.gf_step_number {
+          text-align: center;
+          width: 2rem;
+          height: 2rem;
+          line-height: 2rem;
+          background-color: theme-color("secondary");
+          border-radius: 100%;
+          color: #fff;
+          font-size: 1rem;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

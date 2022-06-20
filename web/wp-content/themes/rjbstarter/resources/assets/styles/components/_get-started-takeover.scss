@@ -1,0 +1,157 @@
+.page-takeover {
+  .gform_wrapper ul.gform_fields li.gfield label {
+    position: relative !important;
+    left: 0 !important;
+    top: 0 !important;
+  }
+
+  .gform_heading {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    .gform_title {
+      font-size: 2rem;
+    }
+  }
+}
+
+.get-started-takeover {
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  width: 100%;
+  z-index: -1;
+  transition: all 0.2s linear;
+  background-color: theme-color("light");
+
+  .card-wrapper-link {
+    @include dropContentButtonLight();
+
+    &:active,
+    &:focus,
+    &:hover {
+      @include dropContentButtonLightHover();
+    }
+  }
+
+  .container-main-content {
+    align-self: flex-end;
+  }
+
+  .footer-title {
+    text-transform: uppercase;
+  }
+
+  .page-takeover-inside,
+  .contact-takover-inside {
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  .close {
+    font-size: 2.5rem;
+    color: link-color("dark");
+    opacity: 0.9;
+  }
+
+  .footer-takover {
+    align-self: flex-end;
+    border-top: 1px solid theme-color("medium");
+    font-size: 13px;
+    //color: text-color("light");
+
+    .nav-social {
+      justify-content: flex-end;
+
+      .social-icon-link {
+        font-size: 1.1rem;
+        margin: 0 0.75rem;
+        //color: text-color("text-white");
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  &.bg-dark,
+  &.bg-darker {
+    a {
+      color: text-color("lighter");
+
+      &.close {
+        color: text-color("text-white");
+      }
+    }
+
+    .footer-takover {
+      color: text-color("lighter");
+    }
+
+    .takeover-copy {
+      a {
+        color: text-color("text-white");
+
+        &:hover {
+          color: text-color("lighter");
+        }
+      }
+    }
+  }
+
+  .card {
+    .headline {
+      .subheadline {
+        font-size: 15px;
+      }
+    }
+
+    .link {
+      font-family: font-main("headline"), font-fallback("sans-serif");
+      font-size: 13px;
+    }
+
+    .content {
+      color: theme-color("text-light");
+    }
+
+    .card-body h5.headline {
+      margin-bottom: 0.3rem;
+    }
+
+    .btn {
+      padding: 0.25rem 0.75rem;
+      margin-right: 15px;
+    }
+  }
+
+  .col-card .col-inside-icon-pos-left .card .card-body .icon-wrapper {
+    top: 0.3rem !important;
+
+    svg,
+    i {
+      color: theme-color("text-light");
+    }
+  }
+}
+
+body {
+  &.get-started-takeover {
+    overflow: hidden;
+
+    .action-plan-takeover,
+    .get-started-takeover-v1 {
+      display: block;
+      position: fixed;
+      top: 0;
+      height: 100vh;
+      z-index: 9999;
+    }
+  }
+}

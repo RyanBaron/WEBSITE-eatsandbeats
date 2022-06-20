@@ -1,0 +1,272 @@
+.form-disabled {
+  display: block !important;
+  height: 0;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+
+  .form-row {
+    margin-top: 0;
+  }
+}
+
+.text-thankyou {
+  & + .buttons {
+    margin-top: 1rem;
+  }
+}
+
+.mktoButtonRow {
+  margin: 0.5rem 0;
+  padding: 0.5rem 0;
+
+  input,
+  button {
+    &[type=submit] {
+      @include btnBase();
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+.col-form {
+  > .col-inside {
+    padding: 2rem;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+    border: 1px solid #e8e9ea;
+  }
+}
+
+.mktoFormRow {
+  float: none;
+  clear: none;
+
+  // Remove/overwrite some default maketo display on form items.
+  .mktoFormRow,
+  .mktoFieldDescriptor,
+  .mktoFormCol {
+    float: none;
+    clear: none;
+  }
+
+  // Default input styling.
+  input {
+    width: 100%;
+    border-radius: 0;
+    border-color: transparent;
+    border-bottom-color: border-color("form-gray");
+    background-color: transparent;
+
+    &[type=checkbox] {
+      max-width: 12px;
+    }
+    //&[type=radio]{
+    //  max-width: 12px;
+    //}
+  }
+
+  //////
+  // Basic Marketo Form Field Styling
+  //////
+  textarea,
+  input[type=email],
+  input[type=tel],
+  input[type=text] {
+    font-size: 14px;
+    font-family: "proxima-nova", "Helvetica Neue", Arial, Verdana, sans-serif;
+    color: #212934;
+    border-radius: 0;
+    height: 36px;
+    padding: 2px 10px 0 2px;
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid transparent;
+    border-bottom-color: border-color("form-gray");
+    transition: 250ms box-shadow;
+    background-color: transparent;
+
+    &:focus {
+      outline: 0;
+      border-bottom-color: #206dc5;
+      box-shadow: 0 0 4px 0 rgba(53, 170, 216, 0.9);
+      box-shadow: none;
+    }
+  }
+
+  // Default checkbox list styling.
+  .mktoCheckboxList {
+    input,
+    label {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 5px;
+      cursor: pointer;
+    }
+
+    input {
+      opacity: 0;
+      position: absolute;
+    }
+
+    label {
+      position: relative;
+      left: 0;
+    }
+
+    & > label {
+      margin-left: 0;
+    }
+  }
+
+  // Remove/overwrite some marketo display items from forms.
+  .mktoClear,
+  .mktoOffset {
+    display: none;
+  }
+
+  // Remove/overwrite some default maketo display on form items.
+  .mktoFieldDescriptor {
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
+
+  // Default marketo form error.
+  .mktoErrorMsg {
+    font-size: 0.85rem;
+    padding: 0;
+    line-height: 1.2;
+    margin: 4px 0 0 4px;
+    width: 100%;
+    max-width: 90%;
+  }
+
+  .mktoError {
+    width: 100%;
+  }
+
+  .mktoField {
+    &.mktoInvalid {
+      border-color: transparent;
+      border-bottom-color: red;
+    }
+  }
+
+  .mktoFieldWrap {
+    min-height: 58px; // !!! this is very F2PF to change and needs to be made more dynamic.
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    //flex-direction: column;
+
+    label {
+      position: absolute;
+      left: -9999px;
+
+      &.mktoLabel {
+        &[for=expressConsent] {
+          left: 0;
+          position: relative;
+          order: 2;
+          width: calc(100% - 25px) !important;
+          flex: 1 1 calc(100% - 25px) !important;
+          padding: 0;
+          margin: 0;
+          line-height: 1.35;
+          font-size: 0.9rem;
+
+          a {
+            color: color-text("link") !important;
+
+            &:hover,
+            &:active,
+            &:focus {
+              color: color-text("link-hover") !important;
+            }
+          }
+
+          & + .mktoGutter {
+            order: 10;
+
+            & + .mktoCheckboxList {
+              order: 1;
+              float: none;
+              width: 25px !important;
+              flex: 1 1 25px !important;
+              padding: 0;
+              margin: 0;
+
+              input {
+                opacity: 1;
+                position: relative;
+                margin: 5px 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //////
+  // The person_notes texarea field.
+  //////
+  &.mktopersonnotes_textarea_row {
+    margin-bottom: 1rem;
+  }
+}
+
+form {
+  &.mktoForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+
+    // Direct decendant .mktoFormRow items
+    > .mktoFormRow {
+      width: 100%;
+      display: flex;
+      padding: 0;
+      margin: 0;
+
+      &:first-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+    }
+
+    // Add any specific styles for the contact sales form.
+    //&.contact-sales {
+    // nothing.
+    //}
+    &.form-md-two-col {
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      .mktoForm,
+      form {
+        clear: both;
+
+        &::after {
+          content: "";
+          clear: both;
+        }
+      }
+
+      @include media-breakpoint-up(md) {
+        > .mktoFormRow {
+          flex: 0 0 50%;
+          width: 50%;
+          padding: 0;
+          margin: 0;
+        }
+      }
+    }
+  }
+}

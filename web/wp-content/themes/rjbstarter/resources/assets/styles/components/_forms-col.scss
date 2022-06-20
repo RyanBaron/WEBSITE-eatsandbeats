@@ -1,0 +1,427 @@
+.col-form {
+  > .col-inside {
+    padding: 2rem;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+    border: 1px solid #e8e9ea;
+
+    &.form-col-dark-trans-p-1 {
+      background: rgba(theme-color("darker"), 0.8);
+      padding: 1rem;
+      border: none;
+
+      .form-header {
+        color: theme-color("theme-white");
+
+        .headline {
+          color: theme-color("theme-white");
+
+          .superheadline {
+            color: theme-color("lighter");
+          }
+
+          .subheadline {
+            color: theme-color("lighter");
+          }
+        }
+      }
+    }
+
+    &.form-col-dark-trans-p-2 {
+      background: rgba(theme-color("darker"), 0.8);
+      padding: 2rem;
+      border: none;
+
+      .form-header {
+        color: theme-color("theme-white");
+
+        .headline {
+          color: theme-color("theme-white");
+
+          .superheadline {
+            color: theme-color("lighter");
+          }
+
+          .subheadline {
+            color: theme-color("lighter");
+          }
+        }
+      }
+    }
+
+    &.form-col-flat-dark-trans-p-1 {
+      box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+      background: rgba(theme-color("darker"), 0.8);
+      padding: 1rem;
+      border: none;
+
+      .form-header {
+        color: theme-color("theme-white");
+
+        .headline {
+          color: theme-color("theme-white");
+
+          .superheadline {
+            color: theme-color("lighter");
+          }
+
+          .subheadline {
+            color: theme-color("lighter");
+          }
+        }
+      }
+    }
+
+    &.form-col-flat-dark-trans-p-2 {
+      box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+      background: rgba(theme-color("darker"), 0.8);
+      padding: 2rem;
+      border: none;
+
+      .form-header {
+        color: theme-color("theme-white");
+
+        .headline {
+          color: theme-color("theme-white");
+
+          .superheadline {
+            color: theme-color("lighter");
+          }
+
+          .subheadline {
+            color: theme-color("lighter");
+          }
+        }
+      }
+    }
+
+    &.form-col-dropshadow-p-1 {
+      box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+      background: theme-color("theme-white");
+      padding: 1rem;
+
+      .form-header {
+        color: theme-color("darker");
+
+        .headline {
+          color: theme-color("darker");
+
+          .superheadline {
+            color: theme-color("dark");
+          }
+
+          .subheadline {
+            color: theme-color("medium");
+          }
+        }
+      }
+    }
+
+    &.form-col-dropshadow-p-2 {
+      box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+      background: theme-color("theme-white");
+      padding: 2rem;
+
+      .form-header {
+        color: theme-color("darker");
+
+        .headline {
+          color: theme-color("darker");
+
+          .superheadline {
+            color: theme-color("dark");
+          }
+
+          .subheadline {
+            color: theme-color("medium");
+          }
+        }
+      }
+    }
+
+    &.form-col-flat-white-p-1 {
+      box-shadow: none;
+      padding: 1rem;
+      border: none;
+      background: theme-color("theme-white");
+
+      .form-header {
+        color: theme-color("darker");
+
+        .headline {
+          color: theme-color("darker");
+
+          .superheadline {
+            color: theme-color("dark");
+          }
+
+          .subheadline {
+            color: theme-color("medium");
+          }
+        }
+      }
+    }
+
+    &.form-col-flat-white-p-2 {
+      box-shadow: none;
+      padding: 2rem;
+      border: none;
+      background: theme-color("theme-white");
+
+      .form-header {
+        color: theme-color("darker");
+
+        .headline {
+          color: theme-color("darker");
+
+          .superheadline {
+            color: theme-color("dark");
+          }
+
+          .subheadline {
+            color: theme-color("medium");
+          }
+        }
+      }
+    }
+
+    &.form-col-flat-lighter-p-1 {
+      box-shadow: none;
+      padding: 1rem;
+      border: none;
+      background: theme-color("theme-lighter");
+
+      .form-header {
+        color: theme-color("darker");
+
+        .headline {
+          color: theme-color("darker");
+
+          .superheadline {
+            color: theme-color("dark");
+          }
+
+          .subheadline {
+            color: theme-color("medium");
+          }
+        }
+      }
+    }
+
+    &.form-col-flat-lighter-p-2 {
+      box-shadow: none;
+      padding: 2rem;
+      border: none;
+      background: theme-color("theme-lighter");
+
+      .form-header {
+        color: theme-color("darker");
+
+        .headline {
+          color: theme-color("darker");
+
+          .superheadline {
+            color: theme-color("dark");
+          }
+
+          .subheadline {
+            color: theme-color("medium");
+          }
+        }
+      }
+    }
+
+    &.form-col-flat-none {
+      box-shadow: none;
+      border: none;
+      padding: 0;
+      background: transparent;
+
+      .col-inside-col-form {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+    }
+
+    &.form-col-flat-none-p-1 {
+      box-shadow: none;
+      border: none;
+      padding: 1rem;
+      background: transparent;
+
+      .col-inside-col-form {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+    }
+
+    &.form-col-flat-none-p-2 {
+      box-shadow: none;
+      border: none;
+      padding: 2rem;
+      background: transparent;
+
+      .col-inside-col-form {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+    }
+
+    &.form-col-white-b-light-p-1 {
+      box-shadow: none;
+      border: 1px solid #e8e9ea;
+      padding: 1rem;
+      background: theme-color("theme-white");
+
+      .form-header {
+        color: theme-color("darker");
+
+        .headline {
+          color: theme-color("darker");
+
+          .superheadline {
+            color: theme-color("dark");
+          }
+
+          .subheadline {
+            color: theme-color("medium");
+          }
+        }
+      }
+    }
+
+    &.form-col-white-b-light-p-2 {
+      box-shadow: none;
+      border: 1px solid #e8e9ea;
+      padding: 2rem;
+      background: theme-color("theme-white");
+
+      .form-header {
+        color: theme-color("darker");
+
+        .headline {
+          color: theme-color("darker");
+
+          .superheadline {
+            color: theme-color("dark");
+          }
+
+          .subheadline {
+            color: theme-color("medium");
+          }
+        }
+      }
+    }
+
+    &.form-col-lighter-p-1 {
+      box-shadow: none;
+      //border: 1px solid #e8e9ea;
+      padding: 1rem;
+      background: theme-color("lighter");
+
+      .form-header {
+        color: theme-color("darker");
+
+        .headline {
+          color: theme-color("darker");
+
+          .superheadline {
+            color: theme-color("dark");
+          }
+
+          .subheadline {
+            color: theme-color("medium");
+          }
+        }
+      }
+    }
+
+    &.form-col-lighter-p-2 {
+      box-shadow: none;
+      //border: 1px solid #e8e9ea;
+      padding: 2rem;
+      background: theme-color("lighter");
+
+      .form-header {
+        color: theme-color("darker");
+
+        .headline {
+          color: theme-color("darker");
+
+          .superheadline {
+            color: theme-color("dark");
+          }
+
+          .subheadline {
+            color: theme-color("medium");
+          }
+        }
+      }
+    }
+  }
+
+  .hl-sm {
+    h1 {
+      font-size: 1.85rem;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+    }
+
+    h3 {
+      font-size: 1.65rem;
+    }
+
+    h4 {
+      font-size: 1.5rem;
+    }
+
+    h5 {
+      font-size: 1.4rem;
+    }
+  }
+
+  .hl-md {
+    h1 {
+      font-size: 1.95rem;
+    }
+
+    h2 {
+      font-size: 1.85rem;
+    }
+
+    h3 {
+      font-size: 1.75rem;
+    }
+
+    h4 {
+      font-size: 1.5rem;
+    }
+
+    h5 {
+      font-size: 1.25rem;
+    }
+  }
+
+  .hl-lg {
+    h1 {
+      font-size: 2.1rem;
+    }
+
+    h2 {
+      font-size: 1.95rem;
+    }
+
+    h3 {
+      font-size: 1.85rem;
+    }
+
+    h4 {
+      font-size: 1.75rem;
+    }
+
+    h5 {
+      font-size: 1.5rem;
+    }
+  }
+}

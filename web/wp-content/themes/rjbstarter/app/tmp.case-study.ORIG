@@ -1,0 +1,190 @@
+<?php
+/**
+ * Initialize custom tab block.
+ */
+add_action('init', function() {
+  // ** flush_rewrite_rules is for testing only (do not add to production) **
+  flush_rewrite_rules();
+
+  // set the post type labels
+  $labels = array(
+    'name' => _x('Case Studies', 'sage'),
+    'singular_name' => _x('Case Study', 'sage'),
+    'add_new' => _x('Add New Case Study', 'sage'),
+    'add_new_item' => __('Add New Case Study', 'sage'),
+    'edit_item' => __('Edit Case Study', 'sage'),
+    'new_item' => __('New Case Study', 'sage'),
+    'view_item' => __('View Case Study', 'sage'),
+    'search_items' => __('Search Case Studies', 'sage'),
+    'not_found' =>  __('Nothing found', 'sage'),
+    'not_found_in_trash' => __('Nothing found in Trash', 'sage'),
+    'parent_item_colon' => ''
+  );
+
+  // set the post type arguments
+  $args = array(
+    'labels' => $labels,
+    'public' => true,
+    'publicly_queryable' => true,
+    'exclude_from_search' => false,
+    'show_ui' => true,
+    'query_var' => true,
+    'has_archive' => 'customers',
+    'has_archive' => 'case-studies',
+    'taxonomies' => array('customer', 'customer-category', 'category'),
+    //'taxonomies' => array('customer', 'customer-category'),
+		"map_meta_cap"        => true,
+		"hierarchical"        => false,
+    'rewrite' => array(
+      //'slug' => 'case-studies/%customer-category%',
+      'slug' => 'case-studies',
+      //'slug' => 'case-studies/%customer-category%',
+      //'slug' => 'case-studies',
+      'with_front' => false,
+    ),
+    'show_in_menu' => true,
+    'capability_type' => 'post',
+    //'hierarchical' => true,
+    'show_in_rest' => true,
+    'supports' => array('title', 'editor', 'excerpt', 'thumbnail', 'revisions')
+  );
+
+  // register the dispaly page section post type
+  register_post_type( 'customer', $args );
+
+  /////
+  //https://wordpress.stackexchange.com/questions/275825/display-custom-post-type-taxonomies-as-an-archive-page
+	//https://react2wp.com/using-same-slug-for-custom-post-type-and-custom-taxonomy/
+  /////
+
+	$labels = array(
+		"name"          => __( 'Customer Categories', 'sage' ),
+		"singular_name" => __( 'Customer Category', 'sage' ),
+	);
+  register_taxonomy(
+    'customer-category',
+    array('customer'),
+    array(
+      'label' => __( 'Customer Categories' ),
+			'labels'             => $labels,
+      'rewrite' => array(
+        'slug' => 'customers',
+        //'slug' => '/case-studies',
+        //'slug' => '/case-studies',
+        'with_front' => false,
+      ),
+      'hierarchical' => true,
+      //'has_archive' => 'case-studies',
+      'show_in_rest' => true,
+      'show_admin_column' => true,
+      'default_term' => array(
+        'name' => 'Uncategorized',
+        'slug' => 'uncategorized',
+      ),
+			"show_ui"            => true,
+			"show_in_menu"       => true,
+			"show_in_nav_menus"  => true,
+			"query_var"          => true,
+    )
+  );
+});
+
+
+
+add_filter('post_type_link', function( $post_link, $post ) {
+	if ( false !== strpos( $post_link, '%customer-category%' ) ) {
+			$taxonomy_terms = get_the_terms( $post->ID, 'customer-category' );
+			if( is_array( $taxonomy_terms ) ) {
+				foreach ( $taxonomy_terms as $term ) {
+						if ( ! $term->parent ) {
+								$post_link = str_replace( '%customer-category%', $term->slug, $post_link );
+								$post_link = str_replace( '%customer-category%', $term->slug, $post_link );
+						}
+				}
+			}
+			else {
+				$post_link = str_replace( '/%customer-category%', '', $post_link );
+			}
+
+	}
+	return $post_link;
+}, 10, 2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// https://woorkup.com/wordpress-custom-post-type/
+
+
+
+// rewrite urls
+//function taxonomy_slug_rewrite($wp_rewrite) {
+
+//}
+add_filter( 'generate_rewrite_rules', function($wp_rewrite){
+	// https://gist.github.com/fomigo/a52866c6ef4dd2c81d1d
+
+	$rules = array();
+
+	$taxonomies = get_taxonomies(
+			array('_builtin' => false),
+			'objects'
+	);
+
+	$post_types = get_post_types(
+			array('public' => true, '_builtin' => false),
+			'names'
+	);
+
+	foreach ($post_types as $post_type) {
+		foreach ($taxonomies as $taxonomy) {
+
+			if ($taxonomy->object_type[0] != $post_type) continue;
+
+			$categories = get_categories(array(
+					'type' => $post_type,
+					'taxonomy' => $taxonomy->name,
+					'hide_empty' => 0
+			));
+
+			foreach ($categories as $category) {
+					$rules[$post_type . '/' . $category->slug . '/?$'] =
+							'index.php?' . $category->taxonomy . '=' . $category->slug;
+							echo "<br><br>";
+							print_r($post_type . '/' . $category->slug . '/?$');
+							echo "<br><br>";
+							print_r($rules[$post_type . '/' . $category->slug . '/?$']);
+			}
+		} // taxonomies
+	} // post_types
+
+
+
+	print_r($wp_rewrite->rules);
+	$wp_rewrite->rules = $rules + $wp_rewrite->rules;
+}, 10, 1 );

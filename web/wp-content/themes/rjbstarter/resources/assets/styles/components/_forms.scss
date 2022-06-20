@@ -1,0 +1,54 @@
+/** Search form */
+.search-form {
+  @extend .form-inline;
+}
+
+.search-form label {
+  @extend .form-group;
+
+  font-weight: normal;
+}
+
+.search-form .search-field {
+  @extend .form-control;
+}
+
+.search-form .search-submit {
+  @extend .btn;
+  @extend .btn-secondary;
+}
+
+.form-btn-left {
+  .gform_footer {
+    text-align: left !important;
+  }
+}
+
+.form-btn-center {
+  .gform_footer {
+    text-align: center !important;
+  }
+}
+
+.form-btn-right {
+  .gform_footer {
+    text-align: right !important;
+  }
+}
+
+.form-btn-lg {
+  .gform_footer {
+    button {
+      &.btn {
+        line-height: 34px !important;
+        height: 50px !important;
+        padding: 8px 40px !important;
+        font-size: 0.9rem !important;
+      }
+    }
+  }
+}
+
+.gform_previous_button {
+  opacity: 0.85;
+}

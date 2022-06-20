@@ -1,0 +1,387 @@
+/////
+// BG Top Fade
+//////
+.bg-top-fade-to-primary-25,
+.bg-top-fade-to-primary-50,
+.bg-top-fade-to-primary-75 {
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 100%;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(theme-color("primary"), 0), rgba(theme-color("primary"), 0.5) 40%, rgba(theme-color("primary"), 1) 98%);
+  }
+
+  .container {
+    z-index: 1;
+    position: relative;
+  }
+}
+
+.bg-top-fade-to-secondary-25,
+.bg-top-fade-to-secondary-50,
+.bg-top-fade-to-secondary-75 {
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 100%;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(theme-color("primary"), 0), rgba(theme-color("primary"), 0.5) 40%, rgba(theme-color("primary"), 1) 98%);
+  }
+
+  .container {
+    z-index: 1;
+    position: relative;
+  }
+}
+
+.bg-top-fade-to-white-25,
+.bg-top-fade-to-white-50,
+.bg-top-fade-to-white-75 {
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 100%;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 40%, rgba(255, 255, 255, 1) 98%);
+  }
+
+  .container {
+    z-index: 1;
+    position: relative;
+  }
+}
+
+.bg-top-fade-to-light-25,
+.bg-top-fade-to-light-50,
+.bg-top-fade-to-light-75 {
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 100%;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(theme-color("light"), 0), rgba(theme-color("light"), 0.5) 40%, rgba(theme-color("light"), 1) 98%);
+  }
+
+  .container {
+    z-index: 1;
+    position: relative;
+  }
+}
+
+.bg-top-fade-to-lighter-25,
+.bg-top-fade-to-lighter-50,
+.bg-top-fade-to-lighter-75 {
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 100%;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(theme-color("lighter"), 0), rgba(theme-color("lighter"), 0.5) 40%, rgba(theme-color("lighter"), 1) 98%);
+  }
+
+  .container {
+    z-index: 1;
+    position: relative;
+  }
+}
+
+.bg-top-fade-to-dark-25,
+.bg-top-fade-to-dark-50,
+.bg-top-fade-to-dark-75 {
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 100%;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(theme-color("dark"), 0), rgba(theme-color("dark"), 0.5) 40%, rgba(theme-color("dark"), 1) 98%);
+  }
+
+  .container {
+    z-index: 1;
+    position: relative;
+  }
+}
+
+.bg-top-fade-to-darker-25,
+.bg-top-fade-to-darker-50,
+.bg-top-fade-to-darker-75 {
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 100%;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(theme-color("darker"), 0), rgba(theme-color("darker"), 0.5) 40%, rgba(theme-color("darker"), 1) 98%);
+  }
+
+  .container {
+    z-index: 1;
+    position: relative;
+  }
+}
+
+//////
+// BG Bottom Fade
+//////
+.bg-bottom-fade-to-primary-25,
+.bg-bottom-fade-to-primary-50,
+.bg-bottom-fade-to-primary-75 {
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 100%;
+    z-index: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, rgba(theme-color(primary), 0), rgba(theme-color(primary), 0.5) 40%, rgba(theme-color(primary), 1) 98%);
+  }
+
+  .container {
+    z-index: 1;
+    position: relative;
+  }
+}
+
+.bg-bottom-fade-to-secondary-25,
+.bg-bottom-fade-to-secondary-50,
+.bg-bottom-fade-to-secondary-75 {
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 100%;
+    z-index: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, rgba(theme-color(secondary), 0), rgba(theme-color(secondary), 0.5) 40%, rgba(theme-color(secondary), 1) 98%);
+  }
+
+  .container {
+    z-index: 1;
+    position: relative;
+  }
+}
+
+.bg-bottom-fade-to-white-25,
+.bg-bottom-fade-to-white-50,
+.bg-bottom-fade-to-white-75 {
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 100%;
+    z-index: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 40%, rgba(255, 255, 255, 1) 98%);
+  }
+
+  .container {
+    z-index: 1;
+    position: relative;
+  }
+}
+
+.bg-bottom-fade-to-light-25,
+.bg-bottom-fade-to-light-50,
+.bg-bottom-fade-to-light-75 {
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 100%;
+    z-index: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, rgba(theme-color("light"), 0), rgba(theme-color("light"), 0.5) 40%, rgba(theme-color("light"), 1) 98%);
+  }
+
+  .container {
+    z-index: 1;
+    position: relative;
+  }
+}
+
+.bg-bottom-fade-to-lighter-25,
+.bg-bottom-fade-to-lighter-50,
+.bg-bottom-fade-to-lighter-75 {
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 100%;
+    z-index: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, rgba(theme-color("lighter"), 0), rgba(theme-color("lighter"), 0.5) 40%, rgba(theme-color("lighter"), 1) 98%);
+  }
+
+  .container {
+    z-index: 1;
+    position: relative;
+  }
+}
+
+.bg-bottom-fade-to-dark-25,
+.bg-bottom-fade-to-dark-50,
+.bg-bottom-fade-to-dark-75 {
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 100%;
+    z-index: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, rgba(theme-color("dark"), 0), rgba(theme-color("dark"), 0.5) 40%, rgba(theme-color("dark"), 1) 98%);
+  }
+
+  .container {
+    z-index: 1;
+    position: relative;
+  }
+}
+
+.bg-bottom-fade-to-darker-25,
+.bg-bottom-fade-to-darker-50,
+.bg-bottom-fade-to-darker-75 {
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 100%;
+    z-index: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, rgba(theme-color("darker"), 0), rgba(theme-color("darker"), 0.5) 40%, rgba(theme-color("darker"), 1) 98%);
+  }
+
+  .container {
+    z-index: 1;
+    position: relative;
+  }
+}
+
+* {
+  &.bg-bottom-fade-to-primary-25,
+  &.bg-bottom-fade-to-secondary-25,
+  &.bg-bottom-fade-to-darker-25,
+  &.bg-bottom-fade-to-dark-25,
+  &.bg-bottom-fade-to-lighter-25,
+  &.bg-bottom-fade-to-light-25,
+  &.bg-bottom-fade-to-white-25 {
+    &::after {
+      height: 25%;
+    }
+  }
+
+  &.bg-top-fade-to-primary-25,
+  &.bg-top-fade-to-secondary-25,
+  &.bg-top-fade-to-darker-25,
+  &.bg-top-fade-to-dark-25,
+  &.bg-top-fade-to-lighter-25,
+  &.bg-top-fade-to-light-25,
+  &.bg-top-fade-to-white-25 {
+    &::before {
+      height: 25%;
+    }
+  }
+
+  &.bg-bottom-fade-to-primary-50,
+  &.bg-bottom-fade-to-secondary-50,
+  &.bg-bottom-fade-to-darker-50,
+  &.bg-bottom-fade-to-dark-50,
+  &.bg-bottom-fade-to-lighter-50,
+  &.bg-bottom-fade-to-light-50,
+  &.bg-bottom-fade-to-white-50 {
+    &::after {
+      height: 50%;
+    }
+  }
+
+  &.bg-top-fade-to-primary-50,
+  &.bg-top-fade-to-secondary-50,
+  &.bg-top-fade-to-darker-50,
+  &.bg-top-fade-to-dark-50,
+  &.bg-top-fade-to-lighter-50,
+  &.bg-top-fade-to-light-50,
+  &.bg-top-fade-to-white-50 {
+    &::before {
+      height: 50%;
+    }
+  }
+
+  &.bg-bottom-fade-to-primary-75,
+  &.bg-bottom-fade-to-secondary-75,
+  &.bg-bottom-fade-to-darker-75,
+  &.bg-bottom-fade-to-dark-75,
+  &.bg-bottom-fade-to-lighter-75,
+  &.bg-bottom-fade-to-light-75,
+  &.bg-bottom-fade-to-white-75 {
+    &::after {
+      height: 75%;
+    }
+  }
+
+  &.bg-top-fade-to-primary-75,
+  &.bg-top-fade-to-secondary-75,
+  &.bg-top-fade-to-darker-75,
+  &.bg-top-fade-to-dark-75,
+  &.bg-top-fade-to-lighter-75,
+  &.bg-top-fade-to-light-75,
+  &.bg-top-fade-to-white-75 {
+    &::before {
+      height: 75%;
+    }
+  }
+}

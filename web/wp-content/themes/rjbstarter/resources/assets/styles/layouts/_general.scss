@@ -1,0 +1,56 @@
+html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  //font-smoothing: antialiased;
+  font-weight: 400;
+}
+
+.page-takeover,
+.contact-takover,
+.get-started-takeover {
+  height: 0;
+  //overflow: hidden;
+}
+
+body {
+  &.admin-bar {
+    .banner {
+      .fixed-top {
+        top: 46px;
+      }
+    }
+  }
+}
+
+main {
+  &.main {
+    margin-top: 0;
+    padding-bottom: 0;
+    overflow: hidden;
+    min-height: 50vh;
+
+    > section {
+      position: relative;
+    }
+  }
+}
+
+@media (min-width: 783px) {
+  body {
+    &.admin-bar {
+      .banner {
+        .fixed-top {
+          top: 32px;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  main {
+    &.main {
+      //margin-top: 76px;
+    }
+  }
+}

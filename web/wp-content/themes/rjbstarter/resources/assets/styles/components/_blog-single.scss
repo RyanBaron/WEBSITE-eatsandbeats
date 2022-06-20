@@ -1,0 +1,27 @@
+main {
+  &.main {
+    article {
+      &.post {
+        .entry-content {
+          a {
+            color: link-color("link-blue");
+
+            &[target="_blank"] {
+              &::after {
+                //content: "\f35d";
+              }
+            }
+
+            &:hover {
+              color: link-color("link-blue-hover");
+            }
+
+            &:focus {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}

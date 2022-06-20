@@ -1,0 +1,42 @@
+.banner {
+  &.banner-blog {
+    .wrap-container {
+      .wrap-container-inside {
+        background-color: bg-color("bg-white");
+      }
+    }
+
+    .navbar-primary-blog {
+      li {
+        a {
+          color: rgba(255, 255, 255, 0.8);
+        }
+      }
+    }
+
+    .navbar-category-blog {
+      li {
+        a {
+          //opacity: 0.8;
+        }
+      }
+    }
+
+    .blog-nav {
+      li {
+        a {
+          border-bottom: 3px solid transparent;
+          padding: 1.25rem 0.15rem;
+          margin: 0 1.5rem -1px 0;
+        }
+
+        &.current_page_item,
+        &.current-post-ancestor {
+          a {
+            border-bottom: 3px solid theme-color("primary");
+          }
+        }
+      }
+    }
+  }
+}

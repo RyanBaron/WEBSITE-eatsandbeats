@@ -1,0 +1,62 @@
+@include media-breakpoint-down(md) {
+  body {
+    &.expanded-nav {
+      .banner {
+        a {
+          &.brand {
+            img {
+              //max-width: 120px;
+              //max-height: 36px;
+            }
+          }
+        }
+
+        .nav-banner {
+          max-height: 60vh;
+          overflow-y: auto;
+        }
+
+        .wrap-container {
+          .wrap-container-inside {
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.975);
+          }
+        }
+
+        li {
+          &.nav-btn-outline {
+            a {
+              background-color: theme-color("primary");
+              color: theme-color("lighter") !important;
+              border-color: theme-color("primary");
+
+              &:hover,
+              &:active,
+              &:focus {
+                color: theme-color("light") !important;
+                background-color: theme-color("primary");
+                border-color: theme-color("primary");
+
+                @include dropshadowLight();
+              }
+            }
+          }
+        }
+
+        .fixed-top {
+          .logo-default {
+            display: none !important;
+          }
+
+          .logo-dark {
+            display: block !important;
+          }
+
+          .logo-light {
+            display: none !important;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,611 @@
+<?php
+/**
+ * Initialize custom tab block.
+ * https://www.ibenic.com/custom-wordpress-rewrite-rule-combine-taxonomy-post-type/
+ */
+add_action('init', function() {
+  // ** flush_rewrite_rules is for testing only (do not add to production) **
+  flush_rewrite_rules();
+
+	/*
+  // set the post type labels
+  $labels = array(
+    'name' => _x('Case Studies', 'sage'),
+    'singular_name' => _x('Case Study', 'sage'),
+    'add_new' => _x('Add New Case Study', 'sage'),
+    'add_new_item' => __('Add New Case Study', 'sage'),
+    'edit_item' => __('Edit Case Study', 'sage'),
+    'new_item' => __('New Case Study', 'sage'),
+    'view_item' => __('View Case Study', 'sage'),
+    'search_items' => __('Search Case Studies', 'sage'),
+    'not_found' =>  __('Nothing found', 'sage'),
+    'not_found_in_trash' => __('Nothing found in Trash', 'sage'),
+    'parent_item_colon' => ''
+  );
+
+  // set the post type arguments
+  $args = array(
+    'labels' => $labels,
+		'taxonomies' => array('customer-category'),
+    'public' => true,
+    'publicly_queryable' => true,
+		'show_ui' => true,
+    'exclude_from_search' => false,
+    'query_var' => true,
+    //'has_archive' => 'customers',
+    'has_archive' => 'case-studies',
+    //'taxonomies' => array('customer', 'customer-category'),
+		//"map_meta_cap"        => true,
+		"hierarchical"        => false,
+    //'rewrite' => array(
+      //'slug' => 'case-studies/%customer-category%',
+      //'slug' => 'case-studies',
+      //'slug' => 'case-studies/%customer-category%',
+      //'slug' => 'other',
+			//'slug' => '/',
+			//'slug' => 'case-study',
+      //'with_front' => false,
+    //),
+    'show_in_menu' => true,
+    'capability_type' => 'post',
+    //'hierarchical' => true,
+    'show_in_rest' => true,
+    'supports' => array('title', 'editor', 'excerpt', 'thumbnail', 'revisions')
+  );
+
+  // register the dispaly page section post type
+  register_post_type( 'customer', $args );
+	*/
+
+
+  /////
+	// https://www.hongkiat.com/blog/wordpress-url-rewrite/
+  //https://wordpress.stackexchange.com/questions/275825/display-custom-post-type-taxonomies-as-an-archive-page
+	//https://react2wp.com/using-same-slug-for-custom-post-type-and-custom-taxonomy/
+  /////
+
+	/*
+	$labels = array(
+		"name"          => __( 'Customer Categories', 'sage' ),
+		"singular_name" => __( 'Customer Category', 'sage' ),
+	);
+
+  register_taxonomy(
+    'customer-category',
+    array('customer'),
+    array(
+      'label' => __( 'Customer Categories' ),
+			'labels'             => $labels,
+			'public' => true,
+      'rewrite' => array(
+        //'slug' => 'customers',
+        //'slug' => '/case-studies',
+        'slug' => 'case-studies',
+        //'slug' => '/',
+        'with_front' => false,
+      ),
+      'hierarchical' => true,
+      //'has_archive' => 'case-studies',
+      'show_in_rest' => true,
+      'show_admin_column' => true,
+      'default_term' => array(
+        'name' => 'Uncategorized',
+        'slug' => 'uncategorized',
+      ),
+			"show_ui"            => true,
+			"show_in_menu"       => true,
+			"show_in_nav_menus"  => true,
+			"query_var"          => true,
+    )
+  );
+	*/
+});
+
+
+/*
+add_filter('post_type_link', function( $post_link, $post ) {
+	if ( false !== strpos( $post_link, '%customer-category%' ) ) {
+			$taxonomy_terms = get_the_terms( $post->ID, 'customer-category' );
+			if( is_array( $taxonomy_terms ) ) {
+				foreach ( $taxonomy_terms as $term ) {
+						if ( ! $term->parent ) {
+								$post_link = str_replace( '%customer-category%', $term->slug, $post_link );
+								$post_link = str_replace( '%customer-category%', $term->slug, $post_link );
+						}
+				}
+			}
+			else {
+				$post_link = str_replace( '/%customer-category%', '', $post_link );
+			}
+
+	}
+	return $post_link;
+}, 10, 2);
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// rewrite urls
+//function taxonomy_slug_rewrite($wp_rewrite) {
+
+//}
+/*
+add_filter( 'generate_rewrite_rules', function($wp_rewrite){
+	// https://gist.github.com/fomigo/a52866c6ef4dd2c81d1d
+
+	$rules = array();
+
+	$taxonomies = get_taxonomies(
+			array('_builtin' => false),
+			'objects'
+	);
+
+	$post_types = get_post_types(
+			array('public' => true, '_builtin' => false),
+			'names'
+	);
+
+	foreach ($post_types as $post_type) {
+		foreach ($taxonomies as $taxonomy) {
+
+			if ($taxonomy->object_type[0] != $post_type) continue;
+
+			$categories = get_categories(array(
+					'type' => $post_type,
+					'taxonomy' => $taxonomy->name,
+					'hide_empty' => 0
+			));
+
+			foreach ($categories as $category) {
+					$rules[$post_type . '/' . $category->slug . '/?$'] =
+							'index.php?' . $category->taxonomy . '=' . $category->slug;
+							//echo "<br><br>";
+						//	print_r($post_type . '/' . $category->slug . '/?$');
+							//echo "<br><br>";
+							//print_r($rules[$post_type . '/' . $category->slug . '/?$']);
+			}
+		} // taxonomies
+	} // post_types
+
+
+
+	//print_r($wp_rewrite->rules);
+	//$wp_rewrite->rules = $rules + $wp_rewrite->rules;
+}, 10, 1 );
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//add_action('generate_rewrite_rules', function(){
+	//$theme_name = next(explode('/themes/', get_stylesheet_directory()));
+
+  //global $wp_rewrite;
+  //$new_non_wp_rules = array(
+  //  'css/(.*)'       => 'wp-content/themes/'. $theme_name . '/css/$1',
+  //  'js/(.*)'        => 'wp-content/themes/'. $theme_name . '/js/$1',
+  //  'images/rjbstarter/(.*)'    => 'wp-content/themes/'. $theme_name . '/images/rjbstarter/$1',
+  //);
+  //$wp_rewrite->non_wp_rules += $new_non_wp_rules;
+//}, 10);
+
+
+/*function themes_dir_add_rewrites() {
+  $theme_name = next(explode('/themes/', get_stylesheet_directory()));
+
+  global $wp_rewrite;
+  $new_non_wp_rules = array(
+    'css/(.*)'       => 'wp-content/themes/'. $theme_name . '/css/$1',
+    'js/(.*)'        => 'wp-content/themes/'. $theme_name . '/js/$1',
+    'images/wordpress-urls-rewrite/(.*)'    => 'wp-content/themes/'. $theme_name . '/images/wordpress-urls-rewrite/$1',
+  );
+  $wp_rewrite->non_wp_rules += $new_non_wp_rules;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+add_filter( 'post_type_link', function ( $post_link, $post, $leavename ) {
+
+    if ( 'customer' != $post->post_type || 'publish' != $post->post_status ) {
+        return $post_link;
+    }
+
+		//echo "<br><br><br>";
+		//print_r($post->post_type);
+		//		echo "<br>";
+		//print_r($post_link);
+
+    $post_link = str_replace( '/' . $post->post_type . '/', '/', $post_link );
+		//echo "<br>";
+		//print_r($post_link);
+
+    return $post_link;
+}, 10, 3 );
+*/
+
+
+
+
+
+/**
+ * Remove the slug from published post permalinks. Only affect our custom post type, though.
+ */
+/*
+add_filter( 'post_type_link', function ( $post_link, $post ) {
+
+    //if ( 'customer' === $post->post_type && 'publish' === $post->post_status ) {
+    //    $post_link = str_replace( '/' . $post->post_type . '/', '/', $post_link );
+    //}
+
+    //return $post_link;
+
+
+		if ( in_array( $post->post_type, array( 'customer' ) )
+			 || in_array( $post->post_type, array( 'customer' ) )
+			 || 'publish' == $post->post_status ) {
+			 	$post_link = str_replace( '/' . $post->post_type . '/', '/', $post_link );
+			}
+			 return $post_link;
+
+}, 10, 2 );
+*/
+
+add_action( 'pre_get_posts', function( $query ) {
+	// https://kellenmace.com/remove-custom-post-type-slug-from-permalinks/
+		// Bail if an admin page query.
+    //if ( is_admin() ) {
+		//	return;
+		//}
+
+		// Bail if not the main query
+    //if ( ! $query->is_main_query() ) {
+		//	return;
+		//}
+
+		//print_r($query);
+
+		//if ( ! isset( $query->query['page'] ) ) {
+		//	echo "<br><br>Bail, not a page<br><br>";
+		//	return;
+		//}
+
+		// Bail if this query doesn't match our very specific rewrite rule.
+		//if ( ! isset( $query->query['page'] ) || 2 !== count( $query->query ) ) {
+		//	return;
+		//}
+
+		// Bail if this query doesn't match our very specific rewrite rule.
+		//if ( ! isset( $query->query['page'] ) || 2 !== count( $query->query ) ) {
+		//	return;
+		//}
+
+		//if( ! isset( $query->query['page'] ) ) {
+    //	return;
+    //}
+
+    //if ( ! empty( $query->query['name'] ) ) {
+    //    $query->set( 'post_type', array( 'post', 'customer', 'page' ) );
+    //}
+
+
+}, 10, 1 );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Register Custom Post Type
+// https://woorkup.com/wordpress-custom-post-type/
+function custom_post_type() {
+
+	$labels = array(
+		'name'                  => _x( 'Customers', 'Post Type General Name', 'sage' ),
+		'singular_name'         => _x( 'Customer', 'Post Type Singular Name', 'sage' ),
+		'menu_name'             => __( 'Customers', 'sage' ),
+		'name_admin_bar'        => __( 'Customer', 'sage' ),
+		'archives'              => __( 'Item Archives', 'sage' ),
+		'attributes'            => __( 'Item Attributes', 'sage' ),
+		'parent_item_colon'     => __( 'Parent Item:', 'sage' ),
+		'all_items'             => __( 'All Items', 'sage' ),
+		'add_new_item'          => __( 'Add New Item', 'sage' ),
+		'add_new'               => __( 'Add New', 'sage' ),
+		'new_item'              => __( 'New Item', 'sage' ),
+		'edit_item'             => __( 'Edit Item', 'sage' ),
+		'update_item'           => __( 'Update Item', 'sage' ),
+		'view_item'             => __( 'View Item', 'sage' ),
+		'view_items'            => __( 'View Items', 'sage' ),
+		'search_items'          => __( 'Search Item', 'sage' ),
+		'not_found'             => __( 'Not found', 'sage' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'sage' ),
+		'featured_image'        => __( 'Featured Image', 'sage' ),
+		'set_featured_image'    => __( 'Set featured image', 'sage' ),
+		'remove_featured_image' => __( 'Remove featured image', 'sage' ),
+		'use_featured_image'    => __( 'Use as featured image', 'sage' ),
+		'insert_into_item'      => __( 'Insert into item', 'sage' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this item', 'sage' ),
+		'items_list'            => __( 'Items list', 'sage' ),
+		'items_list_navigation' => __( 'Items list navigation', 'sage' ),
+		'filter_items_list'     => __( 'Filter items list', 'sage' ),
+	);
+	$rewrite = array(
+		'slug'                  => 'customer',
+		'with_front'            => false,
+		'pages'                 => true,
+		'feeds'                 => true,
+		'with_front'            => false
+	);
+	$args = array(
+		'label'                 => __( 'Customer', 'sage' ),
+		'description'           => __( 'Customer case studies.', 'sage' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'thumbnail', 'excerpt', 'revisions', 'custom-fields', 'page-attributes' ),
+		'taxonomies'            => array( 'category', 'post_tag' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		//'menu_icon'             => 'dashicons-format-audio',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => 'case-studies',
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'rewrite'               => $rewrite,
+		'show_in_rest'          => true,
+	);
+	register_post_type( 'customer', $args );
+
+}
+add_action( 'init', 'custom_post_type', 0 );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+function na_remove_slug( $post_link, $post, $leavename ) {
+
+    if ( 'customer' != $post->post_type || 'publish' != $post->post_status ) {
+        return $post_link;
+    }
+
+//print_r($post_link);
+//echo "<br><br>";
+    $post_link = str_replace( '/' . $post->post_type . '/', '/', $post_link );
+
+    return $post_link;
+}
+add_filter( 'post_type_link', 'na_remove_slug', 10, 3 );
+*/
+
+
+/*
+function na_parse_request( $query ) {
+
+    if ( ! $query->is_main_query() || 2 != count( $query->query ) || ! isset( $query->query['page'] ) ) {
+        return;
+    }
+
+    if ( ! empty( $query->query['name'] ) ) {
+        $query->set( 'post_type', array( 'post', 'customer', 'page' ) );
+    }
+}
+add_action( 'pre_get_posts', 'na_parse_request' );
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Rewrite WordPress URLs to Include /blog/ in Post Permalink Structure
+ *
+ * @author   Golden Oak Web Design <info@goldenoakwebdesign.com>
+ * @license  https://www.gnu.org/licenses/gpl-2.0.html GPLv2+
+ */
+function golden_oak_web_design_blog_generate_rewrite_rules( $wp_rewrite ) {
+  $new_rules = array(
+    '(([^/]+/)*blog)/page/?([0-9]{1,})/?$' => 'index.php?pagename=$matches[1]&paged=$matches[3]',
+    'blog/([^/]+)/?$' => 'index.php?post_type=post&name=$matches[1]',
+    'blog/[^/]+/attachment/([^/]+)/?$' => 'index.php?post_type=post&attachment=$matches[1]',
+    'blog/[^/]+/attachment/([^/]+)/trackback/?$' => 'index.php?post_type=post&attachment=$matches[1]&tb=1',
+    'blog/[^/]+/attachment/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$' => 'index.php?post_type=post&attachment=$matches[1]&feed=$matches[2]',
+    'blog/[^/]+/attachment/([^/]+)/(feed|rdf|rss|rss2|atom)/?$' => 'index.php?post_type=post&attachment=$matches[1]&feed=$matches[2]',
+    'blog/[^/]+/attachment/([^/]+)/comment-page-([0-9]{1,})/?$' => 'index.php?post_type=post&attachment=$matches[1]&cpage=$matches[2]',
+    'blog/[^/]+/attachment/([^/]+)/embed/?$' => 'index.php?post_type=post&attachment=$matches[1]&embed=true',
+    'blog/[^/]+/embed/([^/]+)/?$' => 'index.php?post_type=post&attachment=$matches[1]&embed=true',
+    'blog/([^/]+)/embed/?$' => 'index.php?post_type=post&name=$matches[1]&embed=true',
+    'blog/[^/]+/([^/]+)/embed/?$' => 'index.php?post_type=post&attachment=$matches[1]&embed=true',
+    'blog/([^/]+)/trackback/?$' => 'index.php?post_type=post&name=$matches[1]&tb=1',
+    'blog/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$' => 'index.php?post_type=post&name=$matches[1]&feed=$matches[2]',
+    'blog/([^/]+)/(feed|rdf|rss|rss2|atom)/?$' => 'index.php?post_type=post&name=$matches[1]&feed=$matches[2]',
+    'blog/page/([0-9]{1,})/?$' => 'index.php?post_type=post&paged=$matches[1]',
+    'blog/[^/]+/page/?([0-9]{1,})/?$' => 'index.php?post_type=post&name=$matches[1]&paged=$matches[2]',
+    'blog/([^/]+)/page/?([0-9]{1,})/?$' => 'index.php?post_type=post&name=$matches[1]&paged=$matches[2]',
+    'blog/([^/]+)/comment-page-([0-9]{1,})/?$' => 'index.php?post_type=post&name=$matches[1]&cpage=$matches[2]',
+    'blog/([^/]+)(/[0-9]+)?/?$' => 'index.php?post_type=post&name=$matches[1]&page=$matches[2]',
+    'blog/[^/]+/([^/]+)/?$' => 'index.php?post_type=post&attachment=$matches[1]',
+    'blog/[^/]+/([^/]+)/trackback/?$' => 'index.php?post_type=post&attachment=$matches[1]&tb=1',
+    'blog/[^/]+/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$' => 'index.php?post_type=post&attachment=$matches[1]&feed=$matches[2]',
+    'blog/[^/]+/([^/]+)/(feed|rdf|rss|rss2|atom)/?$' => 'index.php?post_type=post&attachment=$matches[1]&feed=$matches[2]',
+    'blog/[^/]+/([^/]+)/comment-page-([0-9]{1,})/?$' => 'index.php?post_type=post&attachment=$matches[1]&cpage=$matches[2]',
+  );
+  $wp_rewrite->rules = $new_rules + $wp_rewrite->rules;
+
+	$new_rules = array(
+    '(([^/]+/)*case-studies)/page/?([0-9]{1,})/?$' => 'index.php?pagename=$matches[1]&paged=$matches[3]',
+    'case-studies/([^/]+)/?$' => 'index.php?post_type=customer&name=$matches[1]',
+    'case-studies/[^/]+/attachment/([^/]+)/?$' => 'index.php?post_type=customer&attachment=$matches[1]',
+    'case-studies/[^/]+/attachment/([^/]+)/trackback/?$' => 'index.php?post_type=customer&attachment=$matches[1]&tb=1',
+    'case-studies/[^/]+/attachment/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$' => 'index.php?post_type=customer&attachment=$matches[1]&feed=$matches[2]',
+    'case-studies/[^/]+/attachment/([^/]+)/(feed|rdf|rss|rss2|atom)/?$' => 'index.php?post_type=customer&attachment=$matches[1]&feed=$matches[2]',
+    'case-studies/[^/]+/attachment/([^/]+)/comment-page-([0-9]{1,})/?$' => 'index.php?post_type=customer&attachment=$matches[1]&cpage=$matches[2]',
+    'case-studies/[^/]+/attachment/([^/]+)/embed/?$' => 'index.php?post_type=customer&attachment=$matches[1]&embed=true',
+    'case-studies/[^/]+/embed/([^/]+)/?$' => 'index.php?post_type=customer&attachment=$matches[1]&embed=true',
+    'case-studies/([^/]+)/embed/?$' => 'index.php?post_type=customer&name=$matches[1]&embed=true',
+    'case-studies/[^/]+/([^/]+)/embed/?$' => 'index.php?post_type=customer&attachment=$matches[1]&embed=true',
+    'case-studies/([^/]+)/trackback/?$' => 'index.php?post_type=customer&name=$matches[1]&tb=1',
+    'case-studies/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$' => 'index.php?post_type=customer&name=$matches[1]&feed=$matches[2]',
+    'case-studies/([^/]+)/(feed|rdf|rss|rss2|atom)/?$' => 'index.php?post_type=customer&name=$matches[1]&feed=$matches[2]',
+    'case-studies/page/([0-9]{1,})/?$' => 'index.php?post_type=customer&paged=$matches[1]',
+    'case-studies/[^/]+/page/?([0-9]{1,})/?$' => 'index.php?post_type=customer&name=$matches[1]&paged=$matches[2]',
+    'case-studies/([^/]+)/page/?([0-9]{1,})/?$' => 'index.php?post_type=customer&name=$matches[1]&paged=$matches[2]',
+    'case-studies/([^/]+)/comment-page-([0-9]{1,})/?$' => 'index.php?post_type=customer&name=$matches[1]&cpage=$matches[2]',
+    'case-studies/([^/]+)(/[0-9]+)?/?$' => 'index.php?post_type=customer&name=$matches[1]&page=$matches[2]',
+    'case-studies/[^/]+/([^/]+)/?$' => 'index.php?post_type=customer&attachment=$matches[1]',
+    'case-studies/[^/]+/([^/]+)/trackback/?$' => 'index.php?post_type=customer&attachment=$matches[1]&tb=1',
+    'case-studies/[^/]+/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$' => 'index.php?post_type=customer&attachment=$matches[1]&feed=$matches[2]',
+    'case-studies/[^/]+/([^/]+)/(feed|rdf|rss|rss2|atom)/?$' => 'index.php?post_type=customer&attachment=$matches[1]&feed=$matches[2]',
+    'case-studies/[^/]+/([^/]+)/comment-page-([0-9]{1,})/?$' => 'index.php?post_type=customer&attachment=$matches[1]&cpage=$matches[2]',
+  );
+  $wp_rewrite->rules = $new_rules + $wp_rewrite->rules;
+}
+add_action( 'generate_rewrite_rules', 'golden_oak_web_design_blog_generate_rewrite_rules' );
+
+
+
+
+
+
+function golden_oak_web_design_update_post_link( $post_link, $id = 0 ) {
+  $post = get_post( $id );
+  if( is_object( $post ) && $post->post_type == 'post' ) {
+    return home_url( '/blog/' . $post->post_name );
+  }
+  //if( is_object( $post ) && $post->post_type == 'customer' ) {
+  //  return home_url( '/case-studies/' . $post->post_name );
+  //}
+  return $post_link;
+}
+add_filter( 'post_link', 'golden_oak_web_design_update_post_link', 1, 3 );
+
+
+function na_remove_slug( $post_link, $post ) {
+
+    if ( 'customer' != $post->post_type || 'publish' != $post->post_status ) {
+        return $post_link;
+    }
+
+
+    $post_link = str_replace( '/' . $post->post_type . '/', '/case-studies/', $post_link );
+
+    return $post_link;
+}
+add_filter( 'post_type_link', 'na_remove_slug', 10, 2 );

@@ -1,0 +1,81 @@
+section.bg-lighter.py-lg-12 {
+  & + section.bg-lighter.py-lg-12 {
+    @include media-breakpoint-up(lg) {
+      padding-top: 3rem !important;
+    }
+  }
+
+  & + section.bg-lighter-to-white.py-lg-12 {
+    @include media-breakpoint-up(lg) {
+      padding-top: 3rem !important;
+    }
+  }
+}
+
+section.bg-light.py-lg-12 {
+  & + section.bg-light.py-lg-12 {
+    @include media-breakpoint-up(lg) {
+      padding-top: 3rem !important;
+    }
+  }
+
+  & + section.bg-light-to-white.py-lg-12 {
+    @include media-breakpoint-up(lg) {
+      padding-top: 3rem !important;
+    }
+  }
+}
+
+section.bg-white.py-lg-12 {
+  & + section.bg-white.py-lg-12 {
+    @include media-breakpoint-up(lg) {
+      padding-top: 3rem !important;
+    }
+  }
+
+  & + section.bg-white-to-lighter.py-lg-12 {
+    @include media-breakpoint-up(lg) {
+      padding-top: 3rem !important;
+    }
+  }
+}
+
+section.bg-dark.py-lg-12 {
+  & + section.bg-dark.py-lg-12 {
+    @include media-breakpoint-up(lg) {
+      padding-top: 3rem !important;
+    }
+  }
+}
+
+section.bg-darker.py-lg-12 {
+  & + section.bg-darker.py-lg-12 {
+    @include media-breakpoint-up(lg) {
+      padding-top: 3rem !important;
+    }
+  }
+}
+
+section.bg-primary.py-lg-12 {
+  & + section.bg-primary.py-lg-12 {
+    @include media-breakpoint-up(lg) {
+      padding-top: 3rem !important;
+    }
+  }
+}
+
+section.bg-secondary.py-lg-12 {
+  & + section.bg-secondary.py-lg-12 {
+    @include media-breakpoint-up(lg) {
+      padding-top: 3rem !important;
+    }
+  }
+}
+
+section.bg-gray.py-lg-12 {
+  & + section.bg-gray.py-lg-12 {
+    @include media-breakpoint-up(lg) {
+      padding-top: 3rem !important;
+    }
+  }
+}

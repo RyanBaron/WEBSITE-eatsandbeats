@@ -1,0 +1,237 @@
+@import "common/variables-bs";
+@import "common/variables";
+@import "components/admin-hidden-acf";
+
+/** Import everything from autoload */
+@import "./autoload/**/*";
+
+body {
+  &:not(.user-type-admin) {
+    div[class^="acf-field-universal-admo-"],
+    div[class*=" acf-field-universal-admo-"] {
+      display: none !important;
+    }
+  }
+}
+
+div[data-type="core/block"] {
+  width: 100% !important;
+  margin: 0;
+  max-width: 100% !important;
+}
+
+.edit-post-sidebar {
+  .acf-block-panel {
+    .acf-block-fields {
+      margin-left: -2px;
+      margin-right: -2px;
+    }
+  }
+}
+
+div[data-type="gutenberg-layout/slider"],
+div[data-type="gutenberg-widgets/slider-item"],
+div[data-type="gutenberg-layout/tabs"],
+div[data-type="gutenberg-widgets/tab-item"],
+div[data-type="acf/universal"],
+div[data-type="acf/hero"],
+div[data-type="acf/logo-block"],
+div[data-type="acf/resource-cards"],
+div[data-type="acf/cta"],
+div[data-type="acf/quote"],
+div[data-type="acf/content-cols"],
+div[data-type="acf/text-and-cards"] {
+  width: 100% !important;
+  padding: 0.5rem 0 !important;
+  margin: 0;
+  max-width: 100% !important;
+
+  .editor-styles-wrapper h1,
+  .editor-styles-wrapper h2,
+  .editor-styles-wrapper h3,
+  .editor-styles-wrapper h4,
+  .editor-styles-wrapper h5,
+  .editor-styles-wrapper h6 {
+    color: initial;
+  }
+}
+
+@media (min-width: 1600px) {
+  body {
+    &.block-editor-page {
+      .edit-post-layout.is-sidebar-opened {
+        .edit-post-sidebar,
+        .edit-post-plugin-sidebar__sidebar-layout {
+          width: 350px;
+        }
+
+        .edit-post-layout__content {
+          margin-right: 350px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1800px) {
+  body {
+    &.block-editor-page {
+      .edit-post-layout.is-sidebar-opened {
+        .edit-post-sidebar,
+        .edit-post-plugin-sidebar__sidebar-layout {
+          width: 400px;
+        }
+
+        .edit-post-layout__content {
+          margin-right: 400px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  body {
+    &.block-editor-page {
+      .edit-post-layout.is-sidebar-opened {
+        .edit-post-sidebar,
+        .edit-post-plugin-sidebar__sidebar-layout {
+          width: 450px;
+        }
+
+        .edit-post-layout__content {
+          margin-right: 450px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 2200px) {
+  body {
+    &.block-editor-page {
+      .edit-post-layout.is-sidebar-opened {
+        .edit-post-sidebar,
+        .edit-post-plugin-sidebar__sidebar-layout {
+          width: 700px;
+        }
+
+        .edit-post-layout__content {
+          margin-right: 700px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 2400px) {
+  body {
+    &.block-editor-page {
+      .edit-post-layout.is-sidebar-opened {
+        .edit-post-sidebar,
+        .edit-post-plugin-sidebar__sidebar-layout {
+          width: 800px;
+        }
+
+        .edit-post-layout__content {
+          margin-right: 800px;
+        }
+      }
+    }
+  }
+}
+
+.edit-post-visual-editor {
+  .block-editor-block-list__block {
+    .block-editor-block-list__block-edit {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+  }
+
+  .editor-post-title__block {
+    max-width: 100%;
+  }
+
+  /**
+   * Import npm dependencies
+   *
+   * Prefix your imports with `~` to grab from node_modules/
+   * @see https://github.com/webpack-contrib/sass-loader#imports
+   */
+  // @import "~some-node-module";
+
+  /** Import theme styles */
+  @import "mixins/dots";
+  @import "common/functions";
+  @import "common/icons";
+  @import "common/bg";
+  @import "common/layout";
+  @import "common/global";
+  @import "cols/col-copy";
+  @import "components/blog";
+  @import "components/blog-single";
+  @import "components/text";
+  @import "components/cards";
+  @import "components/blockquote";
+  @import "components/headlines";
+  @import "components/links"; // Now loading via critical.css
+  @import "components/footer";
+  @import "components/buttons";
+  @import "components/comments";
+  @import "components/forms";
+  @import "components/table";
+  @import "components/quote";
+  @import "components/header";
+  @import "components/wp-classes";
+  @import "components/list";
+  @import "layouts/admin";
+  @import "layouts/gutters";
+  @import "layouts/header";
+  @import "layouts/hero";
+  @import "layouts/sidebar";
+  @import "layouts/footer";
+  @import "layouts/pages";
+  @import "layouts/posts";
+  @import "layouts/tinymce";
+  @import "layouts/grid";
+
+  .col {
+    &.col-card {
+      .col-inside {
+        .card {
+          padding: 0;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+.wp-block {
+  &.is-reusable {
+    .block-editor-block-list__block {
+      //background-color: darken(#fff, 15);
+      position: relative;
+      border: 1px dashed rgba(#f00, 0.15);
+
+      &::after {
+        content: "Reusable Section";
+        position: absolute;
+        color: red;
+        top: 5px;
+        left: 10px;
+      }
+    }
+  }
+}
+
+.wp-admin {
+  .wp-block {
+    &.wp-block-group {
+      &.block-editor-block-list__block {
+        max-width: 100%;
+      }
+    }
+  }
+}

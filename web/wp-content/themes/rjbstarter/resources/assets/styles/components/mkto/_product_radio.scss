@@ -1,0 +1,132 @@
+//////
+// The person_notes texarea field.
+//////
+form {
+  &.mktoForm {
+    .mktoFormRow {
+      &.product_radio_row {
+        margin: 0.75rem 0;
+        margin-top: 0;
+
+        .product_radio_wrapper {
+          overflow: visible;
+
+          .mktoRadioList {
+            border: 1px solid transparent;
+            display: flex;
+            margin-left: -5px;
+            margin-right: -5px;
+            width: calc(100% + 10px) !important;
+            padding: 0.5rem 0;
+            padding-top: 0;
+
+            input,
+            label {
+              display: inline-block;
+              vertical-align: middle;
+              margin: 5px;
+              cursor: pointer;
+            }
+
+            label {
+              position: relative;
+              flex: 1;
+              text-align: center;
+              font-size: 0.8rem;
+              font-weight: normal;
+              padding: 0.5rem 0.25rem;
+              margin: 0 5px;
+              border: 1px solid border-color("form-gray");
+              left: 0;
+              background-color: bg-color("bg-white");
+
+              @include dropshadowLight();
+
+              &:hover {
+                border: 1px solid darken(border-color("form-gray"), 10);
+
+                @include dropshadowLightHover();
+              }
+
+              @media (min-width: 768px) {
+                font-size: 1rem;
+              }
+
+              @media (min-width: 992px) {
+                font-size: 1.05rem;
+              }
+            }
+
+            @media (min-width: 768px) {
+              margin-left: -10px;
+              margin-right: -10px;
+              width: calc(100% + 20px) !important;
+
+              label {
+                padding: 1rem;
+                margin: 0 10px;
+              }
+            }
+
+            input {
+              opacity: 0;
+              position: absolute;
+
+              & + label::before {
+                display: none;
+              }
+
+              &:checked {
+                & + label {
+                  //font-weight: 500;
+                  border-color: theme-color("primary");
+
+                  @include dropshadowLightHover();
+                }
+              }
+
+              &[name="product"] {
+                & + label {
+                  // do nothing.
+                }
+
+                &:checked {
+                  & + label {
+                    // doing nothing
+                  }
+                }
+
+                &.q-for-publishers,
+                &.advertise,
+                &.choice-premium {
+                  &:checked {
+                    //& + label {
+                    // still nothing.
+                    //:}
+                  }
+                }
+
+                &.measure,
+                &.choice,
+                &.choice-free,
+                &.q-for-marketers {
+                  display: none !important;
+
+                  & + label {
+                    display: none !important;
+                  }
+                }
+              }
+            }
+
+            &.mktoInvalid {
+              border-color: transparent;
+              border-bottom-color: red;
+              font-size: 13px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

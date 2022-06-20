@@ -1,0 +1,39 @@
+.article-feature-secondary {
+  .article-inside {
+    height: 100%;
+
+    > * {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      width: 100%;
+
+      &:first-child {
+        padding-top: 0;
+      }
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+
+      &.col-extras {
+        > * {
+          margin-top: 0;
+          margin-bottom: 0;
+          padding-top: 0.5rem;
+          padding-bottom: 0.5rem;
+          width: 100%;
+
+          &:first-child {
+            padding-top: 0;
+          }
+
+          &:last-child {
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

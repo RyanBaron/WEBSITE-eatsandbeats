@@ -1,0 +1,763 @@
+.menu-item {
+  &.bg-dark,
+  &.bg-darker,
+  &.bg-primary,
+  &.bg-dark-blue,
+  &.bg-sec-orange,
+  &.bg-sec-red,
+  &.bg-sec-red,
+  &.bg-sec-gold,
+  &.bg-sec-lime,
+  &.bg-sec-cyan,
+  &.bg-sec-blue,
+  &.bg-sec-geek-blue,
+  &.bg-sec-magenta,
+  &.bg-sec-orange,
+  &.bg-sec-purple,
+  &.bg-sec-green {
+    color: text-color("text-white");
+
+    a {
+      color: text-color("text-white");
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: text-color("light");
+      }
+    }
+  }
+}
+
+.nav-banner-primary {
+  .menu-item {
+    &.bg-dark,
+    &.bg-darker,
+    &.bg-dark-blue,
+    &.bg-primary,
+    &.bg-sec-orange,
+    &.bg-sec-volcano,
+    &.bg-sec-red,
+    &.bg-sec-gold,
+    &.bg-sec-lime,
+    &.bg-sec-cyan,
+    &.bg-sec-lime,
+    &.bg-sec-blue,
+    &.bg-sec-geek-blue,
+    &.bg-sec-magenta,
+    &.bg-sec-purple,
+    &.bg-sec-green {
+      color: text-color("text-white") !important;
+
+      a {
+        color: text-color("text-white") !important;
+
+        &:hover,
+        &:active,
+        &:focus {
+          color: text-color("lighter") !important;
+        }
+      }
+    }
+  }
+}
+
+.bg-overlay-lightest,
+.bg-overlay-lighter,
+.bg-overlay-light,
+.bg-overlay-dark-blue,
+.bg-overlay-darkest,
+.bg-overlay-darker,
+.bg-overlay-dark {
+  position: relative;
+
+  &::before {
+    content: "";
+    z-index: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+}
+
+*.bg-overlay-light {
+  &::before {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+*.bg-overlay-lighter {
+  &::before {
+    background-color: rgba(255, 255, 255, 0.65);
+  }
+}
+
+*.bg-overlay-lightest {
+  &::before {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+*.bg-overlay-dark {
+  &::before {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+*.bg-overlay-darker {
+  &::before {
+    background-color: rgba(0, 0, 0, 0.65);
+  }
+}
+
+*.bg-overlay-darkest {
+  &::before {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}
+
+.bg-primary {
+  background-color: theme-color("primary");
+  color: theme-color("white");
+}
+
+.bg-red {
+  color: theme-color("white");
+  background-color: theme-color("secondary-red");
+}
+
+.bg-volcano {
+  color: theme-color("white");
+  background-color: theme-color("secondary-volcano");
+}
+
+.bg-orange {
+  color: theme-color("white");
+  background-color: theme-color("secondary-orange");
+}
+
+.bg-gold {
+  color: theme-color("white");
+  background-color: theme-color("secondary-gold");
+}
+
+.bg-yellow {
+  color: theme-color("darker");
+  background-color: theme-color("secondary-yellow");
+}
+
+.bg-lime {
+  color: theme-color("white");
+  background-color: theme-color("secondary-lime");
+}
+
+.bg-cyan {
+  color: theme-color("white");
+  background-color: theme-color("secondary-cyan");
+}
+
+.bg-geek-blue {
+  color: theme-color("white");
+  background-color: theme-color("secondary-cyan");
+}
+
+.bg-purple {
+  color: theme-color("white");
+  background-color: theme-color("secondary-cyan");
+}
+
+.bg-sec-magenta {
+  color: theme-color("white");
+  background-color: theme-color("secondary-magenta");
+}
+
+.bg-dark-blue {
+  background-color: theme-color("secondary-blue-dark");
+  color: text-color("white");
+}
+
+.bg-blue {
+  color: theme-color("white");
+  background-color: theme-color("secondary-blue");
+}
+
+.bg-light {
+  background-color: theme-color("light");
+  color: theme-color("dark");
+}
+
+.bg-lighter {
+  background-color: theme-color("lighter");
+  color: theme-color("dark");
+}
+
+.bg-lighter-to-white {
+  background-image: linear-gradient(theme-color("lighter"), #fff);
+  color: theme-color("dark");
+}
+
+.bg-white-to-lighter {
+  background-image: linear-gradient(#fff, theme-color("lighter"));
+  color: theme-color("dark");
+}
+
+.bg-light-to-white {
+  background-image: linear-gradient(theme-color("light"), #fff);
+  color: theme-color("dark");
+}
+
+.bg-white-to-light {
+  background-image: linear-gradient(#fff, theme-color("light"));
+  color: theme-color("dark");
+}
+
+.bg-light-to-lighter {
+  background-image: linear-gradient(theme-color("light"), theme-color("lighter"));
+  color: theme-color("dark");
+}
+
+.bg-lighter-to-light {
+  background-image: linear-gradient(theme-color("lighter"), theme-color("light"));
+  color: theme-color("dark");
+}
+
+.bg-white {
+  background-color: theme-color("theme-white");
+  color: text-color("dark");
+
+  .headline {
+    color: text-color("dark");
+  }
+}
+
+.bg-gray {
+  background-color: theme-color("gray");
+}
+
+.bg-secondary {
+  background-color: theme-color("secondary");
+  color: text-color("text-white");
+}
+
+.bg-plus-bg-thin-dark-lg {
+  background-image: url("../images/plus-bg-thin-dark-lg.png");
+  background-position: center;
+  background-repeat: repeat;
+}
+
+.bg-plus-bg-thin-dark-md {
+  background-image: url("../images/plus-bg-thin-dark-md.png");
+  background-position: center;
+  background-repeat: repeat;
+}
+
+.bg-plus-bg-thin-dark-sm {
+  background-image: url("../images/plus-bg-thin-dark-sm.png");
+  background-position: center;
+  background-repeat: repeat;
+}
+
+.bg-plus-bg-thin-dark-xs {
+  background-image: url("../images/plus-bg-thin-dark-xs.png");
+  background-position: center;
+  background-repeat: repeat;
+}
+
+.bg-plus-bg-thin-gray-lg {
+  background-image: url("../images/plus-bg-thin-gray-lg.png");
+  background-position: center;
+  background-repeat: repeat;
+}
+
+.bg-plus-bg-thin-gray-md {
+  background-image: url("../images/plus-bg-thin-gray-md.png");
+  background-position: center;
+  background-repeat: repeat;
+}
+
+.bg-plus-bg-thin-gray-sm {
+  background-image: url("../images/plus-bg-thin-gray-sm.png");
+  background-position: center;
+  background-repeat: repeat;
+}
+
+.bg-plus-bg-thin-gray-xs {
+  background-image: url("../images/plus-bg-thin-gray-xs.png");
+  background-position: center;
+  background-repeat: repeat;
+}
+
+.bg-plus-bg-thin-light-lg {
+  background-image: url("../images/plus-bg-thin-light-lg.png");
+  background-position: center;
+  background-repeat: repeat;
+}
+
+.bg-plus-bg-thin-light-md {
+  background-image: url("../images/plus-bg-thin-light-md.png");
+  background-position: center;
+  background-repeat: repeat;
+}
+
+.bg-plus-bg-thin-light-sm {
+  background-image: url("../images/plus-bg-thin-light-sm.png");
+  background-position: center;
+  background-repeat: repeat;
+}
+
+.bg-plus-bg-thin-light-xs {
+  background-image: url("../images/plus-bg-thin-light-xs.png");
+  background-position: center;
+  background-repeat: repeat;
+}
+
+.bg-plus-bg-thin-lighter-lg {
+  background-image: url("../images/plus-bg-thin-lighter-lg.png");
+  background-position: center;
+  background-repeat: repeat;
+}
+
+.bg-plus-bg-thin-lighter-md {
+  background-image: url("../images/plus-bg-thin-lighter-md.png");
+  background-position: center;
+  background-repeat: repeat;
+}
+
+.bg-plus-bg-thin-lighter-sm {
+  background-image: url("../images/plus-bg-thin-lighter-sm.png");
+  background-position: center;
+  background-repeat: repeat;
+}
+
+.bg-plus-bg-thin-lighter-xs {
+  background-image: url("../images/plus-bg-thin-lighter-xs.png");
+  background-position: center;
+  background-repeat: repeat;
+}
+
+.bg-plus-bg-thin-lightest-lg {
+  background-image: url("../images/plus-bg-thin-lightest-lg.png");
+  background-position: center;
+  background-repeat: repeat;
+}
+
+.bg-plus-bg-thin-lightest-md {
+  background-image: url("../images/plus-bg-thin-lightest-md.png");
+  background-position: center;
+  background-repeat: repeat;
+}
+
+.bg-plus-bg-thin-lightest-sm {
+  background-image: url("../images/plus-bg-thin-lightest-sm.png");
+  background-position: center;
+  background-repeat: repeat;
+}
+
+.bg-plus-bg-thin-lightest-xs {
+  background-image: url("../images/plus-bg-thin-lightest-xs.png");
+  background-position: center;
+  background-repeat: repeat;
+}
+
+.bg-dark-to-darker,
+.bg-darker-to-dark,
+.bg-sec-orange,
+.bg-sec-green,
+.bg-sec-purple,
+.bg-darker,
+.bg-dark-blue,
+.bg-dark {
+  background-color: theme-color("dark");
+  color: text-color("text-white");
+
+  .headline {
+    color: text-color("text-white");
+  }
+
+  .superheadline {
+    color: text-color("lighter");
+  }
+
+  .subheadline {
+    color: text-color("lighter");
+  }
+
+  .card {
+    &:not(.transparent) {
+      color: text-color("dark");
+    }
+  }
+
+  .text-col {
+    p {
+      color: text-color("lighter");
+    }
+  }
+
+  .col-copy {
+    .text-col {
+      p {
+        color: text-color("lighter");
+      }
+    }
+  }
+
+  .header-content {
+    .headline {
+      .superheadline {
+        color: text-color("lighter");
+      }
+
+      .subheadline {
+        color: text-color("lighter");
+      }
+    }
+  }
+
+  .bg-white {
+    .headline {
+      color: text-color("dark");
+    }
+
+    .col-copy {
+      .text-col {
+        p {
+          color: text-color("dark");
+        }
+      }
+    }
+  }
+
+  .bg-gray {
+    .headline {
+      color: text-color("dark");
+    }
+
+    .col-copy {
+      .text-col {
+        p {
+          color: text-color("dark");
+        }
+      }
+    }
+  }
+
+  .bg-light {
+    .headline {
+      color: text-color("dark");
+    }
+
+    .col-copy {
+      .text-col {
+        p {
+          color: text-color("dark");
+        }
+      }
+    }
+  }
+
+  .bg-lighter {
+    .headline {
+      color: text-color("dark");
+    }
+
+    .col-copy {
+      .text-col {
+        p {
+          color: text-color("dark");
+        }
+      }
+    }
+  }
+
+  .bg-lighter-to-white {
+    .headline {
+      color: text-color("dark");
+    }
+
+    .col-copy {
+      .text-col {
+        p {
+          color: text-color("dark");
+        }
+      }
+    }
+  }
+
+  .bg-light-to-white {
+    .headline {
+      color: text-color("dark");
+    }
+
+    .col-copy {
+      .text-col {
+        p {
+          color: text-color("dark");
+        }
+      }
+    }
+  }
+
+  .bg-white-to-lighter {
+    .headline {
+      color: text-color("dark");
+    }
+
+    .col-copy {
+      .text-col {
+        p {
+          color: text-color("dark");
+        }
+      }
+    }
+  }
+
+  .bg-white-to-light {
+    .headline {
+      color: text-color("dark");
+    }
+
+    .col-copy {
+      .text-col {
+        p {
+          color: text-color("dark");
+        }
+      }
+    }
+  }
+}
+
+* {
+  &.bg-darker {
+    background-color: theme-color("darker");
+
+    .contact-list {
+      li {
+        border-color: border-color("medium");
+      }
+    }
+  }
+
+  &.bg-dark-blue {
+    background-color: theme-color("dark-blue");
+
+    .contact-list {
+      li {
+        border-color: border-color("dark-blue");
+      }
+    }
+  }
+
+  *.bg-dark {
+    /*
+    .superheadline {
+      color: text-color("light");
+    }
+
+    .text-col {
+      p {
+        color: text-color("light");
+      }
+    }
+
+    .col-copy {
+      .text-col {
+        p {
+          color: text-color("light");
+        }
+      }
+    }
+
+    .header-content {
+      .headline {
+        .superheadline {
+          color: text-color("light");
+        }
+
+        .subheadline {
+          color: text-color("light");
+        }
+      }
+    }
+    */
+
+    .contact-list {
+      li {
+        border-color: border-color("medium");
+      }
+    }
+  }
+
+  &.bg-sec-purple {
+    background-color: theme-color("secondary-purple");
+  }
+
+  &.bg-sec-green {
+    background-color: theme-color("secondary-green");
+  }
+
+  &.bg-sec-orange {
+    background-color: theme-color("secondary-orange");
+  }
+
+  .bg-dark-to-darker {
+    background-image: linear-gradient(theme-color("dark"), theme-color("darker"));
+  }
+
+  .bg-darker-to-dark {
+    background-image: linear-gradient(theme-color("darker"), theme-color("dark"));
+  }
+}
+
+.section-bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+
+  video {
+    // width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1000;
+    overflow: hidden;
+  }
+}
+
+.bg-offset-left {
+  background-position: 70px center;
+
+  @include media-breakpoint-up(md) {
+    background-position: 80px center;
+  }
+
+  @include media-breakpoint-up(xl) {
+    background-position: 100px center;
+  }
+}
+
+.bg-offset-right {
+  background-position: -70px center;
+
+  @include media-breakpoint-up(md) {
+    background-position: -80px center;
+  }
+
+  @include media-breakpoint-up(xl) {
+    background-position: -100px center;
+  }
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+
+.bg-repeat {
+  background-repeat: repeat;
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-contain {
+  background-size: contain;
+}
+
+.bg-cover-lg-up {
+  @include media-breakpoint-up(lg) {
+    background-size: cover;
+  }
+}
+
+.bg-contain-lg-up {
+  @include media-breakpoint-up(lg) {
+    background-size: contain;
+  }
+}
+
+.bg-center {
+  background-position: center;
+}
+
+.bg-left {
+  background-position: center left;
+}
+
+.bg-right {
+  background-position: center right;
+}
+
+.bg-top {
+  background-position: top center;
+}
+
+.bg-bottom {
+  background-position: bottom center;
+}
+
+.bg-center-lg-up {
+  @include media-breakpoint-up(lg) {
+    background-position: center;
+  }
+}
+
+.bg-left-lg-up {
+  @include media-breakpoint-up(lg) {
+    background-position: center left;
+  }
+}
+
+.bg-right-lg-up {
+  @include media-breakpoint-up(lg) {
+    background-position: center right;
+  }
+}
+
+.bg-top-lg-up {
+  @include media-breakpoint-up(lg) {
+    background-position: top center;
+  }
+}
+
+.bg-bottom-lg-up {
+  @include media-breakpoint-up(lg) {
+    background-position: bottom center;
+  }
+}
+
+.bg-offset-left-lg-up {
+  @include media-breakpoint-up(lg) {
+    background-position: 80px center;
+  }
+
+  @include media-breakpoint-up(xl) {
+    background-position: 100px center;
+  }
+}
+
+.bg-offset-right-lg-up {
+  @include media-breakpoint-up(lg) {
+    background-position: -80px center;
+  }
+
+  @include media-breakpoint-up(xl) {
+    background-position: -100px center;
+  }
+}

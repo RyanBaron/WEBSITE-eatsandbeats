@@ -1,0 +1,27 @@
+footer {
+  > .container {
+    > .row {
+      > .col-footer {
+        > * {
+          margin: 0.75rem 0;
+
+          &:first-child {
+            margin-top: 0;
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+
+            &.buttons {
+              margin-top: 2rem;
+
+              @include media-breakpoint-up(lg) {
+                margin-top: 2.5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

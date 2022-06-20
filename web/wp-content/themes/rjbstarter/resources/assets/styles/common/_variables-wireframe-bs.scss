@@ -1,0 +1,85 @@
+/** Import Bootstrap functions */
+@import "~bootstrap/scss/functions";
+
+$theme-colors: (
+  primary: #206dc5,
+  secondary: #6c6463,
+  light: #dbdde2,
+  lighter: #f2f4f9,
+  white: #fff,
+  dark: #1f2532, // 1f2532 is the rjbstarter theme primary dark
+  darker: #10131a,
+  secondary-orange: rgba(255, 127, 31, 1),
+  secondary-green: rgba(0, 180, 125, 1),
+  secondary-purple: rgba(104, 68, 205, 1),
+  //secondary-light: lighten(#6c6463, 25),
+  //secondary-lighter: lighten(#6c6463, 10),
+  //secondary-darker: darken(#6c6463, 5),
+  //secondary-dark: darken(#6c6463, 10),
+  //primary-light: lighten(#e73c3e, 15),
+  //primary-lighter: lighten(#e73c3e, 7.5),
+  //primary: #e73c3e,
+  //primary-darker: darken(#e73c3e, 5),
+  //primary-dark: darken(#e73c3e, 10),
+  gray-dark: darken(#bababa, 25),
+  gray-darker: darken(#bababa, 10),
+  gray: #bababa,
+  gray-lighter: lighten(#bababa, 5),
+  gray-light: lighten(#bababa, 10),
+  //dark: #071721,
+  medium: darken(#f1f1f1, 20),
+  theme-white: #fff,
+  text-light: #747985,
+  text-lighter: #8c919e,
+  blog-green: #00cba6,
+  blog-blue: #4860ff,
+  blog-red: #f2434f,
+  blog-purple: #7469ab,
+  blog-gray: #a7abb5,
+);
+
+/** Bootstrap navbar fix (https://git.io/fADqW) */
+$navbar-dark-toggler-icon-bg: none;
+$navbar-light-toggler-icon-bg: none;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm:576px,
+  md:768px,
+  lg:992px,
+  xl:1200px,
+  xxl:1440px,
+  xxxl:1920px,
+  xxxxl:2400px
+) !default;
+
+$container-max-widths: (
+  sm:540px,
+  md:720px,
+  lg:960px,
+  xl:1170px,
+  xxl:1270px,
+  xxxl:1400px,
+  xxxxl:1600px
+) !default;
+
+// Update bootstrap spacer classes.
+// https://medium.com/@louiswang0128/expand-bootstrap-spacing-classes-with-sass-ced4b5383aea
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * 0.5),
+    2: $spacer,
+    3: ($spacer * 1.5),
+    4: ($spacer * 2),
+    5: ($spacer * 2.5),
+    6: ($spacer * 3),
+    7: ($spacer * 3.5),
+    8: ($spacer * 4),
+    9: ($spacer * 4.5),
+    10: ($spacer * 5),
+  ),
+  $spacers
+);

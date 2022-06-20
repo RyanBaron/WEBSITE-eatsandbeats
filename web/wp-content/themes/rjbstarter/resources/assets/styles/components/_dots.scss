@@ -1,0 +1,291 @@
+.dots-child {
+  > * {
+    @include dotsBG();
+  }
+
+  &-overflow-1 {
+    > * {
+      &::before {
+        width: calc(100% + 1rem);
+        height: calc(100% + 1rem);
+        margin-left: -0.5rem;
+        margin-top: -0.5rem;
+      }
+
+      &.row {
+        &::before {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+.dots-child-child {
+  > * {
+    > * {
+      @include dotsBG();
+    }
+  }
+
+  .row {
+    &.bg-white {
+      .col {
+        &.col-copy {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+
+  &-overflow-1 {
+    > * {
+      > * {
+        &::before {
+          width: calc(100% + 1rem);
+          height: calc(100% + 1rem);
+          margin-left: -0.5rem;
+          margin-top: -0.5rem;
+        }
+
+        &.row {
+          &::before {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &-overflow-2 {
+    > * {
+      > * {
+        &::before {
+          width: calc(100% + 2rem);
+          height: calc(100% + 2rem);
+          margin-left: -1rem;
+          margin-top: -1rem;
+        }
+
+        &.row {
+          &::after {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &-overflow-3 {
+    > * {
+      > * {
+        &::before {
+          width: calc(100% + 3rem);
+          height: calc(100% + 3rem);
+          margin-left: -1.5rem;
+          margin-top: -1.5rem;
+        }
+
+        &.row {
+          &::after {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &-overflow-4 {
+    > * {
+      > * {
+        &::before {
+          width: calc(100% + 4rem);
+          height: calc(100% + 4rem);
+          margin-left: -2rem;
+          margin-top: -2rem;
+        }
+
+        &.row {
+          &::after {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.dots {
+  @include dotsBG();
+
+  &-overflow {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    &.row {
+      &::before {
+        margin-left: 0;
+      }
+    }
+
+    &-1 {
+      &::before {
+        width: calc(100% + 1rem);
+        height: calc(100% + 1rem);
+        margin-left: -0.5rem;
+        margin-top: -0.5rem;
+      }
+    }
+
+    &-2 {
+      &::before {
+        width: calc(100% + 2rem);
+        height: calc(100% + 2rem);
+        margin-left: -1rem;
+        margin-top: -1rem;
+      }
+    }
+
+    &-3 {
+      &::before {
+        width: calc(100% + 3rem);
+        height: calc(100% + 3rem);
+        margin-left: -1.5rem;
+        margin-top: -1.5rem;
+      }
+    }
+
+    &-4 {
+      &::before {
+        width: calc(100% + 4rem);
+        height: calc(100% + 4rem);
+        margin-left: -2rem;
+        margin-top: -2rem;
+      }
+    }
+
+    &-5 {
+      &::before {
+        width: calc(100% + 5rem);
+        height: calc(100% + 5rem);
+        margin-left: -2.5rem;
+        margin-top: -2.5rem;
+      }
+    }
+
+    &-6 {
+      &::before {
+        width: calc(100% + 6rem);
+        height: calc(100% + 6rem);
+        margin-left: -3rem;
+        margin-top: -3rem;
+      }
+    }
+
+    &-7 {
+      &::before {
+        width: calc(100% + 7rem);
+        height: calc(100% + 7rem);
+        margin-left: -3.5rem;
+        margin-top: -3.5rem;
+      }
+    }
+
+    &-8 {
+      &::before {
+        width: calc(100% + 8rem);
+        height: calc(100% + 8rem);
+        margin-left: -4rem;
+        margin-top: -4rem;
+      }
+    }
+  }
+
+  &.dots-top {
+    padding-top: 5rem;
+
+    &::before {
+      top: 0;
+      height: 64px;
+    }
+  }
+
+  &.dots-center {
+    &::before {
+      margin-left: -125px;
+      left: 50%;
+      width: 250px;
+    }
+  }
+}
+
+.dots-title {
+  header {
+    .far-left {
+      .section-title {
+        @include dotsBG();
+      }
+    }
+  }
+
+  &.dots-title-left {
+    header {
+      .far-left {
+        .section-title {
+          &::before {
+            top: -3%;
+            left: 0;
+            height: 106%;
+          }
+        }
+
+        &.padding-left-1 {
+          .section-title {
+            &::before {
+              width: 1rem;
+              left: -1rem;
+            }
+          }
+        }
+
+        &.padding-left-2 {
+          .section-title {
+            &::before {
+              width: 1rem;
+              left: -2rem;
+            }
+          }
+        }
+
+        &.padding-left-3 {
+          .section-title {
+            &::before {
+              width: 2rem;
+              left: -3rem;
+            }
+          }
+        }
+
+        &.padding-left-4 {
+          .section-title {
+            &::before {
+              width: 3rem;
+              left: -4rem;
+            }
+          }
+        }
+
+        &.padding-left-5 {
+          .section-title {
+            &::before {
+              width: 4rem;
+              left: -5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

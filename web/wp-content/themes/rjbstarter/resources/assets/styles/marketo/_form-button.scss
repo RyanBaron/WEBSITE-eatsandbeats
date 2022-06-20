@@ -1,0 +1,49 @@
+.mktoButtonRow {
+  margin: 0.5rem 0;
+  padding: 0.5rem 0;
+
+  input,
+  button {
+    &[type=submit] {
+      //@include btnBase();
+
+      @extend .btn-primary;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+.mkto-form-btn-left {
+  .mktoButtonRow {
+    text-align: left !important;
+  }
+}
+
+.mkto-form-btn-center {
+  .mktoButtonRow {
+    text-align: center !important;
+  }
+}
+
+.mkto-form-btn-right {
+  .mktoButtonRow {
+    text-align: right !important;
+  }
+}
+
+.mkto-form-btn-lg {
+  .mktoButtonRow {
+    button {
+      &.mktoButton {
+        line-height: 34px !important;
+        height: 50px !important;
+        padding: 8px 40px !important;
+        font-size: 0.9rem !important;
+      }
+    }
+  }
+}

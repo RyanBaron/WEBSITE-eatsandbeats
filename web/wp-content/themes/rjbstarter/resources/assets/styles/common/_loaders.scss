@@ -1,0 +1,51 @@
+/* stylelint-disable */
+
+.spinner {
+  color: theme-color("primary");
+  font-size: 8px;
+  margin: 30px auto;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  position: relative;
+  text-indent: -9999em;
+  animation: loadSpinner 1.3s infinite linear;
+  transform: translateZ(0);
+}
+
+@keyframes loadSpinner {
+  0%,
+  100% {
+    box-shadow: 0 -1.5em 0 0.1em, 1em -1em 0 0em, 1.5em 0 0 -0.5em, 1em 1em 0 -0.5em, 0 1.5em 0 -0.5em, -1em 1em 0 -0.5em, -1.5em 0 0 -0.5em, -1em -1em 0 0;
+  }
+
+  12.5% {
+    box-shadow: 0 -1.5em 0 0, 1em -1em 0 0.1em, 1.5em 0 0 0, 1em 1em 0 -0.5em, 0 1.5em 0 -0.5em, -1em 1em 0 -0.5em, -1.5em 0 0 -0.5em, -1em -1em 0 -0.5em;
+  }
+
+  25% {
+    box-shadow: 0 -1.5em 0 -0.5em, 1em -1em 0 0, 1.5em 0 0 0.1em, 1em 1em 0 0, 0 1.5em 0 -0.5em, -1em 1em 0 -0.5em, -1.5em 0 0 -0.5em, -1em -1em 0 -0.5em;
+  }
+
+  37.5% {
+    box-shadow: 0 -1.5em 0 -0.5em, 1em -1em 0 -0.5em, 1.5em 0em 0 0, 1em 1em 0 0.1em, 0 1.5em 0 0em, -1em 1em 0 -0.5em, -1.5em 0em 0 -0.5em, -1em -1em 0 -0.5em;
+  }
+
+  50% {
+    box-shadow: 0 -1.5em 0 -0.5em, 1em -1em 0 -0.5em, 1.5em 0 0 -0.5em, 1em 1em 0 0em, 0 1.5em 0 0.1em, -1em 1em 0 0, -1.5em 0em 0 -0.5em, -1em -1em 0 -0.5em;
+  }
+
+  62.5% {
+    box-shadow: 0 -1.5em 0 -0.5em, 1em -1em 0 -0.5em, 1.5em 0 0 -0.5em, 1em 1em 0 -0.5em, 0 1.5em 0 0, -1em 1em 0 0.1em, -1.5em 0 0 0, -1em -1em 0 -0.5em;
+  }
+
+  75% {
+    box-shadow: 0em -1.5em 0 -0.5em, 1em -1em 0 -0.5em, 1.5em 0em 0 -0.5em, 1em 1em 0 -0.5em, 0 1.5em 0 -0.5em, -1em 1em 0 0, -1.5em 0em 0 0.1em, -1em -1em 0 0;
+  }
+
+  87.5% {
+    box-shadow: 0em -1.5em 0 0, 1em -1em 0 -0.5em, 1.5em 0 0 -0.5em, 1em 1em 0 -0.5em, 0 1.5em 0 -0.5em, -1em 1em 0 0, -1.5em 0em 0 0, -1em -1em 0 0.1em;
+  }
+}
+
+/* stylelint-enable */

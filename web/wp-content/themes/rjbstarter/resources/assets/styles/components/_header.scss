@@ -1,0 +1,120 @@
+header {
+  &.post-header {
+    .post-details {
+      font-size: 0.9rem;
+    }
+
+    .headline {
+      font-weight: 600;
+    }
+
+    .post-social {
+      font-size: 1.8rem;
+    }
+
+    .category-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      color: text-color("light");
+      position: relative;
+
+      &::before {
+        content: "\25CF";
+        position: absolute;
+        top: 5px;
+        left: -32px;
+        font-size: 0.5rem;
+        color: text-color("light");
+      }
+
+      .category-list-item {
+        a {
+          color: link-color("link-blue");
+          text-decoration: none;
+
+          &:hover {
+            color: link-color("link-blue-hover");
+            text-decoration: none;
+          }
+        }
+      }
+
+      > .category-list-item {
+        &::after {
+          content: ",";
+          margin-right: 5px;
+        }
+
+        &:last-of-type {
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &.header-content {
+    .headline {
+      font-weight: 600;
+
+      .superheadline {
+        text-transform: uppercase;
+      }
+    }
+
+    h3.headline {
+      &.headline-header {
+        font-family: font-main("section-header-light"), font-midstack("sans-serif"), font-fallback("sans-serif");
+      }
+    }
+
+    &.primary-dots-one {
+      .col-header {
+        @include dotsBG();
+
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        background: theme-color("primary");
+      }
+
+      .col-inside-header {
+        margin: 0.75rem;
+        background: theme-color("primary");
+        position: relative;
+        padding: 0.75rem;
+        z-index: 2;
+
+        * {
+          color: theme-color("lighter");
+        }
+      }
+    }
+
+    &.secondary-dots-one {
+      .col-header {
+        @include dotsBG();
+
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        background: theme-color("secondary");
+      }
+
+      .col-inside-header {
+        margin: 0.75rem;
+        padding: 0.75rem;
+        background: theme-color("secondary");
+        position: relative;
+        z-index: 2;
+
+        * {
+          color: theme-color("lighter");
+        }
+      }
+    }
+  }
+}

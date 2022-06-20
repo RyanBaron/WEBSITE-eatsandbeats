@@ -1,0 +1,114 @@
+.nav-item-af {
+  margin-top: 0 !important;
+  display: flex;
+  align-items: start;
+
+  &:not(.nav-item-af-header-text) {
+    &:hover {
+      background-color: theme-color("lighter");
+    }
+  }
+
+  span[itemprop="name"] {
+    font-size: 16px;
+    font-family: font-main("nav-headline"), font-midstack("sans-serif"), font-fallback("sans-serif");
+    line-height: 1.3;
+    font-weight: 600;
+    transition: all 0.15s linear;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 17px;
+    }
+  }
+
+  &-header {
+    padding: 0.2rem 0 0.4rem;
+    align-items: start;
+
+    span[itemprop="name"] {
+      font-size: 17px;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 18px;
+      }
+    }
+
+    .dropdown-item {
+      padding: 0 0.5rem !important;
+    }
+
+    &:hover {
+      background-color: initial;
+    }
+  }
+
+  &-primary {
+    .nav-icon-wrap {
+      //background-color: theme-color("primary") !important;
+      color: theme-color("primary") !important;
+    }
+  }
+
+  &-secondary-green {
+    .nav-icon-wrap {
+      //background-color: theme-color("secondary-green") !important;
+      //color: link-color("link-white") !important;
+      color: theme-color("secondary-green") !important;
+    }
+  }
+
+  &-secondary-orange {
+    .nav-icon-wrap {
+      //background-color: theme-color("secondary-orange") !important;
+      //color: link-color("link-white") !important;
+      color: theme-color("secondary-orange") !important;
+    }
+  }
+
+  &-secondary-purple {
+    .nav-icon-wrap {
+      //background-color: theme-color("secondary-purple") !important;
+      //color: link-color("link-white") !important;
+      color: theme-color("secondary-purple") !important;
+    }
+  }
+
+  &::after {
+    //content: "";
+    //width: 15px;
+    //height: 1px;
+    //background: theme-color("nav-link-desc");
+    //display: block;
+    //margin-left: 3.6rem;
+    //margin-bottom: 10px;
+
+    //@include media-breakpoint-up(lg) {
+    //  margin-left: 3rem;
+    //}
+  }
+
+  .nav-desc {
+    color: text-color("nav-link-desc");
+    font-size: 15px !important;
+    line-height: 22px !important;
+  }
+
+  a {
+    color: link-color("dark") !important;
+
+    &:hover {
+      color: link-color("darker") !important;
+    }
+  }
+}
+
+.nav-item {
+  &.bg-light,
+  &.bg-lighter {
+    a {
+      &:hover {
+        color: link-color("darker") !important;
+      }
+    }
+  }
+}

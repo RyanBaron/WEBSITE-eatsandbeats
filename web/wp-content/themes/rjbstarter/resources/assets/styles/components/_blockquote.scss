@@ -1,0 +1,133 @@
+blockquote {
+  font-family: font-main("quote"), font-fallback("serif");
+  line-height: 1.5;
+  font-size: 18px;
+  font-weight: 500;
+  text-indent: -7px;
+  margin: 1rem 0;
+
+  @include media-breakpoint-up(md) {
+    font-size: 18px;
+    line-height: 1.4;
+    text-indent: -10px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: 19px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: 20px;
+  }
+}
+
+.quote-image {
+  img {
+    border-radius: 100%;
+    border: 4px solid theme-color("primary");
+  }
+}
+
+cite,
+.quote-cite {
+  //text-transform: uppercase;
+  font-style: normal;
+  font-family: font-main("quote-details"), font-fallback("serif");
+  font-size: 12px;
+  line-height: 1.3;
+  letter-spacing: 0.9px;
+  text-align: left;
+
+  .name {
+    color: text-color("dark");
+    font-family: font-main("quote-name"), font-fallback("serif");
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .details {
+    color: text-color("dark");
+  }
+
+  span {
+    &.name {
+      & + span.details {
+        &::before {
+          content: ", ";
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+.text-center {
+  .quote-cite {
+    text-align: left !important;
+  }
+}
+
+.bg-darker,
+.bg-dark,
+.bg-primary,
+.bg-secondary,
+.bg-sec-purple,
+.bg-sec-green {
+  .bg-light,
+  .bg-white,
+  .bg-lighter,
+  .card {
+    cite,
+    .quote-cite {
+      .name {
+        color: text-color("dark");
+      }
+
+      .details {
+        color: text-color("dark");
+      }
+    }
+  }
+
+  &:not(.bg-white):not(.bg-light):not(.bg-lighter) {
+    cite,
+    .quote-cite {
+      .name {
+        //color: text-color("text-white");
+      }
+
+      .details {
+        //color: text-color("text-white");
+      }
+    }
+  }
+}
+
+.medium-quote-item {
+  blockquote {
+    font-size: 20px;
+  }
+}
+
+.large-quote-item {
+  blockquote {
+    font-size: 24px;
+  }
+}
+
+/*
+.row {
+  &.bg-white,
+  &.bg-light,
+  &.bg-lighter {
+    .quote-wrapper {
+      .name {
+        color: theme-color("darker");
+      }
+      .details {
+        color: theme-color("darker");
+      }
+    }
+  }
+}
+*/

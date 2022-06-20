@@ -1,0 +1,23 @@
+.mktoFormRow {
+  // Default select styling.
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 2px;
+    background-color: transparent;
+    border-width: 1px;
+    border-radius: 0;
+    border-color: transparent;
+    border-bottom-color: border-color("form-gray");
+    max-height: 36px;
+
+    &.mktoRequired {
+      color: #757575;
+
+      &.mktoValid {
+        color: color-text();
+      }
+    }
+  }
+}

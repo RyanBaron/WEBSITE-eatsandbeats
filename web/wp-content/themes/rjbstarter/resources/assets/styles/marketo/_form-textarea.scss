@@ -1,0 +1,13 @@
+.mktoFormRow {
+  textarea {
+    padding: 2px;
+    line-height: 1.3;
+    height: 5.2rem !important;
+    background-color: transparent;
+    max-height: 39rem;
+    width: 100%;
+    border-radius: 0;
+    border-color: transparent;
+    border-bottom-color: border-color("form-gray");
+  }
+}

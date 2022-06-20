@@ -1,0 +1,51 @@
+.card-header-accordion {
+  padding: 1.2rem 1.25rem 1rem;
+
+  &.card-header {
+    padding: 1.2rem 1.25rem 1rem;
+
+    &.thin-title {
+      .headline {
+        font-family: font-main("headline-light"), font-midstack("sans-serif"), font-fallback("sans-serif");
+      }
+    }
+  }
+
+  strong {
+    color: initial;
+  }
+
+  .accordion-leading-icon {
+    margin-right: 6px;
+
+    i,
+    svg {
+      color: initial;
+      font-size: 14px;
+    }
+  }
+
+  .accordion-link {
+    .accordion-leading-icon {
+      i,
+      svg {
+        transform: rotateX(180deg);
+      }
+    }
+
+    &.collapsed {
+      .accordion-leading-icon {
+        i,
+        svg {
+          transform: rotateX(0deg);
+        }
+      }
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

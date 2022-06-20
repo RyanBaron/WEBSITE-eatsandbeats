@@ -1,0 +1,379 @@
+.full-width-bleed-right,
+.full-width-bleed-large-right {
+  &.bg-dark {
+    .tns-inner {
+      &::after {
+        background-image: linear-gradient(to left, rgba(bg-color("bg-dark"), 1) 0, rgba(bg-color("bg-dark"), 0) 100%);
+      }
+    }
+  }
+
+  &.bg-darker {
+    .tns-inner {
+      &::after {
+        background-image: linear-gradient(to left, rgba(bg-color("bg-darker"), 1) 0, rgba(bg-color("bg-darker"), 0) 100%);
+      }
+    }
+  }
+}
+
+.wp-block-gutenberg-layout-slider {
+  .tns-nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-top: 1.5rem;
+
+    @include media-breakpoint-down(md) {
+      display: none !important; // Hide for mobile.
+    }
+
+    > button {
+      border: none;
+      border-top: 2px solid theme-color("light");
+      outline: none;
+      flex: 1;
+      background-color: transparent;
+      height: 15px;
+
+      &.tns-nav-active {
+        border-color: bg-color("bg-primary");
+      }
+    }
+  }
+
+  .tns-slide-inactive-hide-card {
+    .card {
+      opacity: 0;
+    }
+  }
+
+  .tns-slide-active {
+    .tns-slide-inactive-hide-card {
+      .card {
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards; // Keep the style after the animation is complete.
+        animation-name: delayedCardFadeIn;
+      }
+    }
+  }
+
+  .tns-outer {
+    position: relative;
+  }
+
+  .tns-controls {
+    justify-content: space-between;
+    height: 0;
+    position: absolute;
+    width: 100%;
+    top: calc(100% + 15px);
+    left: 0;
+    right: 0;
+    display: flex;
+    font-size: 1rem;
+
+    button {
+      background: transparent;
+      border: 1px solid theme-color("lighter");
+      outline: none;
+      color: theme-color("lighter");
+      width: 36px;
+      height: 36px;
+      border-radius: 100%;
+      margin-left: 15px;
+      margin-right: 15px;
+
+      @include media-breakpoint-up(md) {
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        //border: none;
+        outline: none;
+        color: text-color("primary");
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      display: flex;
+    }
+  }
+
+  .wp-block-gutenberg-widgets-slider-item {
+    &:active,
+    &:focus,
+    &:hover {
+      outline: none !important;
+    }
+
+    .slider-item-wrapper {
+      > .py-lg-12 {
+        padding-top: 5rem !important;
+        padding-bottom: 5rem !important;
+      }
+
+      .card {
+        //opacity: 0;
+        //transition: all 0.25s linear;
+      }
+
+      &.bg-offset-left {
+        //background-position: 0 center;
+        background-position: 125px center;
+      }
+    }
+
+    &.slick-center,
+    &.slick-active,
+    &.slick-current {
+      .slider-item-wrapper {
+        &.bg-offset-left {
+          background-position: 125px center;
+        }
+
+        .card {
+          opacity: 1;
+        }
+      }
+    }
+
+    &.tns-item {
+      .slider-item-wrapper {
+        height: 100%;
+
+        > section {
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  &.full-width-bleed-right {
+    .tns-inner {
+      padding-right: 8%;
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 8%;
+        z-index: 99;
+        position: absolute;
+        height: 100%;
+        right: 0;
+        top: 0;
+      }
+
+      @include media-breakpoint-up(md) {
+        //padding-right: 9%;
+      }
+
+      @include media-breakpoint-up(lg) {
+        padding-right: 10%;
+      }
+
+      @include media-breakpoint-up(xl) {
+        //padding-right: 7%;
+      }
+    }
+  }
+
+  &.full-width-bleed-large-right {
+    .tns-inner {
+      @include media-breakpoint-up(lg) {
+        padding-right: 12%;
+        position: relative;
+
+        &::after {
+          content: "";
+          width: 10%;
+          z-index: 99;
+          position: absolute;
+          height: 100%;
+          right: 0;
+          top: 0;
+        }
+      }
+
+      @include media-breakpoint-up(md) {
+        //padding-right: 9%;
+      }
+
+      @include media-breakpoint-up(lg) {
+        padding-right: 20%;
+      }
+
+      @include media-breakpoint-up(xl) {
+        //padding-right: 7%;
+      }
+    }
+  }
+
+  > .container {
+    padding-left: 0;
+    padding-right: 0;
+
+    .wp-block-gutenberg-widgets-slider-item {
+      &:active,
+      &:focus,
+      &:hover {
+        outline: none !important;
+      }
+
+      .slider-item-wrapper {
+        &.container {
+          padding-left: 0;
+          padding-right: 0;
+
+          section {
+            .container {
+              // empty
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.bg-dark {
+    .tns-controls {
+      color: text-color("text-lighter");
+    }
+  }
+
+  &.bg-darker {
+    color: text-color("text-lighter");
+  }
+
+  &.tns-navigation-hidden {
+    .tns-nav {
+      display: none;
+    }
+  }
+
+  &.tns-controls-hidden {
+    .tns-controls {
+      display: none;
+    }
+  }
+
+  &.tns-controls-primary {
+    .tns-controls {
+      button {
+        color: theme-color("primary");
+        border-color: theme-color("primary");
+      }
+    }
+  }
+
+  &.tns-controls-light {
+    .tns-controls {
+      button {
+        color: theme-color("light");
+        border-color: theme-color("light");
+      }
+    }
+  }
+
+  &.tns-controls-dark {
+    .tns-controls {
+      button {
+        color: theme-color("dark");
+        border-color: theme-color("dark");
+      }
+    }
+  }
+
+  &.tns-controls-lighter {
+    .tns-controls {
+      button {
+        color: theme-color("lighter");
+        border-color: theme-color("lighter");
+      }
+    }
+  }
+
+  &.tns-controls-darker {
+    .tns-controls {
+      button {
+        color: theme-color("darker");
+        border-color: theme-color("darker");
+      }
+    }
+  }
+
+  &.tns-controls-orange {
+    .tns-controls {
+      button {
+        color: theme-color("secondary-orange");
+        border-color: theme-color("secondary-orange");
+      }
+    }
+  }
+
+  &.tns-controls-green {
+    .tns-controls {
+      button {
+        color: theme-color("secondary-green");
+        border-color: theme-color("secondary-green");
+      }
+    }
+  }
+
+  &.tns-controls-purple {
+    .tns-controls {
+      button {
+        color: theme-color("secondary-purple");
+        border-color: theme-color("secondary-purple");
+      }
+    }
+  }
+
+  &.tns-controls-vertical-center {
+    .tns-controls {
+      top: calc(50% - 15px);
+    }
+  }
+}
+
+.slide-items {
+  //padding: 0 20% 0 0;
+}
+
+.slider-pane-item {
+  @include media-breakpoint-up(lg) {
+    //width: 800px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    //width: 900px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    //width: 1000px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    //width: 1100px;
+  }
+
+  @include media-breakpoint-up(xxxl) {
+    //width: 1200px;
+  }
+}
+
+@keyframes delayedCardFadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

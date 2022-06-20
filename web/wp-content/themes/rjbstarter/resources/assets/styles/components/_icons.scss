@@ -1,0 +1,87 @@
+main {
+  &.main {
+    .icon-wrap {
+      vertical-align: middle;
+      line-height: 1.2;
+      margin-bottom: 3px;
+
+      &.circle-outline {
+        padding: 0;
+        margin: 0;
+        border: 1px solid border-color("dark");
+        border-radius: 100%;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+
+        i,
+        svg {
+          color: text-color("dark");
+          padding: 7px;
+          margin: 0;
+          width: 28px;
+          height: 28px;
+
+          &.fa-caret-right {
+            padding: 5px;
+          }
+        }
+
+        &.circle-outline-light {
+          border-color: border-color("light");
+
+          i,
+          svg {
+            color: text-color("light");
+          }
+        }
+
+        &.circle-outline-primary {
+          border-color: border-color("primary");
+
+          i,
+          svg {
+            color: text-color("primary");
+          }
+        }
+      }
+    }
+
+    .icon-after {
+      .icon-wrap {
+        margin-right: 0.5rem;
+        line-height: 26px;
+        margin-bottom: 3px;
+      }
+    }
+
+    .icon-before {
+      .icon-wrap {
+        margin-right: 0.5rem;
+        line-height: 26px;
+        margin-bottom: 3px;
+      }
+    }
+
+    .link {
+      &:hover,
+      &:focus {
+        color: theme-color("primary") !important;
+
+        .icon-wrap {
+          &.circle-outline {
+            border-color: theme-color("primary");
+            background-color: theme-color("primary");
+
+            i,
+            svg {
+              color: theme-color("lighter");
+              column-fill: theme-color("lighter");
+            }
+          }
+        }
+      }
+    }
+  }
+}

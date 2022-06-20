@@ -1,0 +1,45 @@
+// Category id 27 (customer experience)
+body {
+  .banner {
+    &.banner-blog {
+      .category-nav {
+        li {
+          &.nav-item {
+            &.category-id-27 {
+              &.current-post-ancestor {
+                a {
+                  border-color: theme-color("blog-purple");
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.category {
+    &-customer-experience,
+    &-27 {
+      .banner {
+        .wrap-container {
+          .wrap-container-inside {
+            //background-image: url("../images/blog-banner-bg-purple.png");
+          }
+        }
+
+        .category-nav {
+          li {
+            &.nav-item {
+              &.category-id-27 {
+                .nav-link {
+                  border-color: theme-color("blog-purple");
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+//.sub-nav-taxonomy-customer
+.banner {
+  &.trans-on-dark {
+    .sub-nav-row {
+      li {
+        a {
+          color: theme-color("light");
+          border-bottom: 4px solid transparent;
+
+          &:hover,
+          &:active,
+          &:focus {
+            color: theme-color("lighter");
+          }
+        }
+
+        &.current-menu-item {
+          a {
+            color: theme-color("lighter");
+            font-family: font-main("nav-heavy"), font-fallback("sans-serif");
+            border-bottom: 4px solid theme-color("primary");
+          }
+        }
+      }
+    }
+
+    .sub-nav-category,
+    .sub-nav-taxonomy {
+      .secondary-nav,
+      .category-nav,
+      .navbar-nav {
+        li {
+          &:first-child {
+            &:not(.current-menu-item) {
+              a {
+                @include media-breakpoint-up(lg) {
+                  padding-left: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .taxonomy-header-row {
+    .headline {
+      font-size: 1.8rem;
+      //color: theme-color("medium");
+    }
+  }
+}

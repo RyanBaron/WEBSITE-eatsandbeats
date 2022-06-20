@@ -1,0 +1,47 @@
+@include media-breakpoint-up(md) {
+  .mktoForm.form-md-two-col {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    margin-left: -15px !important;
+    margin-right: -15px !important;
+
+    > .mktoFormRow {
+      flex: 0 0 50%;
+      width: 50%;
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+      //background-color: red;
+
+      > .mktoFormCol {
+        padding: 0;
+        margin: 0;
+      }
+
+      &.expressconsent_checkbox_row {
+        flex: 0 0 100%;
+        width: 100%;
+      }
+    }
+
+    .mktoButtonRow {
+      margin: 0.5rem 0;
+      padding: 0.5rem 0;
+      flex: 0 0 100%;
+      width: 100%;
+
+      input,
+      button {
+        &[type=submit] {
+          // @include btnBase();
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+    }
+  }
+}

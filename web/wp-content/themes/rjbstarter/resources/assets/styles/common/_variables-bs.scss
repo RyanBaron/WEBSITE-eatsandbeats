@@ -1,0 +1,148 @@
+/** Import Bootstrap functions */
+@import "~bootstrap/scss/functions";
+
+$theme-colors: (
+  primary: #0290af,
+  primary-light: lighten(#0290af, 10),
+  secondary: #e31245,
+  light: #b8dce5,
+  lighter: #ccdde7,
+  lightest: #fafafa,
+  white: #fff,
+  dark-blue: #273c47,
+  dark: #1f2532,
+  darker: #10131a,
+  secondary-red: #e31245, // ant#7
+  secondary-volcano: #fa541c, // ant#6
+  secondary-orange: #fa8c16, // ant#6
+  secondary-gold: #ffc53d, // ant#5
+  secondary-yellow: #ffde2d, // ant#5
+  secondary-lime: #a0d911, // ant#6
+  secondary-green: #52c41a, // ant#6
+  secondary-cyan: #13c2c2, // ant#7
+  secondary-blue: #1890ff, // ant#6
+  secondary-blue-dark: #030852, // ant#10
+  secondary-geek-blue: #1d39c4, // ant#7
+  secondary-purple: #531dab, // ant#7
+  secondary-magenta: #c41d7f, // ant#7
+  //secondary-light: lighten(#6c6463, 25),
+  //secondary-lighter: lighten(#6c6463, 10),
+  //secondary-darker: darken(#6c6463, 5),
+  //secondary-dark: darken(#6c6463, 10),
+  //primary-light: lighten(#e73c3e, 15),
+  //primary-lighter: lighten(#e73c3e, 7.5),
+  //primary: #e73c3e,
+  //primary-darker: darken(#e73c3e, 5),
+  //primary-dark: darken(#e73c3e, 10),
+  gray-dark: darken(#e8e9ea, 25),
+  gray-darker: darken(#e8e9ea, 10),
+  gray: #e8e9ea,
+  gray-lighter: lighten(#e8e9ea, 5),
+  gray-light: lighten(#e8e9ea, 10),
+  //dark: #071721,
+  medium: darken(#f1f1f1, 20),
+  theme-white: #fff,
+  text-light: #747985,
+  text-lighter: #8c919e,
+  blog-green: #208f4f,
+  blog-blue: #4860ff,
+  blog-red: #f2434f,
+  blog-purple: #7469ab,
+  blog-gray: #a7abb5,
+);
+
+/** Bootstrap navbar fix (https://git.io/fADqW) */
+$navbar-dark-toggler-icon-bg: none;
+$navbar-light-toggler-icon-bg: none;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm:576px,
+  md:768px,
+  lg:1024px,
+  xl:1200px,
+  xxl:1440px,
+  xxxl:1920px,
+  //xxxxl:2400px
+) !default;
+
+$container-max-widths: (
+  sm:540px,
+  md:720px,
+  lg:994px,
+  xl:1170px,
+  xxl:1280px,
+  xxxl:1400px,
+  //xxxxl:1600px
+) !default;
+
+$border-radius: 0.15rem;
+
+// Update bootstrap spacer classes.
+// https://medium.com/@louiswang0128/expand-bootstrap-spacing-classes-with-sass-ced4b5383aea
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * 0.5),
+    2: $spacer,
+    3: ($spacer * 1.5),
+    4: ($spacer * 2),
+    5: ($spacer * 2.5),
+    6: ($spacer * 3),
+    7: ($spacer * 3.5),
+    8: ($spacer * 4),
+    9: ($spacer * 4.5),
+    10: ($spacer * 5),
+    11: ($spacer * 5.5),
+    12: ($spacer * 6),
+    13: ($spacer * 6.5),
+    14: ($spacer * 7),
+    15: ($spacer * 7.5),
+    16: ($spacer * 8),
+  ),
+  $spacers
+);
+
+// Buttons + Forms
+//
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+$input-btn-padding-y: 0.2rem !default;
+$input-btn-padding-x: 0.5rem !default;
+$input-btn-font-size: 14px !default;
+$input-btn-line-height: 1.6 !default;
+$input-btn-padding-y-sm: 0.125rem !default;
+$input-btn-padding-x-sm: 0.35rem !default;
+$input-btn-font-size-sm: 13px !default;
+$input-btn-padding-y-lg: 0.4rem !default;
+$input-btn-padding-x-lg: 0.8rem !default;
+$input-btn-font-size-lg: 15px !default;
+
+//$btn-box-shadow: inset 0 1px 0 rgba($white, 0.15), 0 1px 1px rgba($black, 0.075) !default;
+$btn-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045) !default;
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background, and border color.
+
+$btn-padding-y:               $input-btn-padding-y !default;
+$btn-padding-x:               $input-btn-padding-x !default;
+$btn-font-size:               $input-btn-font-size !default;
+$btn-line-height:             $input-btn-line-height !default;
+
+$btn-padding-y-sm:            $input-btn-padding-y-sm !default;
+$btn-padding-x-sm:            $input-btn-padding-x-sm !default;
+$btn-font-size-sm:            $input-btn-font-size-sm !default;
+
+$btn-padding-y-lg:            $input-btn-padding-y-lg !default;
+$btn-padding-x-lg:            $input-btn-padding-x-lg !default;
+$btn-font-size-lg:            $input-btn-font-size-lg !default;
+
+//$btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;
+//$btn-active-box-shadow:       inset 0 3px 5px rgba($black, .125) !default;
+
+// Allows for customizing button radius independently from global border radius
+//$btn-border-radius:           $border-radius !default;
+//$btn-border-radius-sm:        $border-radius-sm !default;
+//$btn-border-radius-lg:        $border-radius-lg !default;

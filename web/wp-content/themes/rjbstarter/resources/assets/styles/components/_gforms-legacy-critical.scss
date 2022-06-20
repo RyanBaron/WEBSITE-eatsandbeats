@@ -1,0 +1,437 @@
+// https://github.com/RyanBaron/site-eabsolutions/blob/master/site/web/app/themes/eab-solutions/resources/assets/styles/components/_forms.critical.scss
+.complex-two-column {
+  width: 100%;
+
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .ginput_complex {
+    width: 100%;
+    position: relative;
+
+    > span {
+      display: block;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+
+      &:nth-of-type(odd) {
+        float: left;
+      }
+
+      &:nth-of-type(even) {
+        float: right;
+
+        &::after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+      }
+
+      label {
+        position: absolute;
+        right: -99999px;
+      }
+    }
+  }
+}
+
+form {
+  .gfield_radio {
+    li {
+      input[type="text"] {
+        width: auto !important;
+      }
+    }
+  }
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    line-height: 1.3 !important;
+    margin: 0 0.25rem 0 !important;
+    min-width: 0.9rem;
+    min-height: 0.9rem;
+  }
+
+  select,
+  textarea,
+  input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]) {
+    @extend .rounded;
+
+    width: 100%;
+    padding: 0.45rem 0.75rem;
+    outline: none;
+    border: 1px solid transparent;
+
+    &:active,
+    &:focus,
+    &:hover {
+      border-color: theme-color("primary");
+    }
+  }
+
+  .ginput_container_textarea {
+    textarea {
+      .textarea {
+        height: 6rem;
+      }
+    }
+  }
+
+  .gf_page_steps {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 15px 0 !important;
+    border-bottom-style: solid !important;
+    border-bottom-color: theme-color("gray") !important;
+
+    .gf_step {
+      flex: 0 0 auto;
+      padding: 0;
+      margin: 0;
+      height: auto;
+      text-align: center;
+      margin-left: 1rem;
+
+      .gf_step_number {
+        padding: 0.25rem;
+        margin: 0 1rem 0 0;
+        border: 1px solid theme-color("gray");
+        border-radius: 100%;
+        width: 2rem;
+        height: 2rem;
+        text-align: center;
+      }
+
+      &.gf_step_pending {
+        opacity: 0.5;
+      }
+
+      &.gf_step_active {
+        font-weight: bolder;
+
+        .gf_step_number {
+          border-color: theme-color("bg-primary");
+        }
+      }
+
+      &.gf_step_first {
+        margin-left: 0;
+      }
+    }
+  }
+
+  ul.gform_fields {
+    li.gfield {
+      margin: 0.65rem 0 0;
+
+      div.ginput_container {
+        padding: 0;
+        margin: 5px 0 0;
+
+        &.ginput_container_checkbox,
+        .ginput_container_checkbox,
+        &.ginput_container_radio,
+        .ginput_container_radio {
+          padding: 0;
+          margin: 5px 0 0;
+        }
+      }
+
+      label {
+        padding: 0;
+        margin: 0;
+      }
+
+      &.half-left,
+      &.half-right {
+        width: calc(50% - 8px);
+        display: block;
+        clear: none;
+      }
+
+      &.half-left {
+        float: left;
+
+        &::before {
+          content: "";
+          display: table;
+          clear: both;
+        }
+      }
+
+      &.half-right {
+        float: right;
+
+        &::after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+      }
+
+      &.full-width {
+        float: left;
+        width: 100%;
+
+        &::before {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        &::after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+      }
+    }
+
+    &.top_label {
+      &.description_belos {
+        .ginput_container {
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+
+  .gform_page_fields {
+    &::after {
+      content: "";
+      clear: both;
+      width: 100%;
+      height: 0;
+      display: table;
+    }
+  }
+
+  .gform_page_footer {
+    border-top-style: solid !important;
+    border-top-color: theme-color("gray") !important;
+    position: relative;
+
+    &::after {
+      content: "";
+      clear: both;
+      width: 100%;
+      height: 0;
+      display: table;
+    }
+
+    img {
+      &.gform_ajax_spinner {
+        position: absolute;
+        z-index: 2;
+        padding: 0;
+        margin: 0;
+        left: 50%;
+        margin-left: -10px;
+        top: 50%;
+        margin-top: -10px;
+        max-width: 20px;
+        height: auto;
+      }
+    }
+
+    input[type="button"],
+    input[type="submit"] {
+      &.button,
+      &.gform_button {
+        float: right;
+        margin-right: 0;
+
+        &.gform_next_button {
+          float: right;
+          margin-right: 0;
+        }
+
+        &.gform_previous_button {
+          @extend .btn-gray;
+
+          float: left;
+        }
+      }
+    }
+  }
+
+  .gform_page_footer,
+  .gform_footer {
+    text-align: center;
+
+    input[type="button"],
+    input[type="submit"] {
+      &.button,
+      &.gform_button,
+      &:not(:disabled):not(.disabled) {
+        @extend .btn-primary;
+        //@extend .btn-narrow;
+
+        padding: 1rem 1.75rem;
+        border-width: 2px;
+        display: inline-block;
+        font-weight: 400;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        user-select: none;
+        border: 1px solid transparent;
+        font-size: 1rem;
+        line-height: 1.5;
+        border-radius: 0.25rem;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+
+        &:hover,
+        &:focus {
+          text-decoration: none;
+        }
+
+        &:focus,
+        &.focus {
+          outline: 0;
+          box-shadow: 0 0 0 0.2rem rgba(39, 174, 96, 0.25);
+        }
+
+        //@include textBolder();
+        //@include textLg();
+      }
+    }
+  }
+
+  &.single-column {
+    ul.gform_fields {
+      padding: 0;
+      margin: 0;
+
+      li.gfield {
+        padding: 0;
+        margin: 0 0 0.65rem 0;
+
+        select,
+        textarea,
+        input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]) {
+          width: 100%;
+        }
+
+        .ginput_complex {
+          > span {
+            display: block;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+          }
+
+          &.ginput_container {
+            width: 100%;
+
+            > span {
+              display: block;
+              width: 100%;
+              padding: 0;
+              margin: 1rem 0 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.bg-white {
+    ul.gform_fields {
+      li.gfield {
+        select,
+        textarea,
+        input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]) {
+          @extend .rounded;
+
+          padding: 0.45rem 0.75rem;
+          outline: none;
+          //border: 1px solid rgba(theme-color("gray"), 1);
+          border: 1px solid rgba(theme-color("dark"), 1);
+
+          &:focus {
+            border-color: rgba(theme-color("secondary"), 0.6) !important;
+          }
+
+          &:active,
+          &:hover {
+            border-color: rgba(theme-color("primary"), 0.6);
+          }
+        }
+      }
+    }
+  }
+
+  &.hide-labels {
+    ul.gform_fields {
+      li.gfield {
+        position: relative;
+        overflow: hidden;
+
+        label {
+          position: absolute;
+          right: -99999px;
+        }
+      }
+    }
+  }
+
+  &.contact {
+    &-modal,
+    &-main {
+      @extend .bg-white;
+
+      ul.gform_fields {
+        li.gfield {
+          &.name {
+            width: 100%;
+
+            &::after {
+              content: "";
+              display: table;
+              clear: both;
+            }
+
+            .ginput_complex {
+              width: 100%;
+              position: relative;
+
+              > span {
+                display: block;
+                width: 100%;
+                padding: 0;
+                margin: 0;
+
+                &:nth-of-type(odd) {
+                  float: left;
+                }
+
+                &:nth-of-type(even) {
+                  float: right;
+
+                  &::after {
+                    content: "";
+                    display: table;
+                    clear: both;
+                  }
+                }
+
+                label {
+                  position: absolute;
+                  right: -99999px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.product-compare {
+  .row {
+    .col-product-compare {
+      font-weight: 700;
+
+      i {
+        font-size: 2rem;
+      }
+
+      &:not(:first-child) {
+        font-weight: 300;
+      }
+    }
+
+    &.row-product-compare-headline {
+      // some comment
+    }
+
+    &.row-product-compare-feature {
+      // another comment
+    }
+  }
+}

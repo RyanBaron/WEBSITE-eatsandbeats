@@ -1,0 +1,1000 @@
+/*** Start - Mobile Specific Nav Adjustments ***/
+
+@include media-breakpoint-down(md) {
+  .menu-secondary-navigation-container {
+    width: 100%;
+  }
+
+  .nav-item {
+    &.dropdown {
+      box-shadow: none !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+  }
+
+  .dropdown-item {
+    .nav-icon-wrap {
+      display: none !important;
+      opacity: 0.5;
+    }
+  }
+
+  .desc {
+    color: theme-color("dark") !important;
+  }
+
+  .dropdown-menu {
+    .nav-desc {
+      color: theme-color("dark") !important;
+    }
+
+    &.nav-lvl-0 {
+      background-color: transparent;
+      border: none;
+      box-shadow: none !important;
+      margin-bottom: 0 !important;
+
+      a {
+        color: theme-color("dark") !important;
+
+        &:hover,
+        &:active,
+        &:focus {
+          color: theme-color("darker") !important;
+        }
+      }
+
+      .nav-item-af {
+        a {
+          span {
+            &[itemprop="name"] {
+              color: theme-color("dark") !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .nav-right {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+
+    .menu-header-secondary-right-container {
+      width: 100%;
+    }
+
+    ul {
+      &.nav {
+        flex-direction: column-reverse !important;
+      }
+    }
+  }
+
+  .nav-banner li .menu-item-icon > a .nav-icon-wrap {
+    display: none !important;
+  }
+
+  .nav-banner li .dropdown-menu.nav-lvl-0 .section-menu.nav-lvl-1 > .menu-item {
+    margin: 0.5rem 0;
+
+    a {
+      padding-left: 15px !important;
+      border-left: 3px solid theme-color("light");
+
+      &:hover {
+        color: theme-color("light");
+      }
+    }
+
+    &.nav-item-af {
+      &-primary {
+        a {
+          border-color: theme-color("primary");
+        }
+      }
+
+      &-secondary {
+        a {
+          border-color: theme-color("secondary");
+        }
+      }
+
+      &-secondary-purple {
+        a {
+          border-color: theme-color("secondary-purple");
+        }
+      }
+
+      &-secondary-yellow {
+        a {
+          border-color: theme-color("secondary-yellow");
+        }
+      }
+
+      &-secondary-blue {
+        a {
+          border-color: theme-color("secondary-blue");
+        }
+      }
+
+      &-secondary-green {
+        a {
+          border-color: theme-color("secondary-green");
+        }
+      }
+
+      &-secondary-orange {
+        a {
+          border-color: theme-color("secondary-orange");
+        }
+      }
+    }
+  }
+
+  .nav-banner li .dropdown-menu.nav-lvl-0 .section-menu.nav-lvl-1 > .menu-item span.nav-icon-wrap {
+    display: none !important;
+  }
+
+  .navbar-toggler {
+    padding: 0;
+    text-align: center;
+
+    .navbar-toggler-icon {
+      display: block;
+      text-align: center;
+      cursor: pointer;
+      width: auto;
+      height: 30px;
+
+      svg {
+        cursor: pointer;
+      }
+
+      .bar-1,
+      .bar-2,
+      .bar-3 {
+        transition: all 0.35s linear;
+        transform: rotate(0deg);
+        transform-origin: 18px 40px;
+      }
+
+      *.bar-1 {
+        transform-origin: 4px 10px;
+      }
+
+      *.bar-3 {
+        transform-origin: 0 20px;
+      }
+    }
+
+    &:not(.collapsed) {
+      border-color: rgba(255, 255, 255, 0);
+      outline: none !important;
+
+      &:active,
+      &:focus {
+        outline: none !important;
+        box-shadow: none !important;
+      }
+
+      .navbar-toggler-icon {
+        svg {
+          .bar-1 {
+            transform: rotate(45deg);
+          }
+
+          .bar-3 {
+            transform: rotate(-45deg);
+          }
+
+          .bar-2 {
+            opacity: 0;
+            width: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*** End - Mobile Specific Nav Adjustments ***/
+
+.dropdown {
+  a {
+    background-color: transparent;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: transparent;
+    }
+  }
+}
+
+.dropdown-header,
+.nav-headline {
+  .nav-desc {
+    margin-top: 0.75rem;
+  }
+}
+
+.nav-item {
+  color: text-color("dark");
+
+  .dropdown-header,
+  .nav-headline {
+    span[itemprop="name"] {
+      font-size: 17px;
+      font-family: font-main("nav-headline"), font-midstack("sans-serif"), font-fallback("sans-serif");
+      line-height: 1.3;
+      font-weight: 600;
+    }
+  }
+
+  &.bg-primary,
+  &.bg-dark,
+  &.bg-darker {
+    .dropdown-item-text {
+      //color: text-color("text-white");
+      color: text-color("nav-bg-dark-text");
+    }
+
+    .dropdown-header {
+      //color: text-color("text-white");
+      color: text-color("nav-bg-dark-text");
+    }
+  }
+}
+
+.nav-banner-primary {
+  > .menu-item {
+    //position: relative;
+
+    &::after {
+      content: "";
+      height: 0;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: theme-color("primary");
+    }
+
+    &:hover,
+    &:active,
+    &:focus,
+    .current-menu-ancestor,
+    .current_page_ancestor,
+    .current-page-item,
+    .current_page_ancestor {
+      &::after {
+        //height: 4px;
+      }
+    }
+  }
+
+  .sub-nav-item {
+    font-size: 13px;
+    margin-top: 0.1rem !important;
+    margin-bottom: 0.1rem !important;
+
+    a {
+      padding-top: 0.1rem !important;
+      padding-bottom: 0.1rem !important;
+      padding-left: 0.9rem !important;
+      font-size: 13px !important;
+      color: text-color("nav-link-desc") !important;
+      //color: theme-color("text-light") !important;
+      line-height: 18px !important;
+
+      span {
+        padding: 0.1rem 0 0.1rem 2.6rem;
+
+        @include media-breakpoint-up(lg) {
+          padding: 0.1rem 0 0.1rem 0;
+        }
+      }
+    }
+
+    &.pipe {
+      span {
+        padding-left: 0.5rem;
+        border-left: 2px solid theme-color("light");
+      }
+    }
+
+    &.pipe-dark {
+      span {
+        border-left-color: theme-color("dark");
+      }
+    }
+
+    &.pipe-transparent {
+      span {
+        border-left-color: transparent;
+      }
+    }
+
+    &.pipe-transparent-with-hover {
+      span {
+        border-left-color: transparent;
+      }
+
+      &:hover {
+        border-left-color: theme-color("gray");
+      }
+    }
+
+    &.pipe-darker {
+      span {
+        border-left-color: theme-color("darker");
+      }
+    }
+
+    &.pipe-lighter {
+      span {
+        border-left-color: theme-color("lighter");
+      }
+    }
+
+    &.pipe-gray {
+      span {
+        border-left-color: theme-color("gray");
+      }
+    }
+
+    &.pipe-primary {
+      span {
+        border-left-color: theme-color("primary");
+      }
+    }
+
+    &.pipe-secondary {
+      span {
+        border-left-color: theme-color("secondary");
+      }
+    }
+
+    &.pipe-secondary-purple {
+      span {
+        border-left-color: theme-color("secondary-purple");
+      }
+    }
+
+    &.pipe-secondary-green {
+      span {
+        border-left-color: theme-color("secondary-green");
+      }
+    }
+
+    &.pipe-secondary-orange {
+      span {
+        border-left-color: theme-color("secondary-orange");
+      }
+    }
+
+    //////
+    // Indent should come before .pipe above, as we want to be able to overwrite the default pipe indent with our indent class.
+    //////
+    &.indent,
+    &.indent-sm {
+      span {
+        padding-left: 0.65rem;
+        margin-left: 0.5rem;
+      }
+    }
+
+    &.indent-md {
+      span {
+        margin-left: 0.5rem;
+        padding-left: 1.55rem;
+      }
+    }
+
+    &.indent-lg {
+      span {
+        margin-left: 2.1rem;
+        padding-left: 0.65rem;
+      }
+    }
+
+    &.indent-xl {
+      span {
+        margin-left: 2.1rem;
+        padding-left: 1rem;
+      }
+    }
+  }
+
+  .section-menu {
+    .dropdown-item-text {
+      padding: 0.4rem 0.5rem;
+    }
+  }
+}
+
+.nav-banner {
+  .dropdown-toggle {
+    position: relative;
+
+    &::before {
+      @include media-breakpoint-down(md) {
+        background-color: transparent;
+      }
+
+      content: "";
+      height: 0;
+      background-color: theme-color("primary");
+      width: 100%;
+      left: 0;
+      right: 0;
+      top: auto;
+      bottom: 0;
+      transition: all 0.2s linear;
+      position: absolute;
+    }
+
+    &::after {
+      vertical-align: 0.125em;
+      content: url("../images/chevron-down-light.svg");
+      border: none;
+      width: 24px;
+      height: 20px;
+      padding: 3px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    @include media-breakpoint-up(lg) {
+      &::after {
+        width: 7px;
+        height: 26px;
+        padding: 0;
+        //margin-top: -8px;
+        margin-left: 8px;
+      }
+    }
+
+    @include media-breakpoint-up(xl) {
+      &::after {
+        position: relative;
+        top: 3px;
+      }
+    }
+  }
+
+  li {
+    margin-top: 1rem;
+
+    .dropdown-menu {
+      a.dropdown-item {
+        display: block;
+        line-height: 1.5;
+        //padding: 0.5rem 0.5rem 0.4rem 1.5rem;
+        padding: 0.75rem 0.5rem 0.65rem 0.5rem;
+      }
+
+      .dropdown-item {
+        line-height: 1.5;
+      }
+
+      .dropdown-header {
+        padding: 0.4rem 0.5rem;
+        line-height: 1.5;
+      }
+
+      .nav-desc {
+        font-family: font-main("nav-desc"), font-midstack("sans-serif"), font-fallback("sans-serif");
+        font-size: 13px;
+        font-weight: normal;
+      }
+
+      &.nav-lvl-0 {
+        @include dropshadow();
+
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
+        border: none;
+
+        @include media-breakpoint-up(lg) {
+          flex-wrap: nowrap;
+        }
+
+        > li {
+          flex: 1;
+          flex-basis: 0;
+          padding: 0.5rem 1rem;
+
+          @include media-breakpoint-up(lg) {
+            padding: 1rem;
+          }
+
+          @include media-breakpoint-up(xl) {
+            padding: 1.5rem;
+          }
+
+          > span[itemprop="name"] {
+            display: none;
+          }
+
+          &.menu-75,
+          &.menu-100,
+          &.menu-125,
+          &.menu-150,
+          &.menu-175,
+          &.menu-200,
+          &.menu-225,
+          &.menu-250,
+          &.menu-275,
+          &.menu-300,
+          &.menu-325,
+          &.menu-350,
+          &.menu-375,
+          &.menu-400,
+          &.menu-425,
+          &.menu-450,
+          &.menu-475,
+          &.menu-500 {
+            width: 100%;
+            max-width: 100%;
+            min-width: 100%;
+          }
+
+          @include media-breakpoint-up(lg) {
+            &.menu-75 {
+              min-width: auto !important;
+              width: 75px !important;
+              flex: 0 0 75px !important;
+            }
+
+            &.menu-100 {
+              min-width: auto !important;
+              width: 100px !important;
+              flex: 0 0 100px !important;
+            }
+
+            &.menu-125 {
+              min-width: auto !important;
+              width: 125px !important;
+              flex: 0 0 125px !important;
+            }
+
+            &.menu-150 {
+              min-width: auto !important;
+              width: 150px !important;
+              flex: 0 0 150px !important;
+            }
+            // -10
+            &.menu-175 {
+              min-width: auto !important;
+              width: 165px !important;
+              flex: 0 0 165px !important;
+            }
+            // -20
+            &.menu-200 {
+              min-width: auto !important;
+              width: 180px !important;
+              flex: 0 0 180px !important;
+            }
+            // -30
+            &.menu-225 {
+              min-width: auto !important;
+              width: 195px !important;
+              flex: 0 0 195px !important;
+            }
+            // -40
+            &.menu-250 {
+              min-width: auto !important;
+              width: 210px !important;
+              flex: 0 0 210px !important;
+            }
+            // -50
+            &.menu-275 {
+              min-width: auto !important;
+              width: 225px !important;
+              flex: 0 0 225px !important;
+            }
+            // -60
+            &.menu-300 {
+              min-width: auto !important;
+              width: 240px !important;
+              flex: 0 0 240px !important;
+            }
+            // - 65
+            &.menu-325 {
+              min-width: auto !important;
+              width: 260px !important;
+              flex: 0 0 260px !important;
+            }
+            // - 70
+            &.menu-350 {
+              min-width: auto !important;
+              width: 280px !important;
+              flex: 0 0 280px !important;
+            }
+            // - 75
+            &.menu-375 {
+              min-width: auto !important;
+              width: 300px !important;
+              flex: 0 0 300px !important;
+            }
+            // -80
+            &.menu-400 {
+              min-width: auto !important;
+              width: 320px !important;
+              flex: 0 0 320px !important;
+            }
+            // -85
+            &.menu-425 {
+              min-width: auto !important;
+              flex: 0 0 340px !important;
+              width: 340px !important;
+            }
+            // -90
+            &.menu-450 {
+              min-width: auto !important;
+              width: 360px !important;
+              flex: 0 0 360px !important;
+            }
+            // -95
+            &.menu-475 {
+              min-width: auto !important;
+              width: 380px !important;
+              flex: 0 0 380px !important;
+            }
+            // -100
+            &.menu-500 {
+              min-width: auto !important;
+              width: 400px !important;
+              flex: 0 0 400px !important;
+            }
+          }
+
+          @include media-breakpoint-up(xl) {
+            &.menu-150 {
+              min-width: auto !important;
+              width: 150px !important;
+              flex: 0 0 150px !important;
+            }
+
+            &.menu-175 {
+              min-width: auto !important;
+              width: 175px !important;
+              flex: 0 0 175px !important;
+            }
+
+            &.menu-200 {
+              min-width: auto !important;
+              width: 200px !important;
+              flex: 0 0 200px !important;
+            }
+
+            &.menu-225 {
+              min-width: auto !important;
+              width: 225px !important;
+              flex: 0 0 225px !important;
+            }
+
+            &.menu-250 {
+              min-width: auto !important;
+              width: 250px !important;
+              flex: 0 0 250px !important;
+            }
+
+            &.menu-275 {
+              min-width: auto !important;
+              width: 275px !important;
+              flex: 0 0 275px !important;
+            }
+
+            &.menu-300 {
+              min-width: auto !important;
+              width: 300px !important;
+              flex: 0 0 300px !important;
+            }
+
+            &.menu-325 {
+              min-width: auto !important;
+              width: 325px !important;
+              flex: 0 0 325px !important;
+            }
+
+            &.menu-350 {
+              min-width: auto !important;
+              width: 350px !important;
+              flex: 0 0 350px !important;
+            }
+
+            &.menu-375 {
+              min-width: auto !important;
+              width: 375px !important;
+              flex: 0 0 375px !important;
+            }
+
+            &.menu-400 {
+              min-width: auto !important;
+              width: 400px !important;
+              flex: 0 0 400px !important;
+            }
+
+            &.menu-425 {
+              min-width: auto !important;
+              flex: 0 0 425px !important;
+              width: 425px !important;
+            }
+
+            &.menu-450 {
+              min-width: auto !important;
+              width: 450px !important;
+              flex: 0 0 450px !important;
+            }
+
+            &.menu-475 {
+              min-width: auto !important;
+              width: 475px !important;
+              flex: 0 0 475px !important;
+            }
+
+            &.menu-500 {
+              min-width: auto !important;
+              width: 500px !important;
+              flex: 0 0 500px !important;
+            }
+          }
+        }
+
+        .section-menu {
+          &.nav-lvl-1 {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100% !important;
+
+            > .menu-item {
+              width: 100%;
+              flex: 1;
+              flex-grow: 0;
+
+              span {
+                display: block;
+                white-space: normal;
+
+                /*
+                &[itemprop="name"] {
+                  > svg {
+                    + .nav-desc {
+                      // padding-left: 1.5rem;
+                    }
+                  }
+                }
+                */
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.nav-item {
+      &.show {
+        > .dropdown-toggle {
+          position: relative;
+
+          &::before {
+            height: 3px;
+          }
+
+          &::after {
+            content: url("../images/chevron-up-light.svg");
+          }
+        }
+      }
+    }
+
+    &.dropdown-menu-center {
+      .dropdown-menu {
+        &.nav-lvl-0 {
+          right: auto;
+          left: 50%;
+          flex-direction: column;
+          //-webkit-transform: translate(-50%, 0);
+          //-o-transform: translate(-50%, 0);
+          //transform: translate(-50%, 0);
+
+          @include media-breakpoint-up(lg) {
+            flex-direction: row;
+          }
+        }
+      }
+    }
+
+    &.dropdown-menu-full {
+      position: inherit;
+
+      .dropdown-menu {
+        &.nav-lvl-0 {
+          right: auto;
+          left: 50%;
+          //-webkit-transform: translate(-50%, 0);
+          //-o-transform: translate(-50%, 0);
+          //transform: translate(-50%, 0);
+        }
+      }
+    }
+
+    .menu-item-icon {
+      > a,
+      > .nav-item-af-header-text-inside {
+        position: relative;
+        padding-left: 3.5rem !important;
+        padding-top: 0.65rem !important;
+
+        @include media-breakpoint-up(md) {
+          padding-left: 3rem !important;
+        }
+
+        .nav-icon-wrap {
+          position: absolute;
+          left: 0.75rem;
+          top: 0.7rem;
+          //background-color: theme-color("lighter");
+          border-radius: 100%;
+          width: 20px;
+          height: 20px;
+          display: flex !important;
+          justify-content: center;
+          align-items: center;
+
+          svg {
+            //font-size: 1.25rem;
+            font-size: 1.15rem;
+          }
+        }
+      }
+    }
+
+    &.menu-item {
+      width: 100%;
+
+      a {
+        letter-spacing: 0.15px;
+        font-size: 14px;
+        color: link-color("link-white");
+
+        &:hover {
+          color: link-color("link-lighter");
+        }
+
+        @include media-breakpoint-down(md) {
+          color: link-color("dark");
+
+          &:hover {
+            color: link-color("darker");
+          }
+        }
+      }
+
+      &.menu-btn-item {
+        margin-left: 1rem;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+
+        > a {
+          @extend .btn;
+          @extend .btn-secondary;
+
+          color: theme-color("theme-white") !important;
+        }
+      }
+
+      .dropdown-menu {
+        li {
+          &.menu-item {
+            a {
+              //&:not(.btn) {
+              color: link-color("dark");
+
+              &:hover {
+                color: link-color("darker");
+              }
+              //}
+            }
+          }
+        }
+
+        &.show {
+          display: flex;
+
+          li {
+            &.menu-item {
+              a {
+                // nothing.
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.banner {
+  &.trans-on-dark {
+    .navbar {
+      .nav-banner {
+        .dropdown-toggle {
+          &::after {
+            content: url("../images/chevron-down-white.svg");
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .banner {
+    .nav-banner-right {
+      justify-content: flex-end;
+
+      li {
+        margin-right: 10px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .nav-banner {
+    li {
+      margin-top: 0;
+
+      &.menu-item {
+        width: auto;
+
+        a {
+          //&:not(.btn) {
+          letter-spacing: 0;
+          font-size: 14px;
+          line-height: 2;
+          padding: 0.35rem 1.25rem;
+          //}
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .nav-banner {
+    li {
+      &.menu-item {
+        a {
+          //&:not(.btn) {
+          line-height: 1.75;
+          //}
+        }
+      }
+    }
+  }
+}

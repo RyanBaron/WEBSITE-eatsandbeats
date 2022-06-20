@@ -1,0 +1,189 @@
+body {
+  &:not(.user-type-admin) {
+    // Config Options
+    [data-name="spacing_footer_accordion"],
+    [data-name="footer_headline_style"],
+    [data-name="footer_link_hide"],
+    [data-name="row_align_section_footer"],
+    [data-name="size_footer_accordion"] {
+      opacity: 0 !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      overflow: hidden !important;
+    }
+
+    // Config Options
+    [data-name="section_context"],
+    [data-name="analytics_context"],
+    [data-name="row_align_section"],
+    [data-name="section_customization_lvl"] {
+      opacity: 0 !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      overflow: hidden !important;
+    }
+
+    // Form Options
+    [data-name="spacing_column_form_accordion"],
+    [data-name="order_column_form_accordion"],
+    [data-name="size_column_form_accordion"],
+    [data-name="section_customization_lvl"] {
+      opacity: 0 !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      overflow: hidden !important;
+    }
+
+    // Card Options
+    [data-name="col_cards_row_align"],
+    [data-name="size_column_cards_accordion"],
+    [data-name="order_column_cards_accordion"],
+    [data-name="col_cards_col_customization_lvl"],
+    [data-name="card_column_styles_accordion"],
+    [data-name="card_link_icon_position"],
+    [data-name="card_link_icon_style"],
+    [data-name="card_link_align"],
+    [data-name="card_image_style"],
+    [data-name="card_style"],
+    [data-name="card_data_g_action"],
+    [data-name="card_data_g_label"],
+    [data-name="card_body_justify"],
+    [data-name="card_body_header_justify"],
+    [data-name="card_col_inside_padding"] {
+      opacity: 0 !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      overflow: hidden !important;
+    }
+
+    // Image Options
+    [data-name="col_image_one_alignment_start_accordion"],
+    [data-name="col_image_one_size_start_accordion"],
+    [data-name="col_image_one_order_start_accordion"],
+    [data-name="col_image_one_image_style"],
+    //[data-name="col_image_one_image_overflow"],
+    [data-name="col_image_one_customization_lvl"] {
+      opacity: 0 !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      overflow: hidden !important;
+    }
+
+    // Header Options
+    [data-name="spacing_header_accordion"],
+    [data-name="row_align_section_header"],
+    [data-name="col_class_section_header"],
+    [data-name="header_headline_style"] {
+      opacity: 0 !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      overflow: hidden !important;
+    }
+
+    // Copy Col Options
+    [data-name="col_copy_one_size_start_accordion"],
+    [data-name="col_copy_one_link_hide"],
+    [data-name="link_tracking_settings_accordion"],
+    [data-name="col_copy_one_link_order"],
+    [data-name="col_copy_one_customization_lvl"],
+    [data-name="quotes_accordion"],
+    [data-name="col_copy_one_headline_style"] {
+      opacity: 0 !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      overflow: hidden !important;
+    }
+  }
+
+  &.user-type-admin {
+    &.user-type-admin {
+      [data-name="card_data_g_action"],
+      [data-name="card_data_g_label"],
+      //[data-name="quotes_accordion"],
+      [data-name="section_context"],
+      [data-name="col_copy_one_link_hide"],
+      [data-name="footer_link_hide"],
+      [data-name="link_tracking_settings_accordion"],
+      [data-name="analytics_context"] {
+        opacity: 0 !important;
+        height: 1px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        overflow: hidden !important;
+      }
+
+      // Config Options
+      [data-name="spacing_footer_accordion"],
+      [data-name="footer_headline_style"],
+      [data-name="row_align_section_footer"],
+      [data-name="size_footer_accordion"] {
+        opacity: 0.65 !important;
+      }
+
+      // Config Options
+      [data-name="row_align_section"],
+      [data-name="section_customization_lvl"] {
+        opacity: 0.65 !important;
+      }
+
+      // Form Options
+      [data-name="spacing_column_form_accordion"],
+      [data-name="order_column_form_accordion"],
+      [data-name="size_column_form_accordion"],
+      [data-name="section_customization_lvl"] {
+        opacity: 0.65 !important;
+      }
+
+      // Card Options
+      [data-name="col_cards_row_align"],
+      [data-name="size_column_cards_accordion"],
+      [data-name="order_column_cards_accordion"],
+      [data-name="col_cards_col_customization_lvl"],
+      [data-name="card_column_styles_accordion"],
+      [data-name="card_link_icon_position"],
+      [data-name="card_link_icon_style"],
+      [data-name="card_link_align"],
+      [data-name="card_image_style"],
+      [data-name="card_style"],
+      [data-name="card_body_justify"],
+      [data-name="card_body_header_justify"],
+      [data-name="card_col_inside_padding"],
+      [data-name="card_col_padding"] {
+        opacity: 0.65 !important;
+      }
+
+      // Image Options
+      [data-name="col_image_one_alignment_start_accordion"],
+      [data-name="col_image_one_size_start_accordion"],
+      [data-name="col_image_one_order_start_accordion"],
+      [data-name="col_image_one_image_style"],
+      //[data-name="col_image_one_image_overflow"],
+      [data-name="col_image_one_customization_lvl"] {
+        opacity: 0.65 !important;
+      }
+
+      // Header Options
+      [data-name="spacing_header_accordion"],
+      [data-name="row_align_section_header"],
+      [data-name="col_class_section_header"],
+      [data-name="header_headline_style"] {
+        opacity: 0.65 !important;
+      }
+
+      // Copy Col Options
+      [data-name="col_copy_one_size_start_accordion"],
+      [data-name="col_copy_one_link_order"],
+      [data-name="col_copy_one_customization_lvl"],
+      [data-name="col_copy_one_headline_style"] {
+        opacity: 0.65 !important;
+      }
+    }
+  }
+}

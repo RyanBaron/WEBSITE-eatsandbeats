@@ -1,0 +1,16 @@
+.page-takeover {
+  display: block;
+
+  .container-main-content {
+    align-self: flex-end;
+  }
+
+  .footer-title {
+    text-transform: uppercase;
+  }
+
+  .page-takeover-inside {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}

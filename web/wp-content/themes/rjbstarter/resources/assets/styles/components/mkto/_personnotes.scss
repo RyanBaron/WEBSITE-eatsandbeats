@@ -1,0 +1,22 @@
+//////
+// The person_notes texarea field.
+//////
+form {
+  &.mktoForm {
+    .mktoFormRow {
+      textarea {
+        [name="MktoPersonNotes"] {
+          padding-left: 0;
+        }
+      }
+
+      &.mktopersonnotes_textarea_row {
+        margin-bottom: 1rem;
+
+        textarea {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}

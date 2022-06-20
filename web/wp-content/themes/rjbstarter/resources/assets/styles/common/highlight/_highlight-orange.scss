@@ -1,0 +1,59 @@
+.highlight-orange {
+  &.wp-block-gutenberg-layout-tabs {
+    .tab-nav-link {
+      &.active {
+        &::after {
+          background-color: theme-color("secondary-orange") !important;
+        }
+      }
+
+      &:hover {
+        &::after {
+          background-color: rgba(theme-color("secondary-orange"), 0.9) !important;
+        }
+      }
+    }
+  }
+
+  &:not(.wp-block-gutenberg-layout-tabs) {
+    .superheadline {
+      color: theme-color("secondary-orange");
+    }
+
+    a {
+      &:not(.btn) {
+        color: theme-color("secondary-orange");
+
+        &:hover,
+        &:active,
+        &:focus {
+          color: rgba(theme-color("secondary-orange"), 0.9);
+        }
+
+        &.tab-nav-link {
+          &.active {
+            &::after {
+              background-color: theme-color("secondary-orange");
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.nav-wrapper {
+  &.tabs-orange {
+    ul.nav {
+      a.tab-nav-link {
+        color: theme-color("secondary-orange");
+
+        &:hover,
+        &:active,
+        &:focus {
+          color: rgba(theme-color("secondary-orange"), 0.85) !important;
+        }
+      }
+    }
+  }
+}

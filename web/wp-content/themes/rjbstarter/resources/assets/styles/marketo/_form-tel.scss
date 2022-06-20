@@ -1,0 +1,12 @@
+.mktoFormRow {
+  // Default tel styling.
+  input[type=tel] {
+    & + .mktoError {
+      .mktoErrorMsg {
+        .mktoErrorDetail {
+          display: inline;
+        }
+      }
+    }
+  }
+}

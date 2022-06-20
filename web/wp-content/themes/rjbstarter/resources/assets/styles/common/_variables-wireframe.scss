@@ -1,0 +1,88 @@
+/** Import Bootstrap functions */
+@import "~bootstrap/scss/functions";
+
+$text-lg: 1.5rem;
+
+$headline-size: (
+  large: 60px
+);
+
+$font-main: (
+  serif: "poynter-oldstyle-display",
+  sans-serif: "nimbus-sans",
+  headline: "poynter-oldstyle-display",
+  superheadline: "poynter-oldstyle-display",
+  subheadline: "poynter-oldstyle-display",
+  list-headline: "poynter-oldstyle-display",
+  list-text: "poynter-oldstyle-display",
+  nav: "poynter-oldstyle-display",
+  body: "poynter-oldstyle-display",
+  cta: "poynter-oldstyle-display"
+);
+
+$font-fallback: (
+  serif: "serif",
+  sans-serif: "sans-serif"
+);
+
+$font-midstack: (
+  serif: "poynter-oldstyle-display",
+  sans-serif: "nimbus-sans"
+);
+
+$link-colors: (
+  link-light: #717885,
+  link-light-hover: darken(#717885, 10),
+  link-light-light-hover: lighten(#717885, 10),
+  link-dark: lighten(#1f2532, 20),
+  link-dark-hover: lighten(#1f2532, 10),
+  link-dark-light-hover: lighten(#1f2532, 35),
+  link-white: #fff,
+  link-gray-light: theme-color("gray"),
+  link-blue: #1d91d0,
+  link-blue-hover: darken(#1d91d0, 20),
+  link-primary: theme-color("primary"),
+  link-primary-hover: theme-color("primary-darker"),
+  link-secondary: theme-color("secondary"),
+  link-secondary-hover: theme-color("secondary-darker")
+);
+
+$text-colors: (
+  text-white: #fff,
+  dark: theme-color("dark"),
+  medium: theme-color("medium"),
+  light: theme-color("light"),
+  primary: theme-color("primary"),
+  secondary: theme-color("secondary")
+);
+
+$btn-colors: (
+  primary: theme-color("primary"),
+  secondary: theme-color("secondary"),
+  primary-alt: #4f4f4f,
+  primary-alt-hover: lighten(#4f4f4f, 10)
+);
+
+$bg-colors: (
+  bg-white: #fff,
+  bg-primary: theme-color("primary"),
+  bg-secondary: theme-color("secondary"),
+  bg-dark: theme-color("dark"),
+  bg-light: theme-color("light"),
+  bg-lighter: lighten(theme-color("light"), 13),
+);
+
+$border-colors: (
+  border-white: #fff,
+  border-primary: theme-color("primary"),
+  border-secondary: theme-color("secondary"),
+  border-light:  theme-color("light"),
+  border-dark:  #757575, // dark border take from mockup 2020-07-12
+  border-lighter:  lighten(theme-color("light"), 13),
+);
+
+$social-colors: (
+  linkedin: #0072b1,
+  facebook: #3b5998,
+  twitter: #00acee,
+);

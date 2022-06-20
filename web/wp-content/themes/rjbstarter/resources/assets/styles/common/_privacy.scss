@@ -1,0 +1,36 @@
+.choice-footer-msg {
+  font-size: 13px;
+  text-align: left;
+
+  &.ccpa-msg-added {
+    padding-top: 1rem !important;
+
+    @include media-breakpoint-up(lg) {
+      margin-right: 15px;
+    }
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+[data-iframe="data-access"] {
+  .spinner {
+    //animation: 10s ease 0s normal forwards 1 dataAccessHideLoader;
+  }
+}
+
+@keyframes dataAccessHideLoader {
+  0% { opacity: 1; }
+  90% { opacity: 1; }
+  92% { opacity: 0.8; }
+  94% { opacity: 0.6; }
+  96% { opacity: 0.4; }
+  98% { opacity: 0.2; }
+
+  100% {
+    opacity: 1;
+    display: none;
+  }
+}

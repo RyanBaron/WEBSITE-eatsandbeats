@@ -1,0 +1,133 @@
+/** Import Bootstrap functions */
+@import "~bootstrap/scss/functions";
+
+$text-lg: 1.5rem;
+
+$headline-size: (
+  large: 60px
+);
+
+$font-fallback: (
+  serif: "serif",
+  sans-serif: "sans-serif"
+);
+
+$font-midstack: (
+  serif: "Times",
+  sans-serif: "Arial"
+);
+
+$font-main: (
+  serif: "Times New Roman",
+  sans-serif: "Muli",
+  nav-heavy: "Muli",
+  nav-light: "Muli",
+  headline: "Muli Bold",
+  headline-black: "Muli Black",
+  headline-light: "Muli SemiBold",
+  tab-nav: "Muli Bold",
+  superheadline: "Muli Light",
+  subheadline: "Muli SemiBold",
+  list-headline: "Muli SemiBold",
+  list-text: "Muli",
+  nav: "Muli",
+  nav-headline: "Muli SemiBold",
+  nav-desc: "Muli",
+  body: "Muli",
+  cta: "Muli",
+  quote: "Muli Italic",
+  quote-name: "Muli SemiBold",
+  quote-details: "Muli",
+  strong: "Muli",
+  section-header-light: "Muli Light"
+);
+
+$link-colors: (
+  primary: theme-color("primary"),
+  secondary: theme-color("secondary"),
+  dark: theme-color("dark"),
+  darker: theme-color("darker"),
+  link-lighter: #8c919e,
+  link-lighter-hover: darken(#8c919e, 10),
+  link-lighter-light-hover: lighten(#8c919e, 10),
+  link-light: #717885,
+  link-light-hover: darken(#717885, 10),
+  link-light-light-hover: lighten(#717885, 10),
+  link-dark: lighten(#1f2532, 20),
+  link-dark-hover: lighten(#1f2532, 10),
+  link-dark-light-hover: lighten(#1f2532, 35),
+  link-white: #fff,
+  link-gray-light: darken(#fff, 15),
+  link-blue: #1d91d0,
+  link-blue-hover: darken(#1d91d0, 20),
+  link-primary: theme-color("primary"),
+  link-primary-hover: theme-color("primary-dark"),
+  light: theme-color("text-light"),
+  lighter: theme-color("text-lighter"),
+  //link-secondary: #6c6463,
+  //link-secondary-hover: darken(#6c6463, 10),
+  //link-secondary-light-hover: lighten(#6c6463, 10)
+);
+
+$text-colors: (
+  text-white: #fff,
+  //dark: #0d2c3d,
+  dark: theme-color("dark"),
+  darker: theme-color("darker"),
+  medium: #4f4f4f,
+  light: theme-color("text-light"),
+  lighter: theme-color("text-lighter"),
+  primary: theme-color("primary"),
+  secondary: theme-color("secondary"),
+  nav-link-desc: #585e6f,
+  nav-bg-dark-text: #c4c7cd,
+  nav-link-gray: #565c77,
+  nav-link-gray-hover: theme-color("primary"),
+  footer: #8c919e,
+);
+
+$btn-colors: (
+  dark: theme-color("dark"),
+  light: theme-color("light"),
+  btn-white: #fff,
+  medium: darken(#f1f1f1, 20),
+  primary: theme-color("primary"),
+  secondary: theme-color("secondary"),
+  primary-alt: #4f4f4f,
+  primary-alt-hover: lighten(#4f4f4f, 10)
+);
+
+$bg-colors: (
+  bg-white: #fff,
+  bg-dark: theme-color("dark"),
+  bg-darker: theme-color("darker"),
+  bg-light: theme-color("light"),
+  bg-lighter: theme-color("lighter"),
+  bg-primary: theme-color("primary"),
+  bg-secondary: theme-color("secondary"),
+);
+
+$border-colors: (
+  border-white: #fff,
+  border-primary: theme-color("primary"),
+  border-secondary: theme-color("secondary"),
+  border-light:  theme-color("light"),
+  border-dark:  #757575, // dark border take from mockup 2020-07-12
+  border-lighter:  theme-color("lighter"),
+  primary: theme-color("primary"),
+  dark: theme-color("dark"),
+  darker: theme-color("darker"),
+  //light: theme-color("light"),
+  //lighter: theme-color("lighter"),
+  medium: #4f4f4f,
+  light: #717885,
+  lighter: #8c919e,
+  form-gray: #e3e5e6,
+  secondary: theme-color("secondary")
+);
+
+$social-colors: (
+  linkedin: #0072b1,
+  facebook: #3b5998,
+  twitter: #00acee,
+);

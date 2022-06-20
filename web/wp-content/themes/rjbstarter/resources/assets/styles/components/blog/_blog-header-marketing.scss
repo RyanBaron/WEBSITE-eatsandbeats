@@ -1,0 +1,45 @@
+// Category id 26 (marketing)
+body {
+  .banner {
+    &.banner-blog {
+      .category-nav {
+        li {
+          &.nav-item {
+            &.category-id-26 {
+              &.current-post-ancestor {
+                a {
+                  border-color: theme-color("blog-blue");
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.category {
+    &-marketing,
+    &-26 {
+      .banner {
+        .wrap-container {
+          .wrap-container-inside {
+            //background-image: url("../images/blog-banner-bg-blue.png");
+          }
+        }
+
+        .category-nav {
+          li {
+            &.nav-item {
+              &.category-id-26 {
+                .nav-link {
+                  border-color: theme-color("blog-blue");
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

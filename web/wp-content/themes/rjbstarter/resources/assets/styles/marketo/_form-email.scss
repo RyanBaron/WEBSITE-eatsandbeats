@@ -1,0 +1,12 @@
+.mktoFormRow {
+  // Default email styling.
+  input[type=email] {
+    & + .mktoError {
+      .mktoErrorMsg {
+        .mktoErrorDetail {
+          display: inline;
+        }
+      }
+    }
+  }
+}

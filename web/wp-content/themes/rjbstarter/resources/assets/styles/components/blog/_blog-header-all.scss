@@ -1,0 +1,38 @@
+// Category id 25 (news and updates)
+body {
+  .banner {
+    &.banner-blog {
+      nav {
+        &.navbar {
+          padding-top: 0.4rem;
+          padding-bottom: 0.5rem;
+        }
+      }
+
+      a.brand {
+        img {
+          max-width: 192px;
+        }
+      }
+
+      .wrap-container {
+        .wrap-container-inside {
+          //background-image: url("../images/blog-banner-bg-red.png");
+        }
+      }
+
+      .category-nav {
+        li {
+          &.nav-item {
+            &.current_page_item,
+            &.current-post-ancestor {
+              a {
+                border-color: theme-color("blog-red");
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

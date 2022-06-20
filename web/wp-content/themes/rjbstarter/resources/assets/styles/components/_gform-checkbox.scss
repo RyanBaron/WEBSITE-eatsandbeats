@@ -1,0 +1,97 @@
+input[type="checkbox"] {
+  opacity: 0;
+  outline: none;
+  z-index: 100;
+  width: 26px;
+  height: 26px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  appearance: none;
+  cursor: pointer;
+
+  & + label {
+    font-size: 18px;
+    font-weight: normal !important;
+  }
+}
+
+.ginput_container_checkbox {
+  padding: 0 0.5rem !important;
+  margin: 0 !important;
+}
+
+ul {
+  &.gfield_checkbox {
+    padding: 0 !important;
+
+    li {
+      position: relative;
+      margin-bottom: 15px;
+      list-style: none;
+      display: block;
+      padding: 5px;
+
+      &:first-child {
+        margin-top: 10px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      label {
+        padding-left: 30px !important;
+        cursor: pointer;
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          display: block;
+          left: 0;
+          top: 0;
+        }
+
+        &::before {
+          opacity: 0;
+          z-index: 1;
+          transition: all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          width: 6px;
+          height: 11px;
+          border: solid theme-color("secondary");
+          border-width: 0 3px 3px 0;
+          left: 7px;
+          top: 5px;
+          transform: rotate(45deg) scale(0);
+          background-color: #fff;
+        }
+
+        &::after {
+          top: 2px;
+          z-index: 0;
+          background: #fff;
+          width: 20px;
+          height: 20px;
+          border-radius: 3px;
+          border: 1px solid theme-color("secondary");
+        }
+      }
+
+      &.form-check {
+        > label {
+          line-height: 1.65;
+        }
+      }
+
+      input[type="checkbox"]:checked + label {
+        font-weight: normal !important;
+
+        &::before {
+          opacity: 1;
+          transform: rotate(45deg) scale(1);
+        }
+      }
+    }
+  }
+}

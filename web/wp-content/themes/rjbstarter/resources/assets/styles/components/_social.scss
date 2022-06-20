@@ -1,0 +1,49 @@
+.social-share {
+  &:hover {
+    cursor: pointer;
+    opacity: 0.9;
+  }
+
+  &.social-share-linkedin {
+    color: social-color("linkedin");
+
+    &:not([href]) {
+      color: social-color("linkedin");
+
+      &:hover {
+        color: social-color("facebook");
+      }
+    }
+  }
+
+  &.social-share-twitter {
+    color: social-color("twitter");
+
+    &:not([href]) {
+      color: social-color("twitter");
+
+      &:hover {
+        color: social-color("facebook");
+      }
+    }
+  }
+
+  &.social-share-facebook {
+    color: social-color("facebook");
+
+    &:not([href]) {
+      color: social-color("facebook");
+
+      &:hover {
+        color: social-color("facebook");
+      }
+    }
+  }
+}
+
+.post-social {
+  .social-share {
+    font-size: 2.15rem;
+    margin: 0 0.2rem;
+  }
+}

@@ -1,0 +1,137 @@
+html,
+body {
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.text-bolder {
+  font-weight: 600;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-xs {
+  font-size: 0.8rem;
+}
+
+.text-sm {
+  font-size: 0.9rem;
+}
+
+.text-md {
+  font-size: 1rem;
+}
+
+.text-lg {
+  font-size: 1.15rem;
+}
+
+.text-xl {
+  font-size: 1.2rem;
+}
+
+.text-xxl {
+  font-size: 1.3rem;
+}
+
+.text-xxxl {
+  font-size: 1.4rem;
+}
+
+.text-xxxxl {
+  font-size: 1.5rem;
+}
+
+.text-color-white,
+.text-white {
+  color: text-color("text-white");
+}
+
+.text-light,
+.text-color-light {
+  color: text-color("light");
+}
+
+.text-lighter,
+.text-color-lighter {
+  color: text-color("lighter");
+}
+
+.text-dark,
+.text-color-dark {
+  color: text-color("dark");
+}
+
+.text-gray-dark {
+  color: theme-color("gray-dark");
+}
+
+.text-gray-darker {
+  color: theme-color("gray-darker");
+}
+
+.text-red {
+  color: theme-color("secondary-red");
+}
+
+.text-volcano {
+  color: theme-color("secondary-volcano");
+}
+
+.text-orange {
+  color: theme-color("secondary-orange");
+}
+
+.text-gold {
+  color: theme-color("secondary-gold");
+}
+
+.text-yellow {
+  color: theme-color("secondary-yellow");
+}
+
+.text-lime {
+  color: theme-color("secondary-lime");
+}
+
+.text-green {
+  color: theme-color("secondary-green");
+}
+
+.text-cyan {
+  color: theme-color("secondary-cyan");
+}
+
+.text-dark-blue {
+  color: theme-color("secondary-blue-dark");
+}
+
+.text-geek-blue {
+  color: theme-color("secondary-geek-blue");
+}
+
+.text-purple {
+  color: theme-color("secondary-purple");
+}
+
+.text-magenta {
+  color: theme-color("secondary-magenta");
+}
+
+@include media-breakpoint-up(lg) {
+  html,
+  body {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  html,
+  body {
+    font-size: 17px;
+    line-height: 1.85;
+  }
+}

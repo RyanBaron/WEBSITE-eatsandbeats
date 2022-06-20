@@ -1,0 +1,36 @@
+.mktoFormRow {
+  //////
+  // Default fieldset view.
+  // We use the field set for putting fields side by side.
+  //////
+  fieldset {
+    padding: 0 !important;
+    //margin: 0 -10px !important;
+    border: none;
+    //width: calc(100% + 20px);
+
+    > * {
+      // nothing.
+    }
+
+    > legend {
+      padding: 0;
+      margin: 0;
+    }
+
+    & .mktoFormCol {
+      > .mktoFormRow {
+        width: 50% !important;
+        display: inline-block;
+        padding: 0.5rem 10px;
+        margin: 0;
+        vertical-align: top;
+
+        @media all and (min-width: 768px) {
+          padding-top: 0;
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+}

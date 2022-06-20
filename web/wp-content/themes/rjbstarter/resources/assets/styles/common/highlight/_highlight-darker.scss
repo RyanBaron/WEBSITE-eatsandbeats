@@ -1,0 +1,51 @@
+.highlight-darker {
+  &.wp-block-gutenberg-layout-tabs {
+    .tab-nav-link {
+      &.active {
+        &::after {
+          background-color: theme-color("darker") !important;
+        }
+      }
+
+      &:hover {
+        &::after {
+          background-color: rgba(theme-color("darker"), 0.9) !important;
+        }
+      }
+    }
+  }
+
+  &:not(.wp-block-gutenberg-layout-tabs) {
+    .superheadline {
+      color: theme-color("darker");
+    }
+
+    a {
+      &:not(.btn) {
+        color: theme-color("darker");
+
+        &:hover,
+        &:active,
+        &:focus {
+          color: rgba(theme-color("darker"), 0.9);
+        }
+      }
+    }
+  }
+}
+
+.nav-wrapper {
+  &.tabs-darker {
+    ul.nav {
+      a.tab-nav-link {
+        color: theme-color("darker");
+
+        &:hover,
+        &:active,
+        &:focus {
+          color: rgba(theme-color("darker"), 0.85) !important;
+        }
+      }
+    }
+  }
+}

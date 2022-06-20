@@ -1,0 +1,118 @@
+.banner {
+  &.trans-on-light {
+    .fixed-top {
+      background-color: rgba(255, 255, 255, 0);
+
+      .logo-dark {
+        display: block;
+      }
+
+      .logo-light {
+        display: none;
+      }
+    }
+
+    .btn-outline-dark,
+    .nav-btn-outline a {
+      border-color: theme-color("darker");
+
+      &:hover,
+      &:active,
+      &:focus {
+        border-color: theme-color("primary");
+        color: theme-color("lighter") !important;
+        background-color: theme-color("primary");
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .banner {
+    &.trans-on-light {
+      .fixed-top {
+        background-color: rgba(255, 255, 255, 0);
+
+        .logo-dark {
+          display: none;
+        }
+
+        .logo-light {
+          display: block;
+        }
+
+        .nav-banner {
+          .menu-item {
+            a {
+              color: link-color("dark");
+            }
+
+            .dropdown-menu {
+              li {
+                &.menu-item {
+                  a {
+                    color: link-color("dark");
+
+                    &:hover {
+                      color: link-color("primary");
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+body {
+  .banner {
+    &.trans-on-light {
+      &.trans-on-light-always {
+        .wrap-container {
+          .wrap-container-inside {
+            background-color: rgba(theme-color("theme-white"), 0.975);
+          }
+        }
+      }
+    }
+  }
+
+  &.scroll {
+    .banner {
+      &.trans-on-light {
+        .fixed-top {
+          background-color: theme-color("white");
+
+          .logo-light {
+            display: block;
+          }
+
+          .banner-nav {
+            .menu-item {
+              &.menu-btn-item {
+                a {
+                  color: link-color("light");
+
+                  &:active,
+                  &:focus,
+                  &:hover {
+                    color: link-color("lighter");
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .wrap-container {
+          .wrap-container-inside {
+            background-color: rgba(theme-color("theme-white"), 0.975);
+          }
+        }
+      }
+    }
+  }
+}

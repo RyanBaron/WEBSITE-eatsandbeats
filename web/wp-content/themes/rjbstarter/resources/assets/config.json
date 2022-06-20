@@ -1,0 +1,44 @@
+{
+  "entry": {
+    "main": [
+      "./scripts/main.js",
+      "./styles/main.scss"
+    ],
+    "marketo": [
+      "./scripts/marketo.js"
+    ],
+    "critical": [
+      "./styles/critical.scss"
+    ],
+    "critical-home": [
+      "./styles/critical-home.scss"
+    ],
+    "admin": [
+      "./styles/admin.scss"
+    ],
+    "customizer": [
+      "./scripts/customizer.js"
+    ],
+    "blocks-tabs": [
+      "./scripts/blocks/tabs.js",
+      "./scripts/blocks/tab-item.js",
+      "./scripts/blocks/tab-link.js"
+    ],
+    "blocks-slider": [
+      "./scripts/blocks/slider.js",
+      "./scripts/blocks/slider-item.js"
+    ],
+    "blocks-other": [
+      "./scripts/blocks/container-item.js"
+    ]
+  },
+  "publicPath": "/wp-content/themes/rjbstarter",
+  "devUrl": "https://rjbstarter.lndo.site",
+  "proxyUrl": "https://localhost:32776",
+  "cacheBusting": "[name]_[hash:8]",
+  "watch": [
+    "app/**/*.php",
+    "config/**/*.php",
+    "resources/views/**/*.php"
+  ]
+}

@@ -1,0 +1,45 @@
+//////
+// Some additional custom bg settings.
+//////
+body {
+  .bg-sec-green,
+  .bg-sec-orange,
+  .bg-dark-blue,
+  .bg-secondary,
+  .bg-dark {
+    .superheadline {
+      color: text-color("lighter");
+    }
+
+    .subheadline {
+      //color: pink !important;
+      color: text-color("text-white");
+    }
+
+    .text-col {
+      p {
+        color: text-color("text-white");
+      }
+    }
+
+    .col-copy {
+      .text-col {
+        p {
+          color: text-color("text-white");
+        }
+      }
+    }
+
+    .header-content {
+      .headline {
+        .superheadline {
+          color: text-color("text-white");
+        }
+
+        .subheadline {
+          color: text-color("text-white");
+        }
+      }
+    }
+  }
+}

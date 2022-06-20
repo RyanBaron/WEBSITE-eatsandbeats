@@ -1,0 +1,23 @@
+name: eatsandbeats
+recipe: wordpress
+config:
+  webroot: web
+services:
+  node:
+    type: node:12
+    ssl: true
+    globals:
+#      gulp-cli: "1.4.8"
+      npm: "latest"
+    overrides:
+      ports:
+        - "3000:3000"
+tooling:
+  node:
+    service: node
+#  gulp:
+#    service: node
+  npm:
+    service: node
+  yarn:
+    service: node

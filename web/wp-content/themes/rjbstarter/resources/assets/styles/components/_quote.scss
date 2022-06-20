@@ -1,0 +1,198 @@
+article,
+section {
+  .quotes-wrapper {
+    & + .buttons {
+      margin-top: 1rem;
+    }
+
+    &.quotes-wrapper-inline {
+      & + .buttons {
+        margin-top: 1rem;
+      }
+
+      .quote-logo {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+
+        figure {
+          max-width: 200px;
+          height: auto;
+
+          img {
+            max-height: 40px;
+            max-width: 120px;
+            width: auto;
+            height: auto;
+          }
+        }
+      }
+
+      .details {
+        > div {
+          display: inline;
+
+          &.position {
+            & + .company {
+              &::before {
+                content: ", ";
+                display: inline;
+                margin-left: -4px;
+              }
+            }
+          }
+        }
+      }
+
+      .quote-image {
+        flex: 1 0 85px;
+        margin-right: 15px;
+        max-width: 85px;
+      }
+
+      @include media-breakpoint-up(lg) {
+        .quote-image {
+          flex: 1 0 85px;
+          margin-right: 15px;
+          max-width: 85px;
+        }
+      }
+
+      @include media-breakpoint-up(xl) {
+        .quote-image {
+          flex: 1 0 90px;
+          margin-right: 20px;
+          max-width: 90px;
+        }
+      }
+
+      @include media-breakpoint-up(xxxl) {
+        .quote-image {
+          flex: 1 0 100px;
+          margin-right: 25px;
+          max-width: 100px;
+        }
+      }
+    }
+  }
+}
+
+.article-feature-primary {
+  .quotes-wrapper {
+    &.quotes-wrapper-inline {
+      blockquote {
+        font-size: 20px;
+        //text-indent: 0;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      .quote-logo {
+        margin-top: 0.5rem;
+        margin-bottom: 0;
+
+        figure {
+          max-width: 140px;
+          height: auto;
+
+          img {
+            max-height: 32px;
+            max-width: 110px;
+            width: auto;
+            height: auto;
+          }
+        }
+      }
+
+      .quote-image {
+        flex: 1 0 75px;
+        margin-right: 15px;
+        max-width: 75px;
+      }
+
+      @include media-breakpoint-up(md) {
+        .quote-image {
+          flex: 1 0 70px;
+          margin-right: 15px;
+          max-width: 70px;
+        }
+      }
+
+      @include media-breakpoint-up(lg) {
+        .quote-image {
+          flex: 1 0 75px;
+          margin-right: 15px;
+          max-width: 75px;
+        }
+      }
+
+      @include media-breakpoint-up(xxl) {
+        .quote-image {
+          flex: 1 0 80px;
+          margin-right: 20px;
+          max-width: 80px;
+        }
+      }
+    }
+  }
+}
+
+.article-feature-secondary {
+  .quotes-wrapper {
+    &.quotes-wrapper-inline {
+      blockquote {
+        font-size: 17px;
+        text-indent: -6px;
+        margin-left: 8px;
+        margin-right: 8px;
+        margin-top: 0.25rem; // Margin is added via the wrapper in this situation.
+      }
+
+      .quote-logo {
+        margin-top: 0.5rem;
+        margin-bottom: 0;
+
+        figure {
+          max-width: 120px;
+          height: auto;
+
+          img {
+            max-height: 28px;
+            max-width: 90px;
+            width: auto;
+            height: auto;
+          }
+        }
+      }
+
+      .quote-image {
+        flex: 1 0 75px;
+        margin-right: 15px;
+        max-width: 75px;
+      }
+
+      @include media-breakpoint-up(md) {
+        .quote-image {
+          flex: 1 0 55px;
+          margin-right: 10px;
+          max-width: 55px;
+        }
+      }
+
+      @include media-breakpoint-up(lg) {
+        .quote-image {
+          flex: 1 0 55px;
+          margin-right: 15px;
+          max-width: 55px;
+        }
+      }
+
+      @include media-breakpoint-up(xxl) {
+        .quote-image {
+          flex: 1 0 60px;
+          margin-right: 15px;
+          max-width: 60px;
+        }
+      }
+    }
+  }
+}

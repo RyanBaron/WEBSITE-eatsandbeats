@@ -1,0 +1,26 @@
+@media print {
+  .banner {
+    .nav-center,
+    .nav-right {
+      display: none;
+    }
+  }
+
+  section {
+    &#top {
+      padding-top: 45px !important;
+    }
+  }
+
+  main.main {
+    > section {
+      &:first-child {
+        padding-top: 45px !important;
+      }
+    }
+  }
+
+  footer.footer-site {
+    display: none;
+  }
+}

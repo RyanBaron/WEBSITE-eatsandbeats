@@ -1,0 +1,45 @@
+// Category id 50 (engineering)
+body {
+  .banner {
+    &.banner-blog {
+      .category-nav {
+        li {
+          &.nav-item {
+            &.category-id-50 {
+              &.current-post-ancestor {
+                a {
+                  border-color: theme-color("blog-gray");
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.category {
+    &-engineering,
+    &-50 {
+      .banner {
+        .wrap-container {
+          .wrap-container-inside {
+            //background-image: url("../images/blog-banner-bg-gray.png");
+          }
+        }
+
+        .category-nav {
+          li {
+            &.nav-item {
+              &.category-id-50 {
+                .nav-link {
+                  border-color: theme-color("blog-gray");
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

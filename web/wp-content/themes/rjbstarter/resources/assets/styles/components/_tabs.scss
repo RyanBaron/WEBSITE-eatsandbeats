@@ -1,0 +1,44 @@
+.wp-block-gutenberg-layout-tabs {
+  .wp-block-gutenberg-widgets-tab-item {
+    .tab-item-wrapper {
+      > .py-8 {
+        padding-top: 2.25rem !important;
+        padding-bottom: 2.25rem !important;
+      }
+
+      > .py-md-10 {
+        @include media-breakpoint-up(md) {
+          padding-top: 3.5rem !important;
+          padding-bottom: 3.5rem !important;
+        }
+      }
+
+      > .py-lg-12 {
+        @include media-breakpoint-up(lg) {
+          padding-top: 4rem !important;
+          padding-bottom: 4rem !important;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .nav-mobile-slider {
+    .nav-item {
+      &.tns-slide-cloned {
+        display: none !important;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .nav-tablet-slider {
+    .nav-item {
+      &.tns-slide-cloned {
+        display: none !important;
+      }
+    }
+  }
+}

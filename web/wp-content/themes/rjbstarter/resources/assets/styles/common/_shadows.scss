@@ -1,0 +1,167 @@
+.dropshadow {
+  @include dropshadow();
+}
+
+.top-inset-shadow {
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 10px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.065), hsla(0, 0, 100%, 0));
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+.shadow-row {
+  > .container {
+    > .row {
+      @include dropshadow();
+    }
+  }
+}
+
+* {
+  &.bg-offset-dots,
+  &.bg-offset-fade-secondary,
+  &.bg-offset-fade-primary {
+    & + .card-body {
+      margin-top: 1rem;
+    }
+  }
+}
+
+figure {
+  &.bg-offset-fade-rounded {
+    &::before {
+      border-radius: 0.25rem;
+    }
+  }
+
+  &.bg-offset-fade-primary {
+    position: relative;
+    padding: 0;
+    margin: 0;
+
+    &::before {
+      content: "";
+      background: linear-gradient(to bottom right, theme-color("primary"), transparent 60%);
+      position: absolute;
+      z-index: 0;
+      top: -0.75rem;
+      left: -0.75rem;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      right: 0;
+      bottom: 0;
+
+      @include media-breakpoint-up(md) {
+        top: -1rem;
+        left: -1rem;
+      }
+
+      @include media-breakpoint-up(xl) {
+        top: -1.25rem;
+        left: -1.25rem;
+      }
+    }
+
+    img {
+      //padding: 0.5rem 0 0 0.5rem;
+      z-index: 1;
+      position: relative;
+      border-radius: 0.25rem;
+    }
+  }
+
+  &.bg-offset-fade-secondary {
+    position: relative;
+    padding: 0;
+    margin: 0;
+
+    &::before {
+      content: "";
+      background: linear-gradient(to bottom right, theme-color("secondary"), transparent 60%);
+      position: absolute;
+      z-index: 0;
+      top: -0.75rem;
+      left: -0.75rem;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+
+      @include media-breakpoint-up(md) {
+        top: -1rem;
+        left: -1rem;
+      }
+
+      @include media-breakpoint-up(xl) {
+        top: -1.25rem;
+        left: -1.25rem;
+      }
+    }
+
+    img {
+      //padding: 0.5rem 0 0 0.5rem;
+      z-index: 1;
+      position: relative;
+      border-radius: 0.25rem;
+    }
+  }
+
+  &.bg-offset-dots {
+    position: relative;
+    padding: 0;
+    margin: 0;
+
+    @include dotsBG();
+
+    &::before {
+      /*
+      content: "";
+      background: linear-gradient(to bottom right, theme-color("secondary"), transparent 60%);
+      position: absolute;
+      z-index: 0;
+      top: -0.75rem;
+      left: -0.75rem;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      */
+
+      @include media-breakpoint-up(md) {
+        top: -1rem;
+        left: -1rem;
+      }
+
+      @include media-breakpoint-up(xl) {
+        top: -1.25rem;
+        left: -1.25rem;
+      }
+    }
+
+    img {
+      //padding: 0.5rem 0 0 0.5rem;
+      z-index: 1;
+      position: relative;
+      border-radius: 0.25rem;
+    }
+  }
+}
+
+section .card.no-y-padding figure.figure-cards {
+  &.bg-offset-fade-secondary,
+  &.bg-offset-fade-primary {
+    & + .card-body {
+      margin-top: 1rem !important;
+    }
+  }
+}

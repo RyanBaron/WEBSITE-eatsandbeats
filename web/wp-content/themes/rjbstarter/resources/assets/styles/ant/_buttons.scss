@@ -1,0 +1,10 @@
+.btn {
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+
+  &.btn-primary {
+    &:hover {
+      background-color: theme-color("primary-light");
+      border-color: theme-color("primary-light");
+    }
+  }
+}

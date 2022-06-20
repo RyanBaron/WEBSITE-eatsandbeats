@@ -1,0 +1,132 @@
+.nav-feature-content {
+  &-dark {
+    * {
+      color: theme-color("light") !important;
+    }
+
+    span[itemprop="name"] {
+      color: theme-color("light");
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: theme-color("lighter");
+    }
+
+    span {
+      color: theme-color("light");
+    }
+
+    .excerpt,
+    .summary {
+      color: theme-color("light");
+    }
+
+    .cta {
+      color: theme-color("lighter") !important;
+    }
+  }
+
+  > a {
+    padding: 0;
+
+    .cta {
+      color: theme-color("primary");
+    }
+
+    .nav-feature-content-image {
+      margin: 0.75rem 0;
+    }
+
+    .summary {
+      margin: 0.25rem 0;
+    }
+
+    span[itemprop="name"] {
+      font-size: 14px;
+
+      .nav-desc {
+        margin-top: 0.5rem;
+
+        h1 {
+          font-size: 22px;
+          margin-bottom: 0.25rem;
+
+          span {
+            display: block;
+            font-size: 16px;
+            font-weight: 400;
+            margin: 0.25rem 0;
+            font-family: font-main("headline-light"), font-fallback("sans-serif");
+          }
+        }
+
+        h2 {
+          font-size: 20px;
+          margin-bottom: 0.25rem;
+
+          span {
+            display: block;
+            font-size: 15px;
+            font-weight: 400;
+            margin: 0.25rem 0;
+            font-family: font-main("headline-light"), font-fallback("sans-serif");
+          }
+        }
+
+        h3 {
+          font-size: 18px;
+          margin-bottom: 0.25rem;
+
+          span {
+            display: block;
+            font-size: 14px;
+            font-weight: 400;
+            margin: 0.25rem 0;
+            font-family: font-main("headline-light"), font-fallback("sans-serif");
+          }
+        }
+
+        h4 {
+          font-size: 16px;
+          margin-bottom: 0.25rem;
+
+          span {
+            display: block;
+            font-size: 13px;
+            font-weight: 400;
+            margin: 0.25rem 0;
+            font-family: font-main("headline-light"), font-fallback("sans-serif");
+          }
+        }
+
+        h5 {
+          font-size: 15px;
+          margin-bottom: 0.25rem;
+
+          span {
+            display: block;
+            font-size: 13px;
+          }
+        }
+
+        h6 {
+          font-size: 14px;
+          margin-bottom: 0.25rem;
+
+          span {
+            display: block;
+            font-size: 13px;
+            font-weight: 400;
+            margin: 0.25rem 0;
+            font-family: font-main("headline-light"), font-fallback("sans-serif");
+          }
+        }
+      }
+    }
+  }
+}

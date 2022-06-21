@@ -50,7 +50,7 @@
       @php
         // gravity_form(id or title, display title, display desc, display inactive, field values, ajax, tab index, echo)
         // https://docs.gravityforms.com/adding-a-form-to-the-theme-file/
-        gravity_form( $form_id, false, false, false, '', true, 100, true );
+        // gravity_form( $form_id, false, false, false, '', true, 100, true );
       @endphp
     </div>
   </div>

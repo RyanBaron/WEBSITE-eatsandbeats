@@ -407,7 +407,7 @@ function get_post_categories( $post_id = '', $args = array()) {
     foreach ($post_cats as $key => $cat_id) {
 
       // Exclude the top level categorzation categories.
-      if( WP_CATEGORY_AUDIENCE_ID !== $cat_id && WP_CATEGORY_TOPIC_ID !== $cat_id && WP_CATEGORY_RESOURCE_TYPE_ID !== $cat_id ) {
+      //if( WP_CATEGORY_AUDIENCE_ID !== $cat_id && WP_CATEGORY_TOPIC_ID !== $cat_id && WP_CATEGORY_RESOURCE_TYPE_ID !== $cat_id ) {
         $name_str           .= isset( $cats[$cat_id]['name'] ) && ! empty( $cats[$cat_id]['name'] ) ? $cats[$cat_id]['name'] . ', ' : '';
         $name_str_condensed .= isset( $cats[$cat_id]['name'] ) && ! empty( $cats[$cat_id]['name'] ) ? $cats[$cat_id]['name'] . ',' : '';
         $slug_str           .= isset( $cats[$cat_id]['slug'] ) && ! empty( $cats[$cat_id]['slug'] ) ? $cats[$cat_id]['slug'] . ', ' : '';
@@ -416,7 +416,7 @@ function get_post_categories( $post_id = '', $args = array()) {
         // Only add to the array if the category is not empty
         if (isset( $cats[$cat_id] ) && ! empty( $cats[$cat_id] ) )
           $raw[$cat_id] = $cats[$cat_id];
-      }
+      //}
     }
   }
 

@@ -417,9 +417,12 @@ add_action('wp_head', function() {
     if( $post_id ) {
 
       $meta_title         = \App\get_meta_title( $post_id, 0 );
-      $topic_cats         = \App\get_post_categories( $post_id, array( 'parent_id' => WP_CATEGORY_TOPIC_ID ) );
-      $resource_type_cats = \App\get_post_categories( $post_id, array( 'parent_id' => WP_CATEGORY_RESOURCE_TYPE_ID ) );
-      $audience_cats      = \App\get_post_categories( $post_id, array( 'parent_id' => WP_CATEGORY_AUDIENCE_ID ) );
+      //$topic_cats         = \App\get_post_categories( $post_id, array( 'parent_id' => WP_CATEGORY_TOPIC_ID ) );
+      //$resource_type_cats = \App\get_post_categories( $post_id, array( 'parent_id' => WP_CATEGORY_RESOURCE_TYPE_ID ) );
+      //$audience_cats      = \App\get_post_categories( $post_id, array( 'parent_id' => WP_CATEGORY_AUDIENCE_ID ) );
+      $topic_cats = 0;
+      $resource_type_cats = 0;
+      $audience_cats = 0;
 
       if ( isset( $meta_title ) && ! empty( $meta_title ) )
         echo '<meta name="content-title" content="' . esc_attr( $meta_title ) . '" />';
